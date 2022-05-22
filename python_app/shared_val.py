@@ -21,12 +21,17 @@ class SharedData:
 
     def millis(self):
         return math.floor(time.time() * 1000)
+    
+    '''
+    
+    TCP Operation
 
+    '''
+    
     def write_tcp_data(self,tcp_cmd):
         # Acquire data rights
         self.tcp_mutex.acquire()
 
-        # TODO: Should make some filter to not update with same data
         # Always write data and release barrier
         self.tcp_data = tcp_cmd
         self.tcp_barrier.release()
@@ -38,19 +43,30 @@ class SharedData:
         # Stall until new data is written to buffer
         self.tcp_barrier.acquire()
         return self.tcp_data
+    
+    '''
+    
+    UDP Operation
 
+    '''
+
+    # Write to UDP client
     def write_udp_data(self,udp_cmd):
         # Acquire data rights
         self.udp_mutex.acquire()
-
         self.udp_data = udp_cmd
-        
         # Release data rights
         self.udp_mutex.release()
 
     def read_udp_data(self):
         return self.udp_data
 
+    '''
+    
+    LED Data Operations
+        - LED posistion is streamed over UDP
+
+    '''
 
     def write_led_pos_cmd(self,led_pos):
         if(isinstance(led_pos, int)):
@@ -69,6 +85,13 @@ class SharedData:
     def led_on_cmd(self):
         tcp_cmd = [LED_CODE_ON]
         self.write_tcp_data(tcp_cmd)
+
+    '''
+    
+    Sound Data Operations
+        - Uses LED write to send data over UDPo
+
+    '''
 
     def write_sound_data(self,sound_data):
         self.sound_mutex.acquire()

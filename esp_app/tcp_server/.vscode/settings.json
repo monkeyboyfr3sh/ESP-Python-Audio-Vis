@@ -10,6 +10,7 @@
     "*.inc": "c",
     "freertos.h": "c",
     "led_thread.h": "c",
-    "tcp_thread.h": "c"
+    "tcp_thread.h": "c",
+    "udp_thread.h": "c"
   }
 }
