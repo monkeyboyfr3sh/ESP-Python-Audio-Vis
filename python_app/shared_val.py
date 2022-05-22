@@ -5,6 +5,7 @@ import math
 LED_CODE_OFF    = 0
 LED_CODE_ON     = 1
 LED_CODE_POS    = 2
+LED_CODE_SYNC   = 2
 
 class SharedData:
     def __init__(self):
@@ -83,6 +84,10 @@ class SharedData:
         self.write_tcp_data(tcp_cmd)
 
     def led_on_cmd(self):
+        tcp_cmd = [LED_CODE_ON]
+        self.write_tcp_data(tcp_cmd)
+
+    def led_sync_cmd(self):
         tcp_cmd = [LED_CODE_ON]
         self.write_tcp_data(tcp_cmd)
 
