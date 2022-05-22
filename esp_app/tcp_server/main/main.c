@@ -26,38 +26,42 @@
 
 #include "driver/rmt.h"
 #include "led_strip.h"
-#include "led_thread.h"
-#include "tcp_thread.h"
 
 #include "stdbool.h"
 
-// #define PORT                        CONFIG_EXAMPLE_PORT
-// #define KEEPALIVE_IDLE              CONFIG_EXAMPLE_KEEPALIVE_IDLE
-// #define KEEPALIVE_INTERVAL          CONFIG_EXAMPLE_KEEPALIVE_INTERVAL
-// #define KEEPALIVE_COUNT             CONFIG_EXAMPLE_KEEPALIVE_COUNT
-#define PORT                        3333
+// TCP INFORMATION
+#define TCP_PORT                        3333
 #define KEEPALIVE_IDLE              5
 #define KEEPALIVE_INTERVAL          5
 #define KEEPALIVE_COUNT             3
 
+// UDP INFORMATION
+#define HOST_IP_ADDR "192.168.0.166"
+#define UDP_PORT 20001
+
 static const char *TAG = "example";
 
+#define RMT_TX_CHANNEL RMT_CHANNEL_0
+
+#define EXAMPLE_CHASE_SPEED_MS          (50)
+#define CONFIG_EXAMPLE_STRIP_LED_NUMBER (124)
+
+typedef enum {
+    led_code_off = 0,
+    led_code_on,
+    led_code_pos,
+} led_code_t;
+
 bool led_on = true;
+uint32_t led_peak = 0;
 
 static void do_retransmit(const int sock)
 {
     int len;
     char rx_buffer[128];
     uint8_t level = 0;
+    char *tcp_op_code = &rx_buffer[0];
 
-    gpio_config_t gpio_conf;
-    gpio_conf.mode = GPIO_MODE_OUTPUT;
-    gpio_conf.pull_up_en = GPIO_PULLUP_DISABLE;
-    gpio_conf.pull_down_en = GPIO_PULLDOWN_DISABLE;
-    gpio_conf.intr_type = GPIO_INTR_DISABLE;
-    gpio_conf.pin_bit_mask = (1ULL << GPIO_NUM_17);
-    gpio_config(&gpio_conf);
-    gpio_set_level(GPIO_NUM_17, level);
     do {
         len = recv(sock, rx_buffer, sizeof(rx_buffer) - 1, 0);
         if (len < 0) {
@@ -70,20 +74,30 @@ static void do_retransmit(const int sock)
             ESP_LOGI(TAG, "Received %d bytes:", len);
             esp_log_buffer_hex(TAG,rx_buffer,len);
 
-            level = rx_buffer[1];
-            ESP_LOGI(TAG,"Setting line to %d",level);
-            gpio_set_level(GPIO_NUM_17, level);
-            led_on = level;
-
-            // send() can return less bytes than supplied length.
-            // Walk-around for robust implementation.
-            int to_write = len;
-            while (to_write > 0) {
-                int written = send(sock, rx_buffer + (len - to_write), to_write, 0);
-                if (written < 0) {
-                    ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
-                }
-                to_write -= written;
+            ESP_LOGI(TAG, "OPCODE:%x",*tcp_op_code);
+            switch(*tcp_op_code){
+                case (led_code_off):
+                    ESP_LOGI(TAG, "Turing LEDs OFF!");
+                    led_on = false;
+                    break;
+                case (led_code_on):
+                    ESP_LOGI(TAG, "Turing LEDs ON!");
+                    led_on = true;
+                    break;
+                case (led_code_pos):
+                    // led_on = true;
+                    led_peak =  (rx_buffer[1] << 0) +
+                                (rx_buffer[2] << 8) +
+                                (rx_buffer[3] << 16) +
+                                (rx_buffer[4] << 24);
+                    if(led_peak > CONFIG_EXAMPLE_STRIP_LED_NUMBER){
+                        led_peak = CONFIG_EXAMPLE_STRIP_LED_NUMBER;
+                    }
+                    ESP_LOGI(TAG, "Setting peak LED to %d!",led_peak);
+                    break;
+                default :
+                    ESP_LOGW(TAG, "Unknown TCP op code %x",*tcp_op_code);
+                    break;
             }
         }
     } while (len > 0);
@@ -104,7 +118,7 @@ static void tcp_server_task(void *pvParameters)
         struct sockaddr_in *dest_addr_ip4 = (struct sockaddr_in *)&dest_addr;
         dest_addr_ip4->sin_addr.s_addr = htonl(INADDR_ANY);
         dest_addr_ip4->sin_family = AF_INET;
-        dest_addr_ip4->sin_port = htons(PORT);
+        dest_addr_ip4->sin_port = htons(TCP_PORT);
         ip_protocol = IPPROTO_IP;
     }
 
@@ -125,7 +139,7 @@ static void tcp_server_task(void *pvParameters)
         ESP_LOGE(TAG, "IPPROTO: %d", addr_family);
         goto CLEAN_UP;
     }
-    ESP_LOGI(TAG, "Socket bound, port %d", PORT);
+    ESP_LOGI(TAG, "Socket bound, port %d", TCP_PORT);
 
     err = listen(listen_sock, 1);
     if (err != 0) {
@@ -167,10 +181,6 @@ CLEAN_UP:
     vTaskDelete(NULL);
 }
 
-#define RMT_TX_CHANNEL RMT_CHANNEL_0
-
-#define EXAMPLE_CHASE_SPEED_MS          (50)
-#define CONFIG_EXAMPLE_STRIP_LED_NUMBER (124)
 
 void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t *g, uint32_t *b)
 {
@@ -218,6 +228,21 @@ void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t
     }
 }
 
+uint32_t decay_pos(uint32_t pos_set, uint32_t decay_rate_ms, uint32_t decay_coef){
+    static uint32_t timestamp = 0;
+    static uint32_t pos;
+
+    pos = pos_set; 
+    if(pos){
+        if( (xTaskGetTickCount()-timestamp) > pdMS_TO_TICKS(decay_rate_ms) ){
+            timestamp = xTaskGetTickCount();
+            pos -= (pos > decay_coef) ? decay_coef : pos;
+        }
+    }
+
+    return pos; 
+}
+
 static void led_strip_task(void *pvParameters)
 {
     uint32_t red = 0;
@@ -246,13 +271,19 @@ static void led_strip_task(void *pvParameters)
 
     // Show simple rainbow chasing pattern
     ESP_LOGI(TAG, "LED Rainbow Chase Start");
+
     while (true) {
+        led_peak = decay_pos(led_peak, 20, 2);
         if(led_on){
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 1; i++) {
                 for (int j = i; j < CONFIG_EXAMPLE_STRIP_LED_NUMBER; j += 1) {
-                    // Build RGB values
-                    hue = j * 360 / CONFIG_EXAMPLE_STRIP_LED_NUMBER + start_rgb;
-                    led_strip_hsv2rgb(hue, 100, 100, &red, &green, &blue);
+                    if(j < led_peak){
+                        // Build RGB values
+                        hue = j * 360 / led_peak + start_rgb;
+                        led_strip_hsv2rgb(hue, 100, 100, &red, &green, &blue);
+                    } else {
+                        red = 0; green = 0; blue = 0;
+                    }
                     // Write RGB values to strip driver
                     ESP_ERROR_CHECK(strip->set_pixel(strip, j, red, green, blue));
                 }
@@ -270,6 +301,85 @@ static void led_strip_task(void *pvParameters)
     }
 }
 
+static const char *payload = "Message from ESP32 ";
+static void udp_client_task(void *pvParameters)
+{
+    char rx_buffer[128];
+    char host_ip[] = HOST_IP_ADDR;
+    int addr_family = 0;
+    int ip_protocol = 0;
+    char *udp_op_code = &rx_buffer[0];
+
+    while (1) {
+        struct sockaddr_in dest_addr;
+        dest_addr.sin_addr.s_addr = inet_addr(HOST_IP_ADDR);
+        dest_addr.sin_family = AF_INET;
+        dest_addr.sin_port = htons(UDP_PORT);
+        addr_family = AF_INET;
+        ip_protocol = IPPROTO_IP;
+
+        int sock = socket(addr_family, SOCK_DGRAM, ip_protocol);
+        if (sock < 0) {
+            ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
+            break;
+        }
+        ESP_LOGI(TAG, "Socket created, sending to %s:%d", HOST_IP_ADDR, UDP_PORT);
+
+        int err = sendto(sock, payload, strlen(payload), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+        if (err < 0) {
+            ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+            break;
+        }
+        ESP_LOGI(TAG, "Message sent");
+
+        struct sockaddr_storage source_addr; // Large enough for both IPv4 or IPv6
+        socklen_t socklen = sizeof(source_addr);
+
+        while (1) {
+            int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer) - 1, 0, (struct sockaddr *)&source_addr, &socklen);
+
+            // Error occurred during receiving
+            if (len < 0) {
+                ESP_LOGE(TAG, "recvfrom failed: errno %d", errno);
+                break;
+            }
+            // Data received
+            else {
+                rx_buffer[len] = 0; // Null-terminate whatever we received and treat like a string
+                // ESP_LOGI(TAG, "Received %d bytes from %s:", len, host_ip);
+                // esp_log_buffer_hex(TAG,rx_buffer,len);
+
+                // ESP_LOGI(TAG, "OPCODE:%x",*udp_op_code);
+                switch(*udp_op_code){
+                    case (led_code_pos):
+                        // led_on = true;
+                        led_peak =  (rx_buffer[1] << 0) +
+                                    (rx_buffer[2] << 8) +
+                                    (rx_buffer[3] << 16) +
+                                    (rx_buffer[4] << 24);
+                        if(led_peak > CONFIG_EXAMPLE_STRIP_LED_NUMBER){
+                            led_peak = CONFIG_EXAMPLE_STRIP_LED_NUMBER;
+                        }
+                        // ESP_LOGI(TAG, "Setting peak LED to %d!",led_peak);
+                        break;
+                    default :
+                        ESP_LOGW(TAG, "Unknown UDP op code %x",*udp_op_code);
+                        break;
+                }
+
+            }
+        }
+
+        if (sock != -1) {
+            ESP_LOGE(TAG, "Shutting down socket and restarting...");
+            shutdown(sock, 0);
+            close(sock);
+        }
+    }
+    vTaskDelete(NULL);
+}
+
+
 void app_main(void)
 {
     ESP_ERROR_CHECK(nvs_flash_init());
@@ -280,8 +390,9 @@ void app_main(void)
      * Read "Establishing Wi-Fi or Ethernet Connection" section in
      * examples/protocols/README.md for more information about this function.
      */
-    // ESP_ERROR_CHECK(example_connect());
+    ESP_ERROR_CHECK(example_connect());
 
     // xTaskCreate(tcp_server_task, "tcp_server", 4096, (void*)AF_INET, 5, NULL);
+    xTaskCreate(udp_client_task, "udp_client", 4096, (void*)AF_INET, 5, NULL);
     xTaskCreate(led_strip_task, "led_task", 4096, (void*)AF_INET, 5, NULL);
 }

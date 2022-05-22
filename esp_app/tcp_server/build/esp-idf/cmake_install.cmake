@@ -124,8 +124,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/main/cmake_install.cmake")
   include("C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/protocol_examples_common/cmake_install.cmake")
   include("C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led_strip/cmake_install.cmake")
-  include("C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led_thread/cmake_install.cmake")
-  include("C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/tcp_thread/cmake_install.cmake")
 
 endif()
 
