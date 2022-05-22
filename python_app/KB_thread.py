@@ -13,6 +13,7 @@ def KB_Thread(name,shared_data):
         keydata = keydata.lower()
         if(keydata == 'q'):
             logging.info("Thread %s: Breaking", name)
+            shared_data.led_off_cmd()
             break
 
         elif(keydata == 'on'):
@@ -23,12 +24,7 @@ def KB_Thread(name,shared_data):
             print()
             shared_data.led_off_cmd()
 
-        elif(keydata.isdigit()):
-            print()
-            int_keydata = int(keydata)
-            logging.info("Thread %s: Sending '%d' as led pos", name,int_keydata)
-            shared_data.write_led_pos_cmd(int_keydata)
         else:
             logging.info("Thread %s: Can't process KB input", name)
-    KB_active = False
+
     exit(0)

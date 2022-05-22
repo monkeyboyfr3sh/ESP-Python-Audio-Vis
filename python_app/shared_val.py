@@ -11,7 +11,7 @@ class SharedData:
         self.tcp_barrier = threading.Semaphore(1)
 
         self.tcp_mutex =    threading.Semaphore(1)
-        self.tcp_data =     bytearray(LED_CODE_OFF.to_bytes(1,'little'))
+        self.tcp_data =     bytearray(LED_CODE_ON.to_bytes(1,'little'))
 
         self.udp_mutex =    threading.Semaphore(1)
         self.udp_data =     bytearray(int(0).to_bytes(1,'little'))

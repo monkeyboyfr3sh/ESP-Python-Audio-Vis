@@ -22,6 +22,8 @@ def UDP_Thread(name,shared_data):
 
     got_address = False
 
+    udp_timestamp_ms = shared_data.millis()
+
     # Listen for incoming datagrams
     while(True):
 
@@ -31,9 +33,10 @@ def UDP_Thread(name,shared_data):
             address = bytesAddressPair[1]
             print(address)
             got_address = True
+            logging.info("Thread %s: Sending UDP data to client", name)
 
-        logging.info("Thread %s: Sending UDP data to client", name)
-        
-        # Sending a reply to client
-        UDPServerSocket.sendto(shared_data.udp_data, address)
-        # time.sleep(0.0005)
+        if(shared_data.millis()-udp_timestamp_ms > 5):
+            udp_timestamp_ms = shared_data.millis()
+
+            # Sending a reply to client
+            UDPServerSocket.sendto(shared_data.udp_data, address)
