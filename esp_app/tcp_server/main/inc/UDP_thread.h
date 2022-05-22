@@ -8,6 +8,6 @@
 #define HOST_IP_ADDR "192.168.0.166"
 #define UDP_PORT 20001
 
-// void udp_client_task(void *pvParameters);
+void udp_client_task(void *pvParameters);
 
 #endif

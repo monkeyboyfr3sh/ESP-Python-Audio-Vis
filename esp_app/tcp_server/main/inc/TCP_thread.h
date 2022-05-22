@@ -10,6 +10,6 @@
 #define KEEPALIVE_INTERVAL          5
 #define KEEPALIVE_COUNT             3
 
-// void tcp_server_task(void *pvParameters);
+void tcp_server_task(void *pvParameters);
 
 #endif
