@@ -17,7 +17,6 @@ if __name__ == "__main__":
 
                         datefmt="%H:%M:%S")
 
-
     logging.info("Main    : Creating TCP thread")
     tcp_t = threading.Thread(target=TCP_Thread, args=(1,myData))
     logging.info("Main    : Creating UDP thread")

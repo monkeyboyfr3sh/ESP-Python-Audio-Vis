@@ -3,6 +3,8 @@ import logging
 import socket
 
 def TCP_Thread(name,shared_data):
+
+    # Config thread
     HOST, PORT = "192.168.0.127", 3333
 
     logging.info("Thread %s: starting", name)

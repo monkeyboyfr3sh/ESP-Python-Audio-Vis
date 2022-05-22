@@ -73,6 +73,7 @@ static void do_retransmit(const int sock)
             }
         }
     } while (len > 0);
+    ESP_LOGE(TAG,"TCP thread exiting");
 }
 
 void tcp_server_task(void *pvParameters)

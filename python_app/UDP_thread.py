@@ -3,20 +3,16 @@ import logging
 import socket
 
 def UDP_Thread(name,shared_data):
-    localIP     = "192.168.0.166"
-    localPort   = 20001
-    bufferSize  = 1024 
-
-    CLIENT= "192.168.0.127"
-
-    msgFromServer       = "Hello UDP Client"
-    bytesToSend         = str.encode(msgFromServer)
+    
+    # Config thread 
+    LOCALIP, PORT = "192.168.0.166", 20001
+    BUFFERSIZE  = 1024
 
     # Create a datagram socket
     UDPServerSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 
     # Bind to address and ip
-    UDPServerSocket.bind((localIP, localPort))
+    UDPServerSocket.bind((LOCALIP, PORT))
 
     logging.info("Thread %s: UDP server up and listening", name)
 
@@ -28,7 +24,7 @@ def UDP_Thread(name,shared_data):
     while(True):
 
         if not (got_address):
-            bytesAddressPair = UDPServerSocket.recvfrom(bufferSize)
+            bytesAddressPair = UDPServerSocket.recvfrom(BUFFERSIZE)
             # message = bytesAddressPair[0]
             address = bytesAddressPair[1]
             print(address)
