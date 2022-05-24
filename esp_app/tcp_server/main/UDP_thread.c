@@ -24,6 +24,7 @@
 #include "stdbool.h"
 
 #include "inc/LED_thread.h"
+#include "inc/TCP_thread.h"
 
 static const char *TAG = "udp";
 
@@ -63,6 +64,16 @@ void udp_client_task(void *pvParameters)
         socklen_t socklen = sizeof(source_addr);
 
         while (1) {
+            if(UDP_sync){
+                UDP_sync = false;
+                int err = sendto(sock, payload, strlen(payload), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+                if (err < 0) {
+                    ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+                    break;
+                }
+                ESP_LOGI(TAG, "Message sent");
+            }
+
             int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer) - 1, 0, (struct sockaddr *)&source_addr, &socklen);
 
             // Error occurred during receiving

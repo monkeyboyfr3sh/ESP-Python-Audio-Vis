@@ -2,6 +2,8 @@ import time
 import logging
 import socket
 
+from shared_val import Led_Code
+
 def TCP_Thread(name,shared_data):
 
     # Config thread
@@ -22,5 +24,14 @@ def TCP_Thread(name,shared_data):
                     
                 # sock.sendall(bytes(data + "\n", "utf-8"))
                 sock.sendall(bytes(rx_data))
-                
+
+                try:
+                    print(rx_data)
+                    if(rx_data[0]==Led_Code.READ_NUM_LED.value):
+                        print("number of leds... {}".format(num_led))
+                        num_led = sock.recv(256)
+                        shared_data.num_leds.write_data(num_led)
+                except:
+                    print('err in rx')
+                    pass
     exit(0)

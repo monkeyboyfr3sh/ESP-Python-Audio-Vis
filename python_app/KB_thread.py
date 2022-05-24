@@ -24,6 +24,15 @@ def KB_Thread(name,shared_data):
             print()
             shared_data.led_off_cmd()
 
+        elif(keydata == 'sync'):
+            print()
+            shared_data.led_sync_cmd()
+            shared_data.led_sync_cmd()
+
+        elif(keydata == '?#'):
+            print()
+            shared_data.read_num_led()
+
         else:
             logging.info("Thread %s: Can't process KB input", name)
 

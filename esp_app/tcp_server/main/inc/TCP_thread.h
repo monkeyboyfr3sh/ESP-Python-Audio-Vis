@@ -10,6 +10,8 @@
 #define KEEPALIVE_INTERVAL          5
 #define KEEPALIVE_COUNT             3
 
+extern bool UDP_sync;
+
 void tcp_server_task(void *pvParameters);
 
 #endif

@@ -3,10 +3,14 @@ import time
 import math
 import binascii
 
-LED_CODE_OFF    = 0
-LED_CODE_ON     = 1
-LED_CODE_POS    = 2
-LED_CODE_SYNC   = 2
+import enum
+
+class Led_Code(enum.Enum):
+    OFF            = 0
+    ON             = 1
+    POS            = 2
+    SYNC           = 3
+    READ_NUM_LED   = 4
 
 class DataField:
     def __init__(self,init_data=None,barrier_init=1):
@@ -45,9 +49,11 @@ class DataField:
 
 class SharedData:
     def __init__(self):
-        self.tcp_data = DataField(init_data=bytearray(LED_CODE_ON.to_bytes(1,'little')))
+        self.tcp_data = DataField(init_data=bytearray(Led_Code.ON.value.to_bytes(1,'little')))
         self.udp_data = DataField(init_data=bytearray(int(0).to_bytes(1,'little')))
         self.sound_data = DataField(init_data=0)
+        self.led_sync_signal = DataField(init_data=True)
+        self.num_leds = DataField(init_data=124)
 
     def millis(self):
         return math.floor(time.time() * 1000)
@@ -61,7 +67,7 @@ class SharedData:
 
     def write_led_pos_cmd(self,led_pos):
         try:
-            led_bytes = bytearray(LED_CODE_POS.to_bytes(1,'little'))
+            led_bytes = bytearray(Led_Code.POS.value.to_bytes(1,'little'))
             led_bytes.extend(led_pos.to_bytes(4,'little'))
             udp_cmd = led_bytes
             self.udp_data.write_data(udp_cmd)
@@ -69,15 +75,20 @@ class SharedData:
             pass
     
     def led_off_cmd(self):
-        tcp_cmd = [LED_CODE_OFF]
+        tcp_cmd = [Led_Code.OFF.value]
         self.tcp_data.write_data(tcp_cmd,inc_barrier=True)
 
     def led_on_cmd(self):
-        tcp_cmd = [LED_CODE_ON]
+        tcp_cmd = [Led_Code.ON.value]
         self.tcp_data.write_data(tcp_cmd,inc_barrier=True)
 
     def led_sync_cmd(self):
-        tcp_cmd = [LED_CODE_ON]
+        self.led_sync_signal.write_data(True)
+        tcp_cmd = [Led_Code.SYNC.value]
+        self.tcp_data.write_data(tcp_cmd,inc_barrier=True)
+
+    def read_num_led(self):
+        tcp_cmd = [Led_Code.READ_NUM_LED.value]
         self.tcp_data.write_data(tcp_cmd,inc_barrier=True)
 
     '''

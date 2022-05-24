@@ -16,6 +16,8 @@ typedef enum {
     led_code_off = 0,
     led_code_on,
     led_code_pos,
+    led_code_sync,
+    num_led_read_num_led,
 } led_code_t;
 
 void led_strip_task(void *pvParameters);

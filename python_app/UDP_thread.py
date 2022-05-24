@@ -16,19 +16,18 @@ def UDP_Thread(name,shared_data):
 
     logging.info("Thread %s: UDP server up and listening", name)
 
-    got_address = False
-
     udp_timestamp_ms = shared_data.millis()
 
     # Listen for incoming datagrams
     while(True):
 
-        if not (got_address):
+        if (shared_data.led_sync_signal.read_data()):
+            logging.info("Thread %s: Waiting for client", name)
             bytesAddressPair = UDPServerSocket.recvfrom(BUFFERSIZE)
             # message = bytesAddressPair[0]
             address = bytesAddressPair[1]
             print(address)
-            got_address = True
+            shared_data.led_sync_signal.write_data(False)
             logging.info("Thread %s: Sending UDP data to client", name)
 
         if(shared_data.millis()-udp_timestamp_ms > 5):

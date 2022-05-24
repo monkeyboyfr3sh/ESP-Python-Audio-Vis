@@ -27,6 +27,8 @@
 
 static const char *TAG = "tcp";
 
+bool UDP_sync = true;
+
 static void do_retransmit(const int sock)
 {
     int len;
@@ -66,6 +68,15 @@ static void do_retransmit(const int sock)
                         led_peak = CONFIG_EXAMPLE_STRIP_LED_NUMBER;
                     }
                     ESP_LOGI(TAG, "Setting peak LED to %d!",led_peak);
+                    break;
+                case (led_code_sync):
+                    UDP_sync = true;
+                    break;
+                case (num_led_read_num_led):
+                    rx_buffer[0] = CONFIG_EXAMPLE_STRIP_LED_NUMBER;
+                    for(int i = 0;i<5;i++){
+                        send(sock, rx_buffer, 1, 0);
+                    }
                     break;
                 default :
                     ESP_LOGW(TAG, "Unknown TCP op code %x",*tcp_op_code);
