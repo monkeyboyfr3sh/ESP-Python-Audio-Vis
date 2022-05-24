@@ -17,7 +17,7 @@ def TCP_Thread(name,shared_data):
             sock.connect((HOST, PORT))
 
             while True:
-                rx_data = shared_data.read_tcp_data_barrier()
+                rx_data = shared_data.tcp_data.barrier_read()
                 logging.info("Thread %s: Sending %d bytes", name,len(bytes(rx_data)))
                     
                 # sock.sendall(bytes(data + "\n", "utf-8"))

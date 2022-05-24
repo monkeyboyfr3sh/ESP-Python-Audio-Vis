@@ -35,4 +35,4 @@ def UDP_Thread(name,shared_data):
             udp_timestamp_ms = shared_data.millis()
 
             # Sending a reply to client
-            UDPServerSocket.sendto(shared_data.udp_data, address)
+            UDPServerSocket.sendto(shared_data.udp_data.read_data(), address)

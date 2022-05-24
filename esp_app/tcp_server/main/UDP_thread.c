@@ -91,6 +91,7 @@ void udp_client_task(void *pvParameters)
                         break;
                     default :
                         ESP_LOGW(TAG, "Unknown UDP op code %x",*udp_op_code);
+                        esp_log_buffer_hex(TAG,rx_buffer,len);
                         break;
                 }
 

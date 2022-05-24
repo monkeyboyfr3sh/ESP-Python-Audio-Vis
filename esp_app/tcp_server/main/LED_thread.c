@@ -94,6 +94,17 @@ uint32_t decay_pos(uint32_t pos_set, uint32_t decay_rate_ms, uint32_t decay_coef
     return pos; 
 }
 
+uint32_t derivative_pos(uint32_t wr_pos, float derivative_coef)
+{
+    static uint32_t prev_pos;
+
+    int delta = (prev_pos - wr_pos);
+    uint32_t return_pos  = (uint32_t)(prev_pos - (derivative_coef * ( (float)delta) ) );
+    prev_pos = return_pos;
+
+    return return_pos; 
+}
+
 void led_strip_task(void *pvParameters)
 {
     uint32_t red = 0;
@@ -124,7 +135,9 @@ void led_strip_task(void *pvParameters)
     ESP_LOGI(TAG, "LED Rainbow Chase Start");
 
     while (true) {
+        led_peak = derivative_pos(led_peak, 0.50);
         led_peak = decay_pos(led_peak, 20, 2);
+        
         if(led_on){
             for (int i = 0; i < 1; i++) {
                 for (int j = i; j < CONFIG_EXAMPLE_STRIP_LED_NUMBER; j += 1) {
