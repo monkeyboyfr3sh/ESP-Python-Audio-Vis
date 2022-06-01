@@ -24,10 +24,12 @@
 #include "stdbool.h"
 
 #include "inc/LED_thread.h"
+#include "inc/UDP_thread.h"
 
 static const char *TAG = "tcp";
 
 bool UDP_sync = true;
+bool SET_LED_CNT = false;
 
 static void do_retransmit(const int sock)
 {
@@ -77,6 +79,14 @@ static void do_retransmit(const int sock)
                     for(int i = 0;i<5;i++){
                         send(sock, rx_buffer, 1, 0);
                     }
+                    break;
+                case (num_led_write_num_led):
+                    wr_num_led_cnt =    (rx_buffer[1] << 0) +
+                                        (rx_buffer[2] << 8) +
+                                        (rx_buffer[3] << 16) +
+                                        (rx_buffer[4] << 24);
+                    wr_num_led = true;
+                    
                     break;
                 default :
                     ESP_LOGW(TAG, "Unknown TCP op code %x",*tcp_op_code);

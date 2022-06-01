@@ -11,6 +11,7 @@ class Led_Code(enum.Enum):
     POS            = 2
     SYNC           = 3
     READ_NUM_LED   = 4
+    WRITE_NUM_LED  = 5
 
 class DataField:
     def __init__(self,init_data=None,barrier_init=1):
@@ -54,6 +55,7 @@ class SharedData:
         self.sound_data = DataField(init_data=0)
         self.led_sync_signal = DataField(init_data=True)
         self.num_leds = DataField(init_data=124)
+        self.client_list = DataField(init_data={})
 
     def millis(self):
         return math.floor(time.time() * 1000)
@@ -89,6 +91,11 @@ class SharedData:
 
     def read_num_led(self):
         tcp_cmd = [Led_Code.READ_NUM_LED.value]
+        self.tcp_data.write_data(tcp_cmd,inc_barrier=True)
+
+    def write_num_led(self,num_leds):
+        tcp_cmd = bytearray(Led_Code.WRITE_NUM_LED.value.to_bytes(1,'little'))
+        tcp_cmd.extend(num_leds.to_bytes(4,'little'))
         self.tcp_data.write_data(tcp_cmd,inc_barrier=True)
 
     '''

@@ -12,6 +12,13 @@
     "led_thread.h": "c",
     "tcp_thread.h": "c",
     "udp_thread.h": "c",
-    "*.ipp": "c"
+    "*.ipp": "c",
+    "led_strip.h": "c",
+    "esp_netif.h": "c",
+    "err.h": "c",
+    "nvs_flash.h": "c",
+    "rmt.h": "c",
+    "cerrno": "c",
+    "gpio.h": "c"
   }
 }

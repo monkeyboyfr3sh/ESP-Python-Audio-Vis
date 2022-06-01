@@ -11,6 +11,7 @@
 #define KEEPALIVE_COUNT             3
 
 extern bool UDP_sync;
+extern bool SET_LED_CNT;
 
 void tcp_server_task(void *pvParameters);
 

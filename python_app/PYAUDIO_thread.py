@@ -43,7 +43,8 @@ def PYAUDIO_Thread(name,shared_data):
                     channels=CHANNELS,
                     rate=RATE,
                     input=True,
-                    frames_per_buffer=CHUNK)
+                    frames_per_buffer=CHUNK,
+                    output_device_index = 1)
     
     print_timestamp_ms = shared_data.millis()
     avrg_timestamp_ms = shared_data.millis()
@@ -89,3 +90,8 @@ def PYAUDIO_Thread(name,shared_data):
     stream.stop_stream()
     stream.close()
     p.terminate()
+
+if __name__ == "__main__":
+    p = pyaudio.PyAudio()
+    info = p.get_host_api_info_by_index(0)
+    numdevices = info.get('deviceCount')

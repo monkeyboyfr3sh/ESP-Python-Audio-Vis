@@ -28,6 +28,9 @@ static const char *TAG = "led";
 bool led_on = true;
 uint32_t led_peak = 0;
 
+bool wr_num_led = false;
+uint32_t wr_num_led_cnt = 0;
+
 /* Function Prototypes */
 void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t *g, uint32_t *b);
 uint32_t decay_pos(uint32_t pos_set, uint32_t decay_rate_ms, uint32_t decay_coef);
@@ -105,15 +108,9 @@ uint32_t derivative_pos(uint32_t wr_pos, float derivative_coef)
     return return_pos; 
 }
 
-void led_strip_task(void *pvParameters)
+led_strip_t *update_num_led(uint32_t num_led)
 {
-    uint32_t red = 0;
-    uint32_t green = 0;
-    uint32_t blue = 0;
-    uint16_t hue = 0;
-    uint16_t start_rgb = 0;
-
-    // rmt_config_t config = RMT_DEFAULT_CONFIG_TX(CONFIG_EXAMPLE_RMT_TX_GPIO, RMT_TX_CHANNEL);
+    ESP_LOGI(TAG,"Updating NUM led to %d",num_led);
     rmt_config_t config = RMT_DEFAULT_CONFIG_TX(GPIO_NUM_16, RMT_TX_CHANNEL);
     // set counter clock to 40MHz
     config.clk_div = 2;
@@ -122,19 +119,39 @@ void led_strip_task(void *pvParameters)
     ESP_ERROR_CHECK(rmt_driver_install(config.channel, 0, 0));
 
     // install ws2812 driver
-    led_strip_config_t strip_config = LED_STRIP_DEFAULT_CONFIG(CONFIG_EXAMPLE_STRIP_LED_NUMBER, (led_strip_dev_t)config.channel);
+    led_strip_config_t strip_config = LED_STRIP_DEFAULT_CONFIG(num_led, (led_strip_dev_t)config.channel);
     led_strip_t *strip = led_strip_new_rmt_ws2812(&strip_config);
     if (!strip) {
         ESP_LOGE(TAG, "install WS2812 driver failed");
     }
+
     // Clear LED strip (turn off all LEDs)
     ESP_ERROR_CHECK(strip->clear(strip, 100));
     ESP_ERROR_CHECK(strip->refresh(strip, 0));
+
+    return strip;
+}
+
+void led_strip_task(void *pvParameters)
+{
+    uint32_t red = 0;
+    uint32_t green = 0;
+    uint32_t blue = 0;
+    uint16_t hue = 0;
+    uint16_t start_rgb = 0;
+
+    led_strip_t *strip = update_num_led(CONFIG_EXAMPLE_STRIP_LED_NUMBER);
 
     // Show simple rainbow chasing pattern
     ESP_LOGI(TAG, "LED Rainbow Chase Start");
 
     while (true) {
+        if(wr_num_led){
+            strip->del(strip);
+            strip = update_num_led(CONFIG_EXAMPLE_STRIP_LED_NUMBER);
+            wr_num_led = false;
+        }
+
         led_peak = derivative_pos(led_peak, 0.50);
         led_peak = decay_pos(led_peak, 20, 2);
         

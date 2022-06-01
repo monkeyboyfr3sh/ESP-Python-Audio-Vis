@@ -1,2 +1,2 @@
-idf_component_register(SRCS "LED_thread.c" "UDP_thread.c" "TCP_thread.c" "main.c"
+idf_component_register(SRCS "UDP_thread.c" "TCP_thread.c" "LED_thread.c" "main.c"
                     INCLUDE_DIRS "." "inc/")
