@@ -48,6 +48,33 @@ class DataField:
         except:
             pass
 
+class DictDataField(DataField):
+    def __init__(self,init_data=None,barrier_init=1):
+        DataField.__init__(self,init_data=init_data,barrier_init=barrier_init)
+
+    def dict_write_data(self,key,value):
+        self.mutex.acquire()
+        self.data[key] = value
+        self.mutex.release()
+
+    def dict_read_data(self,key):
+        self.mutex.acquire()
+        read_val = self.data[key]
+        self.mutex.release()
+        return read_val
+
+    def dict_get_dict(self):
+        self.mutex.acquire()
+        read_val = self.data
+        self.mutex.release()
+        return read_val
+    
+    def dict_pop_data(self,key):
+        self.mutex.acquire()
+        pop_val = self.data.pop(key)
+        self.mutex.release()
+        return pop_val
+
 class SharedData:
     def __init__(self):
         self.tcp_data = DataField(init_data=bytearray(Led_Code.ON.value.to_bytes(1,'little')))
@@ -55,7 +82,7 @@ class SharedData:
         self.sound_data = DataField(init_data=0)
         self.led_sync_signal = DataField(init_data=True)
         self.num_leds = DataField(init_data=124)
-        self.client_list = DataField(init_data={})
+        self.client_dict = DictDataField(init_data={})
 
     def millis(self):
         return math.floor(time.time() * 1000)

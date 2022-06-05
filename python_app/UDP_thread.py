@@ -7,8 +7,6 @@ LOCALIP             = "192.168.0.166"
 UDP_STREAM_PER_MS   = 5
 CLEANUP_PER_MS      = 10000
 
-client_dict = {}
-
 def UDP_Streaming_Thread(name,shared_data):
     
     # Config thread 
@@ -37,10 +35,10 @@ def UDP_Streaming_Thread(name,shared_data):
             remove_list = []
 
             try:
-                shared_data.client_list.mutex.acquire()
+                safe_client_dict = shared_data.client_dict.dict_get_dict()
                 # Sending data to client
-                for client in client_dict:
-                    if(shared_data.millis() - client_dict[client] > CLEANUP_PER_MS):
+                for client in safe_client_dict:
+                    if(shared_data.millis() - safe_client_dict[client] > CLEANUP_PER_MS):
                         remove_list.append(client)
                     else:
                         UDPServerSocket.sendto(shared_data.udp_data.read_data(), client)
@@ -48,11 +46,10 @@ def UDP_Streaming_Thread(name,shared_data):
                 # Cleanup
                 for client in remove_list:
                     logging.info("Thread %s: Removing client (%s:%d) from the list",name,client[0],client[1])
-                    client_dict.pop(client)
+                    shared_data.client_dict.dict_pop_data(client)
 
-                shared_data.client_list.mutex.release()
-            except:
-                logging.error("Thread %s: Error accessing client list",name)
+            except Exception as e:
+                logging.error("Thread %s: Error accessing client list... error %s",name,e)
 
 
 def UDP_Listening_Thread(name,shared_data):
@@ -80,13 +77,12 @@ def UDP_Listening_Thread(name,shared_data):
         address = bytesAddressPair[1]
 
         try:
-            shared_data.client_list.mutex.acquire()
-            if not (address in client_dict):
+            if not (address in shared_data.client_dict.dict_get_dict()):
                 logging.info("Thread %s: Adding client (%s:%d) to list",name,address[0],address[1])
             else:
                 logging.debug("Thread %s: Client (%s:%d) already in list",name,address[0],address[1])
             
-            client_dict[address] = shared_data.millis()
-            shared_data.client_list.mutex.release()
-        except:
-            logging.error("Thread %s: Error accessing client list",name)
+            shared_data.client_dict.dict_write_data(address,shared_data.millis())
+
+        except Exception as e:
+            logging.error("Thread %s: Error accessing client list... error %s",name,e)

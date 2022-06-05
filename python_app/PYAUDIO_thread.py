@@ -12,7 +12,7 @@ def inv_cubed(y):
     return y0
 
 def sq_root(y):
-    y0 = np.sqrt(y)
+    y0 = np.sqrt(np.abs(y))
     return y0
 
 class MyCollection:
