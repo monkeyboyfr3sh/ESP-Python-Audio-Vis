@@ -19,9 +19,11 @@ def KB_Thread(name,shared_data):
         elif(keydata == 'on'):
             print()
             shared_data.led_on_cmd()
+            shared_data.led_on_cmd()
         
         elif(keydata == 'off'):
             print()
+            shared_data.led_off_cmd()
             shared_data.led_off_cmd()
 
         elif(keydata == 'sync'):

@@ -1,7 +1,9 @@
-from http import client
-import time
+import threading
 import logging
 import socket
+
+
+from TCP_thread import TCP_Thread
 
 LOCALIP             = "192.168.0.166"
 UDP_STREAM_PER_MS   = 5
@@ -34,22 +36,22 @@ def UDP_Streaming_Thread(name,shared_data):
 
             remove_list = []
 
-            try:
-                safe_client_dict = shared_data.client_dict.dict_get_dict()
-                # Sending data to client
-                for client in safe_client_dict:
-                    if(shared_data.millis() - safe_client_dict[client] > CLEANUP_PER_MS):
-                        remove_list.append(client)
-                    else:
-                        UDPServerSocket.sendto(shared_data.udp_data.read_data(), client)
-                
-                # Cleanup
-                for client in remove_list:
-                    logging.info("Thread %s: Removing client (%s:%d) from the list",name,client[0],client[1])
-                    shared_data.client_dict.dict_pop_data(client)
+            # try:
+            safe_client_dict = shared_data.client_dict.dict_get_dict()
+            # Sending data to client
+            for client in safe_client_dict:
+                if(shared_data.millis() - safe_client_dict[client] > CLEANUP_PER_MS):
+                    remove_list.append(client)
+                else:
+                    UDPServerSocket.sendto(shared_data.udp_data.read_data(), client)
+            
+            # Cleanup
+            for client in remove_list:
+                logging.info("Thread %s: Removing client (%s:%d) from the list",name,client[0],client[1])
+                shared_data.client_dict.dict_pop_data(client)
 
-            except Exception as e:
-                logging.error("Thread %s: Error accessing client list... error %s",name,e)
+            # except Exception as e:
+            #     logging.error("Thread %s: Error accessing client list... error %s",name,e)
 
 
 def UDP_Listening_Thread(name,shared_data):
@@ -79,6 +81,10 @@ def UDP_Listening_Thread(name,shared_data):
         try:
             if not (address in shared_data.client_dict.dict_get_dict()):
                 logging.info("Thread %s: Adding client (%s:%d) to list",name,address[0],address[1])
+                logging.info("Thread %s: Creating TCP thread",name)
+                tcp_t = threading.Thread(target=TCP_Thread, args=(3,shared_data,address[0]))
+                logging.info("Thread %s: Forking TCP thread",name)
+                tcp_t.start()
             else:
                 logging.debug("Thread %s: Client (%s:%d) already in list",name,address[0],address[1])
             

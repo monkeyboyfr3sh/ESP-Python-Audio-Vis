@@ -46,18 +46,7 @@ if __name__ == "__main__":
         kb_t = threading.Thread(target=KB_Thread, args=(2,myData))
         logging.info("Main    : Forking KB thread")
         kb_t.start()
-
-    '''
-
-    TCP thread (client) connects to a server for setting controls
-    
-    '''
-    if(INIT_TCP):
-        logging.info("Main    : Creating TCP thread")
-        tcp_t = threading.Thread(target=TCP_Thread, args=(3,myData))
-        logging.info("Main    : Forking TCP thread")
-        tcp_t.start()
-
+        
     '''
 
     UDP thread (server) outputs audio stream

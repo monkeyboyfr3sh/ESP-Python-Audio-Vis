@@ -65,7 +65,7 @@ class DictDataField(DataField):
 
     def dict_get_dict(self):
         self.mutex.acquire()
-        read_val = self.data
+        read_val = dict(self.data)
         self.mutex.release()
         return read_val
     

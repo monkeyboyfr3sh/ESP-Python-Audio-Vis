@@ -20,21 +20,21 @@
 
 #include "driver/rmt.h"
 #include "led_strip.h"
+#include "inc/utils.h"
 
 #include "stdbool.h"
 
 static const char *TAG = "led";
 
 bool led_on = true;
-uint32_t led_peak = 0;
+int led_peak = 0;
+int show_led_peak = 0;
 
 bool wr_num_led = false;
-uint32_t wr_num_led_cnt = 0;
+int wr_num_led_cnt = 0;
 
 /* Function Prototypes */
 void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t *g, uint32_t *b);
-uint32_t decay_pos(uint32_t pos_set, uint32_t decay_rate_ms, uint32_t decay_coef);
-
 void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t *g, uint32_t *b)
 {
     h %= 360; // h -> [0,360]
@@ -81,33 +81,6 @@ void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t
     }
 }
 
-uint32_t decay_pos(uint32_t pos_set, uint32_t decay_rate_ms, uint32_t decay_coef)
-{
-    static uint32_t timestamp = 0;
-    static uint32_t pos;
-
-    pos = pos_set; 
-    if(pos){
-        if( (xTaskGetTickCount()-timestamp) > pdMS_TO_TICKS(decay_rate_ms) ){
-            timestamp = xTaskGetTickCount();
-            pos -= (pos > decay_coef) ? decay_coef : pos;
-        }
-    }
-
-    return pos; 
-}
-
-uint32_t derivative_pos(uint32_t wr_pos, float derivative_coef)
-{
-    static uint32_t prev_pos;
-
-    int delta = (prev_pos - wr_pos);
-    uint32_t return_pos  = (uint32_t)(prev_pos - (derivative_coef * ( (float)delta) ) );
-    prev_pos = return_pos;
-
-    return return_pos; 
-}
-
 led_strip_t *update_num_led(uint32_t num_led)
 {
     ESP_LOGI(TAG,"Updating NUM led to %d",num_led);
@@ -140,10 +113,25 @@ void led_strip_task(void *pvParameters)
     uint16_t hue = 0;
     uint16_t start_rgb = 0;
 
+    // PID Settings
+    const int Kc = 1.5;
+    const float Tp = 1.25;
+    const float Ti = 1.25;
+    const float Td = 0.25;
+
+    // PID runtime vars
+    int e1 = 0;
+    int e2 = 0;
+    int e3 = 0;
+    int error = 0;
+    int prev_pos = 0;
+
     led_strip_t *strip = update_num_led(CONFIG_EXAMPLE_STRIP_LED_NUMBER);
 
     // Show simple rainbow chasing pattern
     ESP_LOGI(TAG, "LED Rainbow Chase Start");
+
+    uint32_t print_timestamp = xTaskGetTickCount();
 
     while (true) {
         if(wr_num_led){
@@ -152,15 +140,27 @@ void led_strip_task(void *pvParameters)
             wr_num_led = false;
         }
 
-        led_peak = derivative_pos(led_peak, 0.50);
-        led_peak = decay_pos(led_peak, 20, 2);
-        
+        // Calculate PID errors
+        error = led_peak - prev_pos;
+        e1 = proportional_pos(error,Tp);
+        e2 = integral_pos(prev_pos,Ti);
+        e3 = derivative_pos(error, Td);
+
+        // Calculate next LED peak, min should be 0
+        show_led_peak = ( Kc * (e1 + e2 - e3) );
+        show_led_peak = (show_led_peak<0) ? 0 : show_led_peak;
+
+        // Applies natural decay to LEDs
+        show_led_peak = decay_pos(show_led_peak, 20, 2);
+
+        prev_pos = show_led_peak;
+
         if(led_on){
             for (int i = 0; i < 1; i++) {
                 for (int j = i; j < CONFIG_EXAMPLE_STRIP_LED_NUMBER; j += 1) {
-                    if(j < led_peak){
+                    if(j < show_led_peak){
                         // Build RGB values
-                        hue = j * 360 / led_peak + start_rgb;
+                        hue = j * 360 / show_led_peak + start_rgb;
                         led_strip_hsv2rgb(hue, 100, 100, &red, &green, &blue);
                     } else {
                         red = 0; green = 0; blue = 0;

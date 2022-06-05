@@ -15,10 +15,10 @@
 #define CONFIG_EXAMPLE_STRIP_LED_NUMBER (124)
 
 extern bool led_on;
-extern uint32_t led_peak;
+extern int led_peak;
 
 extern bool wr_num_led;
-extern uint32_t wr_num_led_cnt;
+extern int wr_num_led_cnt;
 
 typedef enum {
     led_code_off = 0,
