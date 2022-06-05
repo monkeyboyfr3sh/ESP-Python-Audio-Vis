@@ -114,13 +114,14 @@ void udp_streaming_client_task(void *pvParameters)
                 switch(*udp_op_code){
                     case (led_code_pos):
 
-                        led_peak =  (rx_buffer[1] << 0) +
+                        wr_led_peak =  (rx_buffer[1] << 0) +
                                     (rx_buffer[2] << 8) +
                                     (rx_buffer[3] << 16) +
                                     (rx_buffer[4] << 24);
-                        if(led_peak > CONFIG_EXAMPLE_STRIP_LED_NUMBER){
-                            led_peak = CONFIG_EXAMPLE_STRIP_LED_NUMBER;
+                        if(wr_led_peak > CONFIG_EXAMPLE_STRIP_LED_NUMBER){
+                            wr_led_peak = CONFIG_EXAMPLE_STRIP_LED_NUMBER;
                         }
+                        wr_led_peak_timestamp = xTaskGetTickCount();
 
                         break;
                     default :

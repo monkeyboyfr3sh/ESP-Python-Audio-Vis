@@ -26,7 +26,7 @@ def TCP_Thread(name,shared_data,server_ip):
                     # sock.sendall(bytes(data + "\n", "utf-8"))
                     sock.sendall(bytes(rx_data))
 
-        except:
-            logging.info("Thread %s: failed to connect, please try again!", name)
+        except Exception as e:
+            logging.info("Thread %s: failed to connect, please try again! error %s",name,e)
             break
     exit(0)

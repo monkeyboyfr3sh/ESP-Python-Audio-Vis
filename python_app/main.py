@@ -4,7 +4,6 @@ import threading
 from shared_val import SharedData
 
 # Select threads to fork
-INIT_TCP = True
 INIT_UDP = True
 INIT_KB = True
 INIT_PA = True
@@ -18,6 +17,7 @@ from PYAUDIO_thread import PYAUDIO_Thread
 if __name__ == "__main__":
 
     myData = SharedData()
+    myData.num_threads.data = 4
 
     format = "%(asctime)s: %(message)s"
 
@@ -46,7 +46,7 @@ if __name__ == "__main__":
         kb_t = threading.Thread(target=KB_Thread, args=(2,myData))
         logging.info("Main    : Forking KB thread")
         kb_t.start()
-        
+
     '''
 
     UDP thread (server) outputs audio stream
@@ -54,16 +54,13 @@ if __name__ == "__main__":
     '''
     if(INIT_UDP):
         logging.info("Main    : Creating UDP streaming thread")
-        udp_t = threading.Thread(target=UDP_Streaming_Thread, args=(4,myData))
+        udp_t = threading.Thread(target=UDP_Streaming_Thread, args=(3,myData))
         logging.info("Main    : Forking UDP streaming thread")
         udp_t.start()
 
         logging.info("Main    : Creating UDP listening thread")
-        udp_t = threading.Thread(target=UDP_Listening_Thread, args=(5,myData))
+        udp_t = threading.Thread(target=UDP_Listening_Thread, args=(4,myData))
         logging.info("Main    : Forking UDP listening thread")
         udp_t.start()
-
-    # logging.info("Main    : Waiting for TCP Thread to finish")
-    # x.join()
 
     logging.info("Main    : all done")

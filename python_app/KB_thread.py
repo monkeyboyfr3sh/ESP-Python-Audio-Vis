@@ -38,6 +38,13 @@ def KB_Thread(name,shared_data):
         elif(keydata == 'wr#'):
             print()
             shared_data.write_num_led(100)
+
+        elif(keydata == 'ls clients'):
+            safe_client_dict = shared_data.client_dict.dict_get_dict()
+            logging.info("Thread %s: Listing client threads", name)
+            for client in safe_client_dict:
+                logging.info("Thread %s: Client: %s:%d", name,client[0],client[1])
+            print()
             
         else:
             logging.info("Thread %s: Can't process KB input", name)

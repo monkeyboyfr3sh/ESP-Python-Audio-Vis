@@ -15,7 +15,8 @@
 #define CONFIG_EXAMPLE_STRIP_LED_NUMBER (124)
 
 extern bool led_on;
-extern int led_peak;
+extern int wr_led_peak;
+extern uint32_t wr_led_peak_timestamp;
 
 extern bool wr_num_led;
 extern int wr_num_led_cnt;

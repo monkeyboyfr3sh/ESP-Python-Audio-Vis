@@ -79,10 +79,14 @@ class SharedData:
     def __init__(self):
         self.tcp_data = DataField(init_data=bytearray(Led_Code.ON.value.to_bytes(1,'little')))
         self.udp_data = DataField(init_data=bytearray(int(0).to_bytes(1,'little')))
+
         self.sound_data = DataField(init_data=0)
+
         self.led_sync_signal = DataField(init_data=True)
         self.num_leds = DataField(init_data=124)
+
         self.client_dict = DictDataField(init_data={})
+        self.num_threads = DataField(init_data=0)
 
     def millis(self):
         return math.floor(time.time() * 1000)

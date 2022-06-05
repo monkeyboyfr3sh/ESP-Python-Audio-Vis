@@ -60,17 +60,6 @@ static void do_retransmit(const int sock)
                     ESP_LOGI(TAG, "Turing LEDs ON!");
                     led_on = true;
                     break;
-                case (led_code_pos):
-                    // led_on = true;
-                    led_peak =  (rx_buffer[1] << 0) +
-                                (rx_buffer[2] << 8) +
-                                (rx_buffer[3] << 16) +
-                                (rx_buffer[4] << 24);
-                    if(led_peak > CONFIG_EXAMPLE_STRIP_LED_NUMBER){
-                        led_peak = CONFIG_EXAMPLE_STRIP_LED_NUMBER;
-                    }
-                    ESP_LOGI(TAG, "Setting peak LED to %d!",led_peak);
-                    break;
                 case (led_code_sync):
                     UDP_sync = true;
                     break;

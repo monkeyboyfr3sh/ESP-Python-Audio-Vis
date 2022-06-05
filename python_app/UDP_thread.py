@@ -81,10 +81,16 @@ def UDP_Listening_Thread(name,shared_data):
         try:
             if not (address in shared_data.client_dict.dict_get_dict()):
                 logging.info("Thread %s: Adding client (%s:%d) to list",name,address[0],address[1])
+                shared_data.num_threads.mutex.acquire()
+                shared_data.num_threads.data += 1
+                shared_data.num_threads.mutex.release()
+                
                 logging.info("Thread %s: Creating TCP thread",name)
-                tcp_t = threading.Thread(target=TCP_Thread, args=(3,shared_data,address[0]))
-                logging.info("Thread %s: Forking TCP thread",name)
+                ThreadID = shared_data.num_threads.read_data()+1
+                tcp_t = threading.Thread(target=TCP_Thread, args=(ThreadID,shared_data,address[0]))
+                logging.info("Thread %s: Forking TCP thread with id %d",name,ThreadID)
                 tcp_t.start()
+                shared_data.num_threads.write_data(ThreadID)
             else:
                 logging.debug("Thread %s: Client (%s:%d) already in list",name,address[0],address[1])
             

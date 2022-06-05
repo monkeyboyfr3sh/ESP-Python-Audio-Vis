@@ -27,8 +27,9 @@
 static const char *TAG = "led";
 
 bool led_on = true;
-int led_peak = 0;
+int wr_led_peak = 0;
 int show_led_peak = 0;
+uint32_t wr_led_peak_timestamp = 0;
 
 bool wr_num_led = false;
 int wr_num_led_cnt = 0;
@@ -140,18 +141,20 @@ void led_strip_task(void *pvParameters)
             wr_num_led = false;
         }
 
-        // Calculate PID errors
-        error = led_peak - prev_pos;
-        e1 = proportional_pos(error,Tp);
-        e2 = integral_pos(prev_pos,Ti);
-        e3 = derivative_pos(error, Td);
+        if(xTaskGetTickCount()-wr_led_peak_timestamp < pdMS_TO_TICKS(50)){
+            // Calculate PID errors
+            error = wr_led_peak - prev_pos;
+            e1 = proportional_pos(error,Tp);
+            e2 = integral_pos(prev_pos,Ti);
+            e3 = derivative_pos(error, Td);
 
-        // Calculate next LED peak, min should be 0
-        show_led_peak = ( Kc * (e1 + e2 - e3) );
-        show_led_peak = (show_led_peak<0) ? 0 : show_led_peak;
-
-        // Applies natural decay to LEDs
-        show_led_peak = decay_pos(show_led_peak, 20, 2);
+            // Calculate next LED peak, min should be 0
+            show_led_peak = ( Kc * (e1 + e2 - e3) );
+            show_led_peak = (show_led_peak<0) ? 0 : show_led_peak;
+        } else {
+            // Applies natural decay to LEDs
+            show_led_peak = decay_pos(prev_pos, 20, 2);
+        }
 
         prev_pos = show_led_peak;
 
