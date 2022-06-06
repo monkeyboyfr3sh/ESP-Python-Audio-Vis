@@ -30,22 +30,28 @@ class MyCollection:
 def PYAUDIO_Thread(name,shared_data):
 
     # Config thread
+    DEVICE_INDEX = 4
+    p = pyaudio.PyAudio()
+    dev = p.get_device_info_by_index(DEVICE_INDEX)
+
+    logging.info("Thread %s: Using audio device as input: %s",name,dev['name'])
+
     CHUNK = 1024
     FORMAT = pyaudio.paInt16
-    CHANNELS = 2
-    RATE = 44100
+    CHANNELS = int(dev['maxInputChannels'])
+    RATE = int(dev['defaultSampleRate'])
     AVRG_PER_MS = 500
     AVRG_WIN_SIZE = 500
     RATIO_COEF = 2
-    p = pyaudio.PyAudio()
+
 
     stream = p.open(format=FORMAT,
                     channels=CHANNELS,
                     rate=RATE,
                     input=True,
                     frames_per_buffer=CHUNK,
-                    output_device_index = 1)
-    
+                    input_device_index = DEVICE_INDEX)
+
     print_timestamp_ms = shared_data.millis()
     avrg_timestamp_ms = shared_data.millis()
 
@@ -93,5 +99,27 @@ def PYAUDIO_Thread(name,shared_data):
 
 if __name__ == "__main__":
     p = pyaudio.PyAudio()
-    info = p.get_host_api_info_by_index(0)
-    numdevices = info.get('deviceCount')
+    for i in range(p.get_device_count()):
+        dev = p.get_device_info_by_index(i)
+        print((i,dev['name'],dev['index'],dev['defaultSampleRate'],dev['maxInputChannels'],dev['maxOutputChannels']))
+
+    DEVICE_INDEX = 4
+    dev = p.get_device_info_by_index(DEVICE_INDEX)
+
+    # logging.info("Thread %s: Using audio device as input: %s",name,dev['name'])
+
+    CHUNK = 1024
+    FORMAT = pyaudio.paInt16
+    CHANNELS = int(dev['maxInputChannels'])
+    RATE = int(dev['defaultSampleRate'])
+    AVRG_PER_MS = 500
+    AVRG_WIN_SIZE = 500
+    RATIO_COEF = 2
+
+
+    stream = p.open(format=FORMAT,
+                    channels=CHANNELS,
+                    rate=RATE,
+                    input=True,
+                    frames_per_buffer=CHUNK,
+                    input_device_index = DEVICE_INDEX)

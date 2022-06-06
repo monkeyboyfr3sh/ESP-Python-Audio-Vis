@@ -78,15 +78,11 @@ void udp_streaming_client_task(void *pvParameters)
         if (sock < 0) {
             ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
         }
-        ESP_LOGI(TAG, "Socket created, sending to %s:%d", HOST_IP_ADDR, UDP_PORT);
-        
-        udp_write_hello(sock);
 
         // Now begin receiving data stream
         struct sockaddr_storage source_addr; // Large enough for both IPv4 or IPv6
         socklen_t socklen = sizeof(source_addr);
 
-        uint32_t hello_timestamp = xTaskGetTickCount();
         while (1) {
 
             // Delete port and resync

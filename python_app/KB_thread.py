@@ -2,6 +2,8 @@ import time
 import logging
 import socket
 
+TRY_COUNT = 2
+
 def KB_Thread(name,shared_data):
     
     logging.info("Thread %s: starting", name)
@@ -18,26 +20,27 @@ def KB_Thread(name,shared_data):
 
         elif(keydata == 'on'):
             print()
-            shared_data.led_on_cmd()
-            shared_data.led_on_cmd()
+            for i in range(TRY_COUNT):
+                shared_data.led_on_cmd()
         
         elif(keydata == 'off'):
             print()
-            shared_data.led_off_cmd()
-            shared_data.led_off_cmd()
+            for i in range(TRY_COUNT):
+                shared_data.led_off_cmd()
 
         elif(keydata == 'sync'):
             print()
-            for i in range(3):
-                shared_data.led_sync_cmd()
+            shared_data.led_sync_cmd()
 
         elif(keydata == 'rd#'):
             print()
-            shared_data.read_num_led()
+            for i in range(TRY_COUNT):
+                shared_data.read_num_led()
 
         elif(keydata == 'wr#'):
             print()
-            shared_data.write_num_led(100)
+            for i in range(TRY_COUNT):
+                shared_data.write_num_led(100)
 
         elif(keydata == 'ls clients'):
             safe_client_dict = shared_data.client_dict.dict_get_dict()
