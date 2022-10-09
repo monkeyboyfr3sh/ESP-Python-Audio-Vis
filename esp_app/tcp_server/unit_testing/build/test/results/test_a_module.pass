@@ -1,0 +1,34 @@
+---
+:source:
+  :path: test
+  :file: test_a_module.c
+:successes:
+- :test: test_p_0
+  :line: 17
+  :message: ''
+  :unity_test_time: 0
+- :test: test_p_1
+  :line: 30
+  :message: ''
+  :unity_test_time: 0
+- :test: test_p_2
+  :line: 43
+  :message: ''
+  :unity_test_time: 0
+- :test: test_p_3
+  :line: 56
+  :message: ''
+  :unity_test_time: 0
+- :test: test_p_4
+  :line: 69
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 5
+  :passed: 5
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.041899800000010146

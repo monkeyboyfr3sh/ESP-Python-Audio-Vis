@@ -50,7 +50,7 @@ void udp_write_hello(int sock)
     if (err < 0) {
         ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
     }
-    ESP_LOGI(TAG, "Hello message sent");
+    // ESP_LOGI(TAG, "Hello message sent");
 }
 
 void udp_hello_client_task(void *pvParameters)

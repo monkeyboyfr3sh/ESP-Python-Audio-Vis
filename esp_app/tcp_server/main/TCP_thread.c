@@ -81,6 +81,7 @@ static void do_retransmit(const int sock)
                     ESP_LOGW(TAG, "Unknown TCP op code %x",*tcp_op_code);
                     break;
             }
+            printf("\r\n");
         }
     } while (len > 0);
     ESP_LOGE(TAG,"TCP thread exiting");

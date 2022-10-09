@@ -29,18 +29,18 @@ static const char *TAG = "audio-vis";
 
 void app_main(void)
 {
-    ESP_ERROR_CHECK(nvs_flash_init());
-    ESP_ERROR_CHECK(esp_netif_init());
-    ESP_ERROR_CHECK(esp_event_loop_create_default());
+    // ESP_ERROR_CHECK(nvs_flash_init());
+    // ESP_ERROR_CHECK(esp_netif_init());
+    // ESP_ERROR_CHECK(esp_event_loop_create_default());
 
-    /* This helper function configures Wi-Fi or Ethernet, as selected in menuconfig.
-     * Read "Establishing Wi-Fi or Ethernet Connection" section in
-     * examples/protocols/README.md for more information about this function.
-     */
-    ESP_ERROR_CHECK(example_connect());
+    // /* This helper function configures Wi-Fi or Ethernet, as selected in menuconfig.
+    //  * Read "Establishing Wi-Fi or Ethernet Connection" section in
+    //  * examples/protocols/README.md for more information about this function.
+    //  */
+    // ESP_ERROR_CHECK(example_connect());
 
-    xTaskCreate(tcp_server_task, "tcp_server", 4096, (void*)AF_INET, 5, NULL);
-    xTaskCreate(udp_streaming_client_task, "udp_streaming_client", 4096, (void*)AF_INET, 5, NULL);
-    xTaskCreate(udp_hello_client_task, "udp_hello_client", 4096, (void*)AF_INET, 5, NULL);
+    // xTaskCreate(tcp_server_task, "tcp_server", 4096, (void*)AF_INET, 5, NULL);
+    // xTaskCreate(udp_streaming_client_task, "udp_streaming_client", 4096, (void*)AF_INET, 5, NULL);
+    // xTaskCreate(udp_hello_client_task, "udp_hello_client", 4096, (void*)AF_INET, 5, NULL);
     xTaskCreate(led_strip_task, "led_task", 2048, (void*)AF_INET, 5, NULL);
 }

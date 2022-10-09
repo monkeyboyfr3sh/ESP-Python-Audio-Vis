@@ -1,3 +1,8 @@
+'''
+    Run from terminal:
+    python.exe c:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/python_app/main.py
+    conda activate pytorch; C:/Users/david/anaconda3/envs/pytorch/python.exe c:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/python_app/main.py
+'''
 import logging
 import threading
 
@@ -22,7 +27,6 @@ if __name__ == "__main__":
     format = "%(asctime)s: %(message)s"
 
     logging.basicConfig(format=format, level=logging.INFO,
-
                         datefmt="%H:%M:%S")
 
     '''

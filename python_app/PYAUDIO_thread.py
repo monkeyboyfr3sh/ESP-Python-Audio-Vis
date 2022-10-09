@@ -2,6 +2,7 @@ import time
 import logging
 
 import pyaudio
+import wave
 import audioop
 import numpy as np
 from collections import deque
@@ -40,10 +41,13 @@ def PYAUDIO_Thread(name,shared_data):
     FORMAT = pyaudio.paInt16
     CHANNELS = int(dev['maxInputChannels'])
     RATE = int(dev['defaultSampleRate'])
+    # CHUNK = 1024
+    # FORMAT = pyaudio.paInt16
+    # RATE = 44100
+
     AVRG_PER_MS = 500
     AVRG_WIN_SIZE = 500
     RATIO_COEF = 2
-
 
     stream = p.open(format=FORMAT,
                     channels=CHANNELS,
@@ -86,10 +90,10 @@ def PYAUDIO_Thread(name,shared_data):
         pixels = np.abs((percent*124) * (ratio*RATIO_COEF))
         pixels = np.min((np.floor(pixels),255)).astype('byte')
 
-        # # Print at interval
-        # if(shared_data.millis() - print_timestamp_ms > 50):
-        #     print_timestamp_ms = shared_data.millis()
-        #     print('RMS: {}; MAX: {}; RATIO: {}; Pixels: {}, '.format(rms,max,ratio,pixels))
+        # Print at interval
+        if(shared_data.millis() - print_timestamp_ms > 50):
+            print_timestamp_ms = shared_data.millis()
+            print('RMS: {}; MAX: {}; RATIO: {}; Pixels: {}, '.format(rms,max,ratio,pixels))
 
         shared_data.write_sound_data(pixels)
 
@@ -103,23 +107,61 @@ if __name__ == "__main__":
         dev = p.get_device_info_by_index(i)
         print((i,dev['name'],dev['index'],dev['defaultSampleRate'],dev['maxInputChannels'],dev['maxOutputChannels']))
 
-    DEVICE_INDEX = 4
-    dev = p.get_device_info_by_index(DEVICE_INDEX)
+    # DEVICE_INDEX = 4
+    # dev = p.get_device_info_by_index(DEVICE_INDEX)
 
-    # logging.info("Thread %s: Using audio device as input: %s",name,dev['name'])
+    # # logging.info("Thread %s: Using audio device as input: %s",name,dev['name'])
+
+    # CHUNK = 1024
+    # FORMAT = pyaudio.paInt16
+    # CHANNELS = int(dev['maxInputChannels'])
+    # RATE = int(dev['defaultSampleRate'])
+    # AVRG_PER_MS = 500
+    # AVRG_WIN_SIZE = 500
+    # RATIO_COEF = 2
+
+    # stream = p.open(format=FORMAT,
+    #                 channels=CHANNELS,
+    #                 rate=RATE,
+    #                 input=True,
+    #                 frames_per_buffer=CHUNK,
+                    # input_device_index = DEVICE_INDEX)
 
     CHUNK = 1024
     FORMAT = pyaudio.paInt16
-    CHANNELS = int(dev['maxInputChannels'])
-    RATE = int(dev['defaultSampleRate'])
-    AVRG_PER_MS = 500
-    AVRG_WIN_SIZE = 500
-    RATIO_COEF = 2
+    CHANNELS = 2
+    RATE = 44100
+    RECORD_SECONDS = 5
+    WAVE_OUTPUT_FILENAME = "output.wav"
 
+    p = pyaudio.PyAudio()
+
+    SPEAKERS = p.get_default_output_device_info()["hostApi"] #The part I have modified
 
     stream = p.open(format=FORMAT,
                     channels=CHANNELS,
                     rate=RATE,
                     input=True,
                     frames_per_buffer=CHUNK,
-                    input_device_index = DEVICE_INDEX)
+                    input_host_api_specific_stream_info=SPEAKERS) #The part I have modified
+
+    print("* recording")
+
+    frames = []
+
+    for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
+        data = stream.read(CHUNK)
+        frames.append(data)
+
+    print("* done recording")
+
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+
+    wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+    wf.setnchannels(CHANNELS)
+    wf.setsampwidth(p.get_sample_size(FORMAT))
+    wf.setframerate(RATE)
+    wf.writeframes(b''.join(frames))
+    wf.close()

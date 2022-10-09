@@ -134,6 +134,27 @@ void led_strip_task(void *pvParameters)
 
     uint32_t print_timestamp = xTaskGetTickCount();
 
+    while(1){
+
+        for (int i = 0; i < 1; i++) {
+            for (int j = i; j < CONFIG_EXAMPLE_STRIP_LED_NUMBER; j += 1) {
+                
+                // Build RGB values
+                hue = j * 360 + start_rgb;
+                led_strip_hsv2rgb(hue, 100, 100, &red, &green, &blue);
+
+                // Write RGB values to strip driver
+                ESP_ERROR_CHECK(strip->set_pixel(strip, j, red, green, blue));
+            }
+            // Flush RGB values to LEDs
+            ESP_ERROR_CHECK(strip->refresh(strip, 0));
+        }
+        start_rgb += 60;
+
+        vTaskDelay(pdMS_TO_TICKS(EXAMPLE_CHASE_SPEED_MS));
+
+    }
+
     while (true) {
         if(wr_num_led){
             strip->del(strip);

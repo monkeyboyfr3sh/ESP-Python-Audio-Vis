@@ -20,6 +20,16 @@
     "rmt.h": "c",
     "cerrno": "c",
     "gpio.h": "c",
-    "utils.h": "c"
+    "utils.h": "c",
+    "chrono": "c",
+    "codecvt": "c",
+    "xlocale": "c",
+    "a_module.h": "c",
+    "stdio.h": "c",
+    "regex": "c",
+    "unity.h": "c",
+    "stdint.h": "c",
+    "adc.h": "c",
+    "random": "c"
   }
 }

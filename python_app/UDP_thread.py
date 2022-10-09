@@ -5,7 +5,7 @@ import socket
 
 from TCP_thread import TCP_Thread
 
-LOCALIP             = "192.168.0.166"
+LOCALIP             = "192.168.0.160"
 UDP_STREAM_PER_MS   = 5
 CLEANUP_PER_MS      = 10000
 
