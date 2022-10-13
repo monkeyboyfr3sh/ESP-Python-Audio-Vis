@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="13939600541512929691">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="udp_write_hello" lineNumber="42"/>
+    <functiondecl functionName="udp_hello_client_task" lineNumber="56"/>
+    <functiondecl functionName="udp_streaming_client_task" lineNumber="71"/>
+    <functioncall functionName="AF_INET"/>
+    <functioncall functionName="ESP_LOGE"/>
+    <functioncall functionName="ESP_LOGI"/>
+    <functioncall functionName="ESP_LOGW"/>
+    <functioncall functionName="IPPROTO_IP"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="SOCK_DGRAM"/>
+    <functioncall functionName="TAG"/>
+    <functioncall functionName="UDP_sync"/>
+    <functioncall functionName="addr_family"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="case"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dest_addr"/>
+    <functioncall functionName="errno"/>
+    <functioncall functionName="esp_log_buffer_hex"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="hello_timestamp"/>
+    <functioncall functionName="htons"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inet_addr"/>
+    <functioncall functionName="ip_protocol"/>
+    <functioncall functionName="led_code_on"/>
+    <functioncall functionName="led_code_pos"/>
+    <functioncall functionName="led_code_sync"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="num_led_read_num_led"/>
+    <functioncall functionName="num_led_write_num_led"/>
+    <functioncall functionName="payload"/>
+    <functioncall functionName="pdMS_TO_TICKS"/>
+    <functioncall functionName="recvfrom"/>
+    <functioncall functionName="rx_buffer"/>
+    <functioncall functionName="sendto"/>
+    <functioncall functionName="shutdown"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sock"/>
+    <functioncall functionName="socket"/>
+    <functioncall functionName="socklen"/>
+    <functioncall functionName="source_addr"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="udp_write_hello"/>
+    <functioncall functionName="vTaskDelay"/>
+    <functioncall functionName="vTaskDelete"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="wr_led_peak"/>
+    <functioncall functionName="xTaskGetTickCount"/>
+  </FileInfo>
+</analyzerinfo>

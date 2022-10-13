@@ -1,0 +1,5 @@
+LED_thread.a1::../main/LED_thread.c
+TCP_thread.a1::../main/TCP_thread.c
+UDP_thread.a1::../main/UDP_thread.c
+main.a1::../main/main.c
+utils.a1::../main/utils.c

@@ -1,0 +1,2 @@
+do_retransmit global:[TAG,UDP_sync,led_on,wr_num_led,wr_num_led_cnt] call:[ESP_LOGE,ESP_LOGI,ESP_LOGW,case,esp_log_buffer_hex,printf,recv,send,sizeof,while] noreturn:[ESP_LOGE,ESP_LOGW,printf,send]
+tcp_server_task global:[TAG] call:[ESP_LOGE,ESP_LOGI,accept,bind,close,do_retransmit,htonl,htons,inet_ntoa_r,listen,setsockopt,shutdown,sizeof,socket,vTaskDelete] noreturn:[close,inet_ntoa_r,vTaskDelete]

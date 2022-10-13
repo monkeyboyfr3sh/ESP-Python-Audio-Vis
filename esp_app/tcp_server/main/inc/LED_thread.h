@@ -11,8 +11,8 @@
 
 #define RMT_TX_CHANNEL RMT_CHANNEL_0
 
-#define EXAMPLE_CHASE_SPEED_MS          (50)
-#define CONFIG_EXAMPLE_STRIP_LED_NUMBER (124)
+#define EXAMPLE_CHASE_SPEED_MS          (10)
+#define CONFIG_EXAMPLE_STRIP_LED_NUMBER (256)
 
 extern bool led_on;
 extern int wr_led_peak;

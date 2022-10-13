@@ -5,3 +5,7 @@ src/adc.c:
 - TEST
 src/utils.c:
 - TEST
+"../main/utils.c":
+- TEST
+"../main/src/utils.c":
+- TEST

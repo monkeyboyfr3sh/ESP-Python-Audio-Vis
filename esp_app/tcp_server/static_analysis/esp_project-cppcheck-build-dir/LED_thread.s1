@@ -1,0 +1,3 @@
+led_strip_hsv2rgb
+update_num_led global:[TAG] call:[ESP_ERROR_CHECK,ESP_LOGE,ESP_LOGI,LED_STRIP_DEFAULT_CONFIG,RMT_DEFAULT_CONFIG_TX,clear,led_strip_new_rmt_ws2812,refresh,rmt_config,rmt_driver_install] noreturn:[ESP_LOGE]
+led_strip_task global:[TAG,led_on,show_led_peak,wr_led_peak,wr_led_peak_timestamp,wr_num_led] call:[ESP_ERROR_CHECK,ESP_LOGI,clear,decay_pos,del,derivative_pos,integral_pos,led_strip_hsv2rgb,pdMS_TO_TICKS,proportional_pos,refresh,set_pixel,update_num_led,vTaskDelay,xTaskGetTickCount] noreturn:[ESP_ERROR_CHECK,decay_pos,led_strip_hsv2rgb,vTaskDelay]

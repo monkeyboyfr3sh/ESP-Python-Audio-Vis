@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="1984218190941940901">
+        <error id="unreadVariable" severity="style" msg="Variable &apos;level&apos; is assigned a value that is never used." verbose="Variable &apos;level&apos; is assigned a value that is never used." cwe="563" file0="../main/TCP_thread.c">
+            <location file="..\main\TCP_thread.c" line="38" column="13"/>
+            <symbol>level</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="do_retransmit" lineNumber="34"/>
+    <functiondecl functionName="tcp_server_task" lineNumber="90"/>
+    <functioncall functionName="AF_INET"/>
+    <functioncall functionName="CLEAN_UP"/>
+    <functioncall functionName="ESP_LOGE"/>
+    <functioncall functionName="ESP_LOGI"/>
+    <functioncall functionName="ESP_LOGW"/>
+    <functioncall functionName="INADDR_ANY"/>
+    <functioncall functionName="IPPROTO_IP"/>
+    <functioncall functionName="IPPROTO_TCP"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="SOCK_STREAM"/>
+    <functioncall functionName="SOL_SOCKET"/>
+    <functioncall functionName="SO_KEEPALIVE"/>
+    <functioncall functionName="SO_REUSEADDR"/>
+    <functioncall functionName="TAG"/>
+    <functioncall functionName="TCP_KEEPCNT"/>
+    <functioncall functionName="TCP_KEEPIDLE"/>
+    <functioncall functionName="TCP_KEEPINTVL"/>
+    <functioncall functionName="accept"/>
+    <functioncall functionName="addr_family"/>
+    <functioncall functionName="addr_len"/>
+    <functioncall functionName="addr_str"/>
+    <functioncall functionName="bind"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="case"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dest_addr"/>
+    <functioncall functionName="do_retransmit"/>
+    <functioncall functionName="errno"/>
+    <functioncall functionName="esp_log_buffer_hex"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="htonl"/>
+    <functioncall functionName="htons"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inet_ntoa_r"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="ip_protocol"/>
+    <functioncall functionName="keepAlive"/>
+    <functioncall functionName="keepCount"/>
+    <functioncall functionName="keepIdle"/>
+    <functioncall functionName="keepInterval"/>
+    <functioncall functionName="led_code_off"/>
+    <functioncall functionName="led_code_on"/>
+    <functioncall functionName="led_code_pos"/>
+    <functioncall functionName="led_code_sync"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="listen"/>
+    <functioncall functionName="listen_sock"/>
+    <functioncall functionName="num_led_read_num_led"/>
+    <functioncall functionName="num_led_write_num_led"/>
+    <functioncall functionName="opt"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="pvParameters"/>
+    <functioncall functionName="recv"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rx_buffer"/>
+    <functioncall functionName="send"/>
+    <functioncall functionName="setsockopt"/>
+    <functioncall functionName="shutdown"/>
+    <functioncall functionName="sin_addr"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sock"/>
+    <functioncall functionName="socket"/>
+    <functioncall functionName="source_addr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="vTaskDelete"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

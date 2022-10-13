@@ -15,6 +15,7 @@ extern void test_p_1(void);
 extern void test_p_2(void);
 extern void test_p_3(void);
 extern void test_p_4(void);
+extern void test_add_0(void);
 
 
 /*=======Mock Management=====*/
@@ -84,6 +85,7 @@ int main(void)
   run_test(test_p_2, "test_p_2", 43);
   run_test(test_p_3, "test_p_3", 56);
   run_test(test_p_4, "test_p_4", 69);
+  run_test(test_add_0, "test_add_0", 88);
 
   return UnityEnd();
 }

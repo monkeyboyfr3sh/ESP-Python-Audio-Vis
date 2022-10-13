@@ -30,6 +30,14 @@
     "unity.h": "c",
     "stdint.h": "c",
     "adc.h": "c",
-    "random": "c"
+    "random": "c",
+    "task.h": "c",
+    "unit_test_def.h": "c",
+    "format": "c",
+    "complex": "c",
+    "esp_event.h": "c",
+    "stdarg.h": "c",
+    "esp_log.h": "c",
+    "queue": "c"
   }
 }

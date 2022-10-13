@@ -34,7 +34,9 @@
     - +:test/**
     - -:test/support
   :source:
-    - src/**
+    - ../main/main.c
+    - ../main/src/**
+    - ../main/inc/**
   :support:
     - test/support
   :libraries: []
@@ -96,6 +98,7 @@
   :load_paths:
     - "#{Ceedling.load_path}"
   :enabled:
+    - gcov
     - stdout_pretty_tests_report
     - module_generator
 ...

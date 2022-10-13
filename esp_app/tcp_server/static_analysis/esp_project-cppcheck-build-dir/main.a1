@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="2973483851777476927">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="app_main" lineNumber="30"/>
+    <functioncall functionName="AF_INET"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="led_code_on"/>
+    <functioncall functionName="led_code_pos"/>
+    <functioncall functionName="led_code_sync"/>
+    <functioncall functionName="led_strip_task"/>
+    <functioncall functionName="num_led_read_num_led"/>
+    <functioncall functionName="num_led_write_num_led"/>
+    <functioncall functionName="xTaskCreate"/>
+  </FileInfo>
+</analyzerinfo>

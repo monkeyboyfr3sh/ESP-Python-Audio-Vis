@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="14737415811042497775">
+        <error id="unreadVariable" severity="style" msg="Variable &apos;hue&apos; is assigned a value that is never used." verbose="Variable &apos;hue&apos; is assigned a value that is never used." cwe="563" file0="../main/LED_thread.c">
+            <location file="..\main\LED_thread.c" line="114" column="18"/>
+            <symbol>hue</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;e1&apos; is assigned a value that is never used." verbose="Variable &apos;e1&apos; is assigned a value that is never used." cwe="563" file0="../main/LED_thread.c">
+            <location file="..\main\LED_thread.c" line="124" column="12"/>
+            <symbol>e1</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;e2&apos; is assigned a value that is never used." verbose="Variable &apos;e2&apos; is assigned a value that is never used." cwe="563" file0="../main/LED_thread.c">
+            <location file="..\main\LED_thread.c" line="125" column="12"/>
+            <symbol>e2</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;e3&apos; is assigned a value that is never used." verbose="Variable &apos;e3&apos; is assigned a value that is never used." cwe="563" file0="../main/LED_thread.c">
+            <location file="..\main\LED_thread.c" line="126" column="12"/>
+            <symbol>e3</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;error&apos; is assigned a value that is never used." verbose="Variable &apos;error&apos; is assigned a value that is never used." cwe="563" file0="../main/LED_thread.c">
+            <location file="..\main\LED_thread.c" line="127" column="15"/>
+            <symbol>error</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;print_timestamp&apos; is assigned a value that is never used." verbose="Variable &apos;print_timestamp&apos; is assigned a value that is never used." cwe="563" file0="../main/LED_thread.c">
+            <location file="..\main\LED_thread.c" line="135" column="30"/>
+            <symbol>print_timestamp</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="../main/LED_thread.c:38:6" call-funcname="led_strip_hsv2rgb" call-argnr="4" file="../main/LED_thread.c" line="144" col="34" call-argexpr="&amp;red" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../main/LED_thread.c:38:6" call-funcname="led_strip_hsv2rgb" call-argnr="5" file="../main/LED_thread.c" line="144" col="34" call-argexpr="&amp;green" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../main/LED_thread.c:38:6" call-funcname="led_strip_hsv2rgb" call-argnr="6" file="../main/LED_thread.c" line="144" col="34" call-argexpr="&amp;blue" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../main/LED_thread.c:38:6" call-funcname="led_strip_hsv2rgb" call-argnr="4" file="../main/LED_thread.c" line="188" col="42" call-argexpr="&amp;red" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../main/LED_thread.c:38:6" call-funcname="led_strip_hsv2rgb" call-argnr="5" file="../main/LED_thread.c" line="188" col="42" call-argexpr="&amp;green" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="../main/LED_thread.c:38:6" call-funcname="led_strip_hsv2rgb" call-argnr="6" file="../main/LED_thread.c" line="188" col="42" call-argexpr="&amp;blue" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="led_strip_hsv2rgb" lineNumber="39"/>
+    <functiondecl functionName="update_num_led" lineNumber="85"/>
+    <functiondecl functionName="led_strip_task" lineNumber="109"/>
+    <functioncall functionName="ESP_ERROR_CHECK"/>
+    <functioncall functionName="ESP_LOGE"/>
+    <functioncall functionName="ESP_LOGI"/>
+    <functioncall functionName="GPIO_NUM_16"/>
+    <functioncall functionName="LED_STRIP_DEFAULT_CONFIG"/>
+    <functioncall functionName="RMT_CHANNEL_0"/>
+    <functioncall functionName="RMT_DEFAULT_CONFIG_TX"/>
+    <functioncall functionName="TAG"/>
+    <functioncall functionName="Td"/>
+    <functioncall functionName="Ti"/>
+    <functioncall functionName="Tp"/>
+    <functioncall functionName="blue"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="channel"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="config"/>
+    <functioncall functionName="decay_pos"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="del"/>
+    <functioncall functionName="derivative_pos"/>
+    <functioncall functionName="e3"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="green"/>
+    <functioncall functionName="hue"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="integral_pos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="led_code_on"/>
+    <functioncall functionName="led_code_pos"/>
+    <functioncall functionName="led_code_sync"/>
+    <functioncall functionName="led_on"/>
+    <functioncall functionName="led_strip_dev_t"/>
+    <functioncall functionName="led_strip_hsv2rgb"/>
+    <functioncall functionName="led_strip_new_rmt_ws2812"/>
+    <functioncall functionName="num_led"/>
+    <functioncall functionName="num_led_read_num_led"/>
+    <functioncall functionName="num_led_write_num_led"/>
+    <functioncall functionName="pdMS_TO_TICKS"/>
+    <functioncall functionName="prev_pos"/>
+    <functioncall functionName="proportional_pos"/>
+    <functioncall functionName="red"/>
+    <functioncall functionName="refresh"/>
+    <functioncall functionName="rgb_adj"/>
+    <functioncall functionName="rgb_max"/>
+    <functioncall functionName="rgb_min"/>
+    <functioncall functionName="rmt_config"/>
+    <functioncall functionName="rmt_driver_install"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="set_pixel"/>
+    <functioncall functionName="show_led_peak"/>
+    <functioncall functionName="start_rgb"/>
+    <functioncall functionName="strip"/>
+    <functioncall functionName="strip_config"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update_num_led"/>
+    <functioncall functionName="vTaskDelay"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="wr_num_led"/>
+    <functioncall functionName="xTaskGetTickCount"/>
+  </FileInfo>
+</analyzerinfo>

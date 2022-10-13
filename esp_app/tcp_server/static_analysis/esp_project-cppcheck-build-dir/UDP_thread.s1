@@ -1,0 +1,3 @@
+udp_write_hello global:[TAG,payload] call:[ESP_LOGE,htons,inet_addr,sendto,sizeof,strlen] noreturn:[ESP_LOGE]
+udp_hello_client_task global:[sock] call:[pdMS_TO_TICKS,udp_write_hello,vTaskDelay,xTaskGetTickCount] noreturn:[udp_write_hello,vTaskDelay]
+udp_streaming_client_task global:[TAG,UDP_sync,addr_family,ip_protocol,rx_buffer,sock,wr_led_peak,wr_led_peak_timestamp] call:[ESP_LOGE,ESP_LOGI,ESP_LOGW,case,close,esp_log_buffer_hex,recvfrom,shutdown,sizeof,socket,vTaskDelete,xTaskGetTickCount] noreturn:[ESP_LOGE,close,vTaskDelete]
