@@ -90,6 +90,7 @@ int hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t *g, uint32
         *b = (uint32_t)( (c+m)*255 );
         break;
     default:
+    case 5:
         *r = (uint32_t)( (c+m)*255 );
         *g = (uint32_t)( m*255 );
         *b = (uint32_t)( (x+m)*255 );
