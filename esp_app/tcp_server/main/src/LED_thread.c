@@ -64,7 +64,6 @@ void led_strip_task(void *pvParameters)
     uint32_t red = 0;
     uint32_t green = 0;
     uint32_t blue = 0;
-    uint16_t hue = 0;
     uint16_t start_rgb = 0;
     int prev_pos = 0;
 
@@ -89,8 +88,7 @@ void led_strip_task(void *pvParameters)
         for (int i = 0; i < num_section; i++) {
             
             // Build RGB values
-            hue = start_rgb;
-            hsv2rgb(hue, 100, 100, &red, &green, &blue);
+            hsv2rgb(start_rgb, 100, 100, &red, &green, &blue);
             
             for (int j = 0; j < section_size; j += 1) {
                 // Write RGB values to strip driver
@@ -106,47 +104,47 @@ void led_strip_task(void *pvParameters)
 
     }
 
-    while (true) {
-        if(wr_num_led){
-            strip->del(strip);
-            strip = update_num_led(CONFIG_EXAMPLE_STRIP_LED_NUMBER);
-            wr_num_led = false;
-        }
+    // while (true) {
+    //     if(wr_num_led){
+    //         strip->del(strip);
+    //         strip = update_num_led(CONFIG_EXAMPLE_STRIP_LED_NUMBER);
+    //         wr_num_led = false;
+    //     }
 
-        if(xTaskGetTickCount()-wr_led_peak_timestamp < pdMS_TO_TICKS(50)){
-            // Calculate next LED peak, min should be 0
-            show_led_peak =  (int)(Kc * pid_loop_step(prev_pos, wr_led_peak, Tp, Ti, Td));
-            show_led_peak = (show_led_peak<0) ? 0 : show_led_peak;
-        } else {
-            // Applies natural decay to LEDs
-            show_led_peak = decay_pos(prev_pos, 20, 2);
-        }
+    //     if(xTaskGetTickCount()-wr_led_peak_timestamp < pdMS_TO_TICKS(50)){
+    //         // Calculate next LED peak, min should be 0
+    //         show_led_peak =  (int)(Kc * pid_loop_step(prev_pos, wr_led_peak, Tp, Ti, Td));
+    //         show_led_peak = (show_led_peak<0) ? 0 : show_led_peak;
+    //     } else {
+    //         // Applies natural decay to LEDs
+    //         show_led_peak = decay_pos(prev_pos, 20, 2);
+    //     }
 
-        prev_pos = show_led_peak;
+    //     prev_pos = show_led_peak;
 
-        if(led_on){
-            for (int i = 0; i < 1; i++) {
-                for (int j = i; j < CONFIG_EXAMPLE_STRIP_LED_NUMBER; j += 1) {
-                    if(j < show_led_peak){
-                        // Build RGB values
-                        hue = j * 360 / show_led_peak + start_rgb;
-                        hsv2rgb(hue, 100, 100, &red, &green, &blue);
-                    } else {
-                        red = 0; green = 0; blue = 0;
-                    }
-                    // Write RGB values to strip driver
-                    ESP_ERROR_CHECK(strip->set_pixel(strip, j, red, green, blue));
-                }
-                // Flush RGB values to LEDs
-                ESP_ERROR_CHECK(strip->refresh(strip, 0));
-            }
-            start_rgb += 60;
-        }
-        else {
-            ESP_ERROR_CHECK(strip->clear(strip, 100));
-            ESP_ERROR_CHECK(strip->refresh(strip, 0));
-        }
+    //     if(led_on){
+    //         for (int i = 0; i < 1; i++) {
+    //             for (int j = i; j < CONFIG_EXAMPLE_STRIP_LED_NUMBER; j += 1) {
+    //                 if(j < show_led_peak){
+    //                     // Build RGB values
+    //                     hue = j * 360 / show_led_peak + start_rgb;
+    //                     hsv2rgb(hue, 100, 100, &red, &green, &blue);
+    //                 } else {
+    //                     red = 0; green = 0; blue = 0;
+    //                 }
+    //                 // Write RGB values to strip driver
+    //                 ESP_ERROR_CHECK(strip->set_pixel(strip, j, red, green, blue));
+    //             }
+    //             // Flush RGB values to LEDs
+    //             ESP_ERROR_CHECK(strip->refresh(strip, 0));
+    //         }
+    //         start_rgb += 60;
+    //     }
+    //     else {
+    //         ESP_ERROR_CHECK(strip->clear(strip, 100));
+    //         ESP_ERROR_CHECK(strip->refresh(strip, 0));
+    //     }
 
-        vTaskDelay(pdMS_TO_TICKS(EXAMPLE_CHASE_SPEED_MS));
-    }
+    //     vTaskDelay(pdMS_TO_TICKS(EXAMPLE_CHASE_SPEED_MS));
+    // }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="1984218190941940901">
-        <error id="unreadVariable" severity="style" msg="Variable &apos;level&apos; is assigned a value that is never used." verbose="Variable &apos;level&apos; is assigned a value that is never used." cwe="563" file0="../main/TCP_thread.c">
-            <location file="..\main\TCP_thread.c" line="38" column="13"/>
+<analyzerinfo hash="14725984984925967510">
+        <error id="unreadVariable" severity="style" msg="Variable &apos;level&apos; is assigned a value that is never used." verbose="Variable &apos;level&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/TCP_thread.c">
+            <location file="C:\Users\david\Documents\GitHub\ESP-Python-Audio-Vis\esp_app\tcp_server\main\src\TCP_thread.c" line="38" column="13"/>
             <symbol>level</symbol>
         </error>
   <FileInfo check="CheckUnusedFunctions">
@@ -9,12 +9,16 @@
     <functiondecl functionName="tcp_server_task" lineNumber="90"/>
     <functioncall functionName="AF_INET"/>
     <functioncall functionName="CLEAN_UP"/>
+    <functioncall functionName="CONFIG_EXAMPLE_STRIP_LED_NUMBER"/>
     <functioncall functionName="ESP_LOGE"/>
     <functioncall functionName="ESP_LOGI"/>
     <functioncall functionName="ESP_LOGW"/>
     <functioncall functionName="INADDR_ANY"/>
     <functioncall functionName="IPPROTO_IP"/>
     <functioncall functionName="IPPROTO_TCP"/>
+    <functioncall functionName="KEEPALIVE_COUNT"/>
+    <functioncall functionName="KEEPALIVE_IDLE"/>
+    <functioncall functionName="KEEPALIVE_INTERVAL"/>
     <functioncall functionName="NULL"/>
     <functioncall functionName="SOCK_STREAM"/>
     <functioncall functionName="SOL_SOCKET"/>
@@ -24,6 +28,7 @@
     <functioncall functionName="TCP_KEEPCNT"/>
     <functioncall functionName="TCP_KEEPIDLE"/>
     <functioncall functionName="TCP_KEEPINTVL"/>
+    <functioncall functionName="TCP_PORT"/>
     <functioncall functionName="accept"/>
     <functioncall functionName="addr_family"/>
     <functioncall functionName="addr_len"/>
@@ -51,7 +56,6 @@
     <functioncall functionName="keepInterval"/>
     <functioncall functionName="led_code_off"/>
     <functioncall functionName="led_code_on"/>
-    <functioncall functionName="led_code_pos"/>
     <functioncall functionName="led_code_sync"/>
     <functioncall functionName="len"/>
     <functioncall functionName="listen"/>

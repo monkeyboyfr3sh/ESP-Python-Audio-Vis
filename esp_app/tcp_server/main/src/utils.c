@@ -11,11 +11,11 @@
 
 int decay_pos(int pos_set, int decay_rate_ms, int decay_coef)
 {
-    static uint32_t timestamp = 0;
     static int pos;
 
     pos = pos_set; 
     if(pos){
+        static uint32_t timestamp = 0;
         if( (xTaskGetTickCount()-timestamp) > pdMS_TO_TICKS(decay_rate_ms) ){
             timestamp = xTaskGetTickCount();
             pos -= (pos > decay_coef) ? decay_coef : pos;
