@@ -40,8 +40,13 @@ float pid_loop_step(float prev_pos, float new_pos, float proportional_coef, floa
     return p+i+d;
 }
 
-void hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t *g, uint32_t *b)
+int hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t *g, uint32_t *b)
 {
+    // Verify pointers are okay
+    if(!r || !g || !b)
+    {
+        return -1;
+    }
 
     h %= 360; // h -> [0,360]
     uint8_t i = h/60;
@@ -90,4 +95,6 @@ void hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t *g, uint3
         *b = (uint32_t)( (x+m)*255 );
         break;
     }
+
+    return 0;
 }

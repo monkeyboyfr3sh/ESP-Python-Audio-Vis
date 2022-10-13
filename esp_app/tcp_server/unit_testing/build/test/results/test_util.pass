@@ -28,42 +28,47 @@
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_1
-  :line: 108
+  :line: 109
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_2
-  :line: 122
+  :line: 124
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_3
-  :line: 136
+  :line: 139
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_4
-  :line: 150
+  :line: 154
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_5
-  :line: 164
+  :line: 169
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_6
-  :line: 178
+  :line: 184
+  :message: ''
+  :unity_test_time: 0
+- :test: test_hsv2rgb_7
+  :line: 199
+  :message: ''
+  :unity_test_time: 0
+- :test: test_hsv2rgb_8
+  :line: 210
+  :message: ''
+  :unity_test_time: 0
+- :test: test_hsv2rgb_9
+  :line: 221
   :message: ''
   :unity_test_time: 0
 :failures: []
 :ignores: []
 :counts:
-  :total: 12
-  :passed: 12
+  :total: 15
+  :passed: 15
   :failed: 0
   :ignored: 0
-:stdout:
-- 'i: 0'
-- 'i: 4'
-- 'i: 3'
-- 'i: 2'
-- 'i: 1'
-- 'i: 0'
-- 'i: 5'
-:time: 0.050543800000014016
+:stdout: []
+:time: 0.058097699999052566

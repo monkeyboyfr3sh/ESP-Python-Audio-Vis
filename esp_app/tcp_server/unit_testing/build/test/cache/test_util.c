@@ -216,7 +216,7 @@ void test_hsv2rgb_0(void)
 
 
 
-    hsv2rgb(0, 100, 100, &r, &g, &b);
+    int rval = hsv2rgb(0, 100, 100, &r, &g, &b);
 
 
 
@@ -238,6 +238,12 @@ void test_hsv2rgb_0(void)
 
    ), (UNITY_UINT)(105), UNITY_DISPLAY_STYLE_UINT32);
 
+    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(106), UNITY_DISPLAY_STYLE_INT);
+
 }
 
 
@@ -256,7 +262,7 @@ void test_hsv2rgb_1(void)
 
 
 
-    hsv2rgb(240, 100, 100, &r, &g, &b);
+    int rval = hsv2rgb(240, 100, 100, &r, &g, &b);
 
 
 
@@ -264,19 +270,25 @@ void test_hsv2rgb_1(void)
 
    ((void *)0)
 
-   ), (UNITY_UINT)(117), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(118), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((0)), (UNITY_INT)(UNITY_UINT32)((g)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(118), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(119), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((255)), (UNITY_INT)(UNITY_UINT32)((b)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(119), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(120), UNITY_DISPLAY_STYLE_UINT32);
+
+    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(121), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -296,7 +308,7 @@ void test_hsv2rgb_2(void)
 
 
 
-    hsv2rgb(180, 100, 100, &r, &g, &b);
+    int rval = hsv2rgb(180, 100, 100, &r, &g, &b);
 
 
 
@@ -304,19 +316,25 @@ void test_hsv2rgb_2(void)
 
    ((void *)0)
 
-   ), (UNITY_UINT)(131), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(133), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((255)), (UNITY_INT)(UNITY_UINT32)((g)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(132), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(134), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((255)), (UNITY_INT)(UNITY_UINT32)((b)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(133), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(135), UNITY_DISPLAY_STYLE_UINT32);
+
+    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(136), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -336,7 +354,7 @@ void test_hsv2rgb_3(void)
 
 
 
-    hsv2rgb(120, 100, 50, &r, &g, &b);
+    int rval = hsv2rgb(120, 100, 50, &r, &g, &b);
 
 
 
@@ -344,19 +362,25 @@ void test_hsv2rgb_3(void)
 
    ((void *)0)
 
-   ), (UNITY_UINT)(145), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(148), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((127)), (UNITY_INT)(UNITY_UINT32)((g)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(146), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(149), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((0)), (UNITY_INT)(UNITY_UINT32)((b)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(147), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(150), UNITY_DISPLAY_STYLE_UINT32);
+
+    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(151), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -376,7 +400,7 @@ void test_hsv2rgb_4(void)
 
 
 
-    hsv2rgb(67, 0, 75, &r, &g, &b);
+    int rval = hsv2rgb(67, 0, 75, &r, &g, &b);
 
 
 
@@ -384,19 +408,25 @@ void test_hsv2rgb_4(void)
 
    ((void *)0)
 
-   ), (UNITY_UINT)(159), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(163), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((191)), (UNITY_INT)(UNITY_UINT32)((g)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(160), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(164), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((191)), (UNITY_INT)(UNITY_UINT32)((b)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(161), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(165), UNITY_DISPLAY_STYLE_UINT32);
+
+    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(166), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -416,7 +446,7 @@ void test_hsv2rgb_5(void)
 
 
 
-    hsv2rgb(42, 96, 90, &r, &g, &b);
+    int rval = hsv2rgb(42, 96, 90, &r, &g, &b);
 
 
 
@@ -424,19 +454,25 @@ void test_hsv2rgb_5(void)
 
    ((void *)0)
 
-   ), (UNITY_UINT)(173), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(178), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((163)), (UNITY_INT)(UNITY_UINT32)((g)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(174), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(179), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((9)), (UNITY_INT)(UNITY_UINT32)((b)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(175), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(180), UNITY_DISPLAY_STYLE_UINT32);
+
+    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(181), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -456,7 +492,7 @@ void test_hsv2rgb_6(void)
 
 
 
-    hsv2rgb(300, 23, 64, &r, &g, &b);
+    int rval = hsv2rgb(300, 23, 64, &r, &g, &b);
 
 
 
@@ -464,18 +500,102 @@ void test_hsv2rgb_6(void)
 
    ((void *)0)
 
-   ), (UNITY_UINT)(187), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(193), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((125)), (UNITY_INT)(UNITY_UINT32)((g)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(188), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(194), UNITY_DISPLAY_STYLE_UINT32);
 
     UnityAssertEqualNumber((UNITY_INT)(UNITY_UINT32)((163)), (UNITY_INT)(UNITY_UINT32)((b)), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(189), UNITY_DISPLAY_STYLE_UINT32);
+   ), (UNITY_UINT)(195), UNITY_DISPLAY_STYLE_UINT32);
+
+    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(196), UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+void test_hsv2rgb_7(void)
+
+{
+
+
+
+    uint32_t g;
+
+    uint32_t b;
+
+
+
+    int rval = hsv2rgb(300, 23, 64, (uint32_t *)0, &g, &b);
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((-1)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(207), UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+void test_hsv2rgb_8(void)
+
+{
+
+
+
+    uint32_t r;
+
+    uint32_t b;
+
+
+
+    int rval = hsv2rgb(300, 23, 64, &r, (uint32_t *)0, &b);
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((-1)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(218), UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+void test_hsv2rgb_9(void)
+
+{
+
+
+
+    uint32_t r;
+
+    uint32_t g;
+
+
+
+    int rval = hsv2rgb(300, 23, 64, &r, &g, (uint32_t *)0);
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((-1)), (UNITY_INT)((rval)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(229), UNITY_DISPLAY_STYLE_INT);
 
 }

@@ -22,6 +22,9 @@ extern void test_hsv2rgb_3(void);
 extern void test_hsv2rgb_4(void);
 extern void test_hsv2rgb_5(void);
 extern void test_hsv2rgb_6(void);
+extern void test_hsv2rgb_7(void);
+extern void test_hsv2rgb_8(void);
+extern void test_hsv2rgb_9(void);
 
 
 /*=======Mock Management=====*/
@@ -92,12 +95,15 @@ int main(void)
   run_test(test_pid_3, "test_pid_3", 58);
   run_test(test_pid_4, "test_pid_4", 70);
   run_test(test_hsv2rgb_0, "test_hsv2rgb_0", 94);
-  run_test(test_hsv2rgb_1, "test_hsv2rgb_1", 108);
-  run_test(test_hsv2rgb_2, "test_hsv2rgb_2", 122);
-  run_test(test_hsv2rgb_3, "test_hsv2rgb_3", 136);
-  run_test(test_hsv2rgb_4, "test_hsv2rgb_4", 150);
-  run_test(test_hsv2rgb_5, "test_hsv2rgb_5", 164);
-  run_test(test_hsv2rgb_6, "test_hsv2rgb_6", 178);
+  run_test(test_hsv2rgb_1, "test_hsv2rgb_1", 109);
+  run_test(test_hsv2rgb_2, "test_hsv2rgb_2", 124);
+  run_test(test_hsv2rgb_3, "test_hsv2rgb_3", 139);
+  run_test(test_hsv2rgb_4, "test_hsv2rgb_4", 154);
+  run_test(test_hsv2rgb_5, "test_hsv2rgb_5", 169);
+  run_test(test_hsv2rgb_6, "test_hsv2rgb_6", 184);
+  run_test(test_hsv2rgb_7, "test_hsv2rgb_7", 199);
+  run_test(test_hsv2rgb_8, "test_hsv2rgb_8", 210);
+  run_test(test_hsv2rgb_9, "test_hsv2rgb_9", 221);
 
   return UnityEnd();
 }
