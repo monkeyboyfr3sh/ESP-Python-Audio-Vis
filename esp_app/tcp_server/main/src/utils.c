@@ -1,7 +1,6 @@
 #include "utils.h"
 #include "stdio.h"
 
-#ifndef TEST
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_system.h"
@@ -21,10 +20,9 @@ int decay_pos(int pos_set, int decay_rate_ms, int decay_coef)
             pos -= (pos > decay_coef) ? decay_coef : pos;
         }
     }
-
+    
     return pos;
 }
-#endif
 
 float pid_loop_step(float prev_pos, float new_pos, float proportional_coef, float integral_coef, float derivative_coef)
 {
@@ -36,6 +34,9 @@ float pid_loop_step(float prev_pos, float new_pos, float proportional_coef, floa
     float p = (proportional_coef * ( (float)new_pos) );
     float i = (integral_coef * ( (float)prev_pos) );
     float d = (derivative_coef * ((float)(new_pos-prev_pos)) );
+
+    vTaskDelay(1);
+
     // Return next step value
     return p+i+d;
 }

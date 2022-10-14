@@ -38,6 +38,11 @@
     "esp_event.h": "c",
     "stdarg.h": "c",
     "esp_log.h": "c",
-    "queue": "c"
+    "queue": "c",
+    "esp_system.h": "c",
+    "mock_esp_system.h": "c",
+    "esp_wifi.h": "c",
+    "event_groups.h": "c",
+    "stdlib.h": "c"
   }
 }

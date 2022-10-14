@@ -9,3 +9,13 @@ src/utils.c:
 - TEST
 "../main/src/utils.c":
 - TEST
+test/src/adc.c:
+- TEST
+build/test/mocks/mock_func.c:
+- TEST
+build/test/mocks/mock_freertos/FreeRTOS.c:
+- TEST
+build/test/mocks/mock_freertos/task.c:
+- TEST
+build/test/mocks/mock_esp_system.c:
+- TEST

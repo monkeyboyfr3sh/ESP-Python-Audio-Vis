@@ -29,6 +29,7 @@
   - "../main/main.c"
   - "../main/src/**"
   - "../main/inc/**"
+  - test/esp-idf-mock/**
   :support:
   - test/support
   :include: []
@@ -55,7 +56,8 @@
   :use_test_definition: false
   :common: []
 :libraries:
-  :flag: "-l${1}"
+  :flag:
+  - "-l${1}"
   :path_flag: "-L ${1}"
   :test: []
   :test_preprocess: []

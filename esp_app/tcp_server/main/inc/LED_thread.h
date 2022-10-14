@@ -31,5 +31,6 @@ typedef enum {
 } led_code_t;
 
 void led_strip_task(void *pvParameters);
+void some_function(void);
 
 #endif

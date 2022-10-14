@@ -2,7 +2,11 @@
 
 #include "unity.h"
 
+// DUT
 #include "utils.h"
+
+// CMock lib 
+#include "mock_esp_system.h"
 
 int test_count = 0;
 void setUp(void)
@@ -26,6 +30,7 @@ void test_pid_0(void)
     float prev_pos = 0.0;
     float new_pos = 1.0;
 
+    vTaskDelay_Expect(1);
     result = pid_loop_step(prev_pos, new_pos, 1.0, 0.0, 0.0);
     
     TEST_ASSERT_EQUAL_FLOAT( 1.0, result );
@@ -74,7 +79,11 @@ void test_pid_4(void)
     float prev_pos = 0.0;
     float new_pos = 0.0;
 
+    
+
     for(int i = 0;i<100;i++){
+        vTaskDelay_Expect(1);
+
         // Update step
         prev_pos = new_pos;
         new_pos++;

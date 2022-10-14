@@ -37,9 +37,11 @@
     - ../main/main.c
     - ../main/src/**
     - ../main/inc/**
+    - test/esp-idf-mock/**
+    # - test/inc/**
   :support:
     - test/support
-  :libraries: []
+  :libraries: [ ]
 
 :defines:
   # in order to add common defines:
@@ -88,7 +90,10 @@
 # tests or releases. These options are MERGED with the options in supplemental yaml files.
 :libraries:
   :placement: :end
-  :flag: "-l${1}"
+  :flag: 
+    - "-l${1}"
+          
+
   :path_flag: "-L ${1}"
   :system: []    # for example, you might list 'm' to grab the math library
   :test: []
