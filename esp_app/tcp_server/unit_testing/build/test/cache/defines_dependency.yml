@@ -19,3 +19,5 @@ build/test/mocks/mock_freertos/task.c:
 - TEST
 build/test/mocks/mock_esp_system.c:
 - TEST
+"../main/src/TCP_thread.c":
+- TEST
