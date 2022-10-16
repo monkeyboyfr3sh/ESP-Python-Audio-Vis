@@ -1,0 +1,1028 @@
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>ESP-Audio-Sync</title>
+  <style media="screen" type="text/css">
+
+    body
+    {
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    /* Link formats: use maroon w/underlines */
+    a:link
+    {
+      color: navy;
+      text-decoration: underline;
+    }
+    a:visited
+    {
+      color: maroon;
+      text-decoration: underline;
+    }
+    a:active
+    {
+      color: navy;
+      text-decoration: underline;
+    }
+
+    /*** TD formats ***/
+    td
+    {
+      font-family: sans-serif;
+    }
+    td.title
+    {
+      text-align: center;
+      padding-bottom: 10px;
+      font-size: 20pt;
+      font-weight: bold;
+    }
+
+    /* TD Header Information */
+    td.headerName
+    {
+      text-align: right;
+      color: black;
+      padding-right: 6px;
+      font-weight: bold;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    td.headerValue
+    {
+      text-align: left;
+      color: blue;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    td.headerTableEntry
+    {
+      text-align: right;
+      color: black;
+      font-weight: bold;
+      white-space: nowrap;
+      padding-left: 12px;
+      padding-right: 4px;
+      background-color: LightBlue;
+    }
+    td.headerValueLeg
+    {
+      text-align: left;
+      color: black;
+      font-size: 80%;
+      white-space: nowrap;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 2px;
+    }
+
+    /* Color of horizontal ruler */
+    td.hr
+    {
+      background-color: navy;
+      height:3px;
+    }
+    /* Footer format */
+    td.footer
+    {
+      text-align: center;
+      padding-top: 3px;
+      font-family: sans-serif;
+    }
+
+    /* Coverage Table */
+
+    td.coverTableHead
+    {
+      text-align: center;
+      color: white;
+      background-color: SteelBlue;
+      font-family: sans-serif;
+      font-size: 120%;
+      white-space: nowrap;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    td.coverFile
+    {
+      text-align: left;
+      padding-left: 10px;
+      padding-right: 20px;
+      color: black;
+      background-color: LightBlue;
+      font-family: monospace;
+      font-weight: bold;
+      font-size: 110%;
+    }
+    td.coverBar
+    {
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: LightBlue;
+    }
+    td.coverBarOutline
+    {
+      background-color: white;
+    }
+    td.coverValue
+    {
+      padding-top: 2px;
+      text-align: right;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: sans-serif;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+
+    /* Link Details */
+    a.detail:link
+    {
+      color: #B8D0FF;
+      font-size:80%;
+    }
+    a.detail:visited
+    {
+      color: #B8D0FF;
+      font-size:80%;
+    }
+    a.detail:active
+    {
+      color: #FFFFFF;
+      font-size:80%;
+    }
+
+    .graphcont{
+        color:#000;
+        font-weight:700;
+        float:left
+    }
+
+    .graph{
+        float:left;
+        background-color: white;
+        position:relative;
+        width:280px;
+        padding:0
+    }
+
+    .graph .bar{
+        display:block;
+        position:relative;
+        border:black 1px solid;
+        text-align:center;
+        color:#fff;
+        height:10px;
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:12px;
+        line-height:1.9em
+    }
+
+    .graph .bar span{
+        position:absolute;
+        left:1em
+    }
+
+    td.coveredLine,
+    span.coveredLine
+    {
+        background-color: LightGreen!important;
+    }
+
+    td.uncoveredLine,
+    span.uncoveredLine
+    {
+        background-color: LightPink!important;
+    }
+
+    .linebranch, .linecount
+    {
+        border-right: 1px gray solid;
+        background-color: lightgray;
+    }
+
+    span.takenBranch
+    {
+        color: Green!important;
+        cursor: help;
+    }
+
+    span.notTakenBranch
+    {
+        color: Red!important;
+        cursor: help;
+    }
+
+    .src
+    {
+        padding-left: 12px;
+    }
+
+    .srcHeader,
+    span.takenBranch,
+    span.notTakenBranch
+    {
+        font-family: monospace;
+        font-weight: bold;
+    }
+
+    pre
+    {
+        height : 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .lineno
+    {
+        background-color: #EFE383;
+        border-right: 1px solid #BBB15F;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr><td class="title">GCC Code Coverage Report</td></tr>
+    <tr><td class="hr"></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding="1" border="0" width="100%">
+          <tr>
+            <td width="10%" class="headerName">Directory:</td>
+            <td width="35%" class="headerValue">../main/src/</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerValue" style="text-align:right;">Exec</td>
+            <td width="10%" class="headerValue" style="text-align:right;">Total</td>
+            <td width="15%" class="headerValue" style="text-align:right;">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerName">File:</td>
+            <td class="headerValue">..\main\src\utils.c</td>
+            <td></td>
+            <td class="headerName">Lines:</td>
+            <td class="headerTableEntry">48</td>
+            <td class="headerTableEntry">55</td>
+            <td class="headerTableEntry" style="background-color:#FFFF55">87.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerName">Date:</td>
+            <td class="headerValue">2022-10-16 16:35:02</td>
+            <td></td>
+            <td class="headerName">Branches:</td>
+            <td class="headerTableEntry">20</td>
+            <td class="headerTableEntry">24</td>
+            <td class="headerTableEntry" style="background-color:#FFFF55">83.3 %</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="hr"></td></tr>
+  </table>
+
+  <br>
+  <table cellspacing="0" cellpadding="1">
+    <tr>
+      <td width="5%" align="right" class="srcHeader">Line</td>
+      <td width="5%" align="right" class="srcHeader">Branch</td>
+      <td width="5%" align="right" class="srcHeader">Exec</td>
+      <td width="75%" align="left" class="srcHeader src">Source</td>
+    </tr>
+
+
+    <tr>
+    <td align="right" class="lineno"><pre>1</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include "utils.h"</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>2</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include "stdio.h"</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>3</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>4</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include "freertos/FreeRTOS.h"</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>5</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include "freertos/task.h"</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>6</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include "esp_system.h"</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>7</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include "esp_wifi.h"</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>8</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include "esp_event.h"</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>9</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include "esp_log.h"</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>10</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>11</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int decay_pos(int pos_set, int decay_rate_ms, int decay_coef)</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>12</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>13</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    static int pos;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>14</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>15</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>    pos = pos_set;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>16</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>    if(pos){</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>17</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>        static uint32_t timestamp = 0;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>18</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>        if( (xTaskGetTickCount()-timestamp) > pdMS_TO_TICKS(decay_rate_ms) ){</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>19</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>            timestamp = xTaskGetTickCount();</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>20</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>            pos -= (pos > decay_coef) ? decay_coef : pos;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>21</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>        }</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>22</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    }</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>23</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>24</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>    return pos;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>25</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>26</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>27</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>104</pre></td>
+    <td align="left" class="src coveredLine"><pre>float pid_loop_step(float prev_pos, float new_pos, float proportional_coef, float integral_coef, float derivative_coef)</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>28</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>29</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 102 times">&check;</span><span class="takenBranch" title="Branch 1 taken 2 times">&check;</span><span class="takenBranch" title="Branch 2 taken 1 times">&check;</span><span class="takenBranch" title="Branch 3 taken 101 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>104</pre></td>
+    <td align="left" class="src coveredLine"><pre>    if((prev_pos&lt;0)||(new_pos&lt;0)){</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>30</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
+    <td align="left" class="src coveredLine"><pre>        return (float)-1.0;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>31</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    }</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>32</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>33</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    // Calaculate feedback values</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>34</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>101</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float p = (proportional_coef * ( (float)new_pos) );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>35</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>101</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float i = (integral_coef * ( (float)prev_pos) );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>36</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>101</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float d = (derivative_coef * ((float)(new_pos-prev_pos)) );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>37</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>38</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>101</pre></td>
+    <td align="left" class="src coveredLine"><pre>    vTaskDelay(1);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>39</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>40</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    // Return next step value</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>41</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>101</pre></td>
+    <td align="left" class="src coveredLine"><pre>    return p+i+d;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>42</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>43</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>44</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
+    <td align="left" class="src coveredLine"><pre>int hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t *r, uint32_t *g, uint32_t *b)</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>45</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>46</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    // Verify pointers are okay</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>47</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 9 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1 times">&check;</span><span class="takenBranch" title="Branch 2 taken 8 times">&check;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><br/><span class="takenBranch" title="Branch 4 taken 1 times">&check;</span><span class="takenBranch" title="Branch 5 taken 7 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
+    <td align="left" class="src coveredLine"><pre>    if(!r || !g || !b)</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>48</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>49</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
+    <td align="left" class="src coveredLine"><pre>        return -1;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>50</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    }</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>51</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>52</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    h %= 360; // h -> [0,360]</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>53</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    uint8_t i = h/60;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>54</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float s_percent  = (s%101) / 100.00f;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>55</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float v_percent  = (v%101) / 100.00f;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>56</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float c = v_percent*s_percent;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>57</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float mod_val = ((float)h/60.0);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>58</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 2 times">&check;</span><span class="takenBranch" title="Branch 1 taken 5 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    mod_val = (mod_val &lt; 1) ? mod_val : ((int)mod_val%2);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>59</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float temp = mod_val - 1;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>60</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 4 times">&check;</span><span class="takenBranch" title="Branch 1 taken 3 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    temp = temp&lt;0 ? -temp : temp;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>61</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float x = c*(1-temp);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>62</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    float m = v_percent-c;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>63</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>64</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    // printf("h: %u s: %u(%f) v: %u(%f) c: %f x: %f m: %f i: %u\n",h,s,s_percent,v,v_percent,c,x,m,i);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>65</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    // printf("i: %u\n",i);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>66</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>67</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 2 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1 times">&check;</span><span class="takenBranch" title="Branch 2 taken 1 times">&check;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><br/><span class="takenBranch" title="Branch 4 taken 1 times">&check;</span><span class="takenBranch" title="Branch 5 taken 1 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    switch (i) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>68</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    case 0:</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>69</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *r = (uint32_t)( (c+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>70</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *g = (uint32_t)( (x+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>71</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *b = (uint32_t)( m*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>72</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>73</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    case 1:</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>74</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *r = (uint32_t)( (x+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>75</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *g = (uint32_t)( (c+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>76</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *b = (uint32_t)( m*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>77</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>78</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    case 2:</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>79</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *r = (uint32_t)( m*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>80</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *g = (uint32_t)( (c+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>81</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *b = (uint32_t)( (x+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>82</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>83</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    case 3:</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>84</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *r = (uint32_t)( m*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>85</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *g = (uint32_t)( (x+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>86</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *b = (uint32_t)( (c+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>87</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>88</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    case 4:</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>89</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *r = (uint32_t)( (x+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>90</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *g = (uint32_t)( m*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>91</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *b = (uint32_t)( (c+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>92</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>93</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    default:</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>94</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    case 5:</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>95</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *r = (uint32_t)( (c+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>96</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *g = (uint32_t)( m*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>97</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        *b = (uint32_t)( (x+m)*255 );</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>98</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>99</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    }</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>100</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>101</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
+    <td align="left" class="src coveredLine"><pre>    return 0;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>102</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
+    </tr>
+
+  </table>
+  <br>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr><td class="hr"><td></tr>
+    <tr><td class="footer">Generated by: <a href="http://gcovr.com">GCOVR (Version 4.1)</a></td></tr>
+  </table>
+  <br>
+
+</body>
+
+</html>
+

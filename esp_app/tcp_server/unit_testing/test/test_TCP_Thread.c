@@ -4,9 +4,11 @@
 
 // DUT
 #include "TCP_thread.h"
+#include "TCP_thread.c" // Not sure if I should do this, but technically removes implicit warnings
 
 // CMock lib 
 #include "mock_esp_system.h"
+#include "mock_TCP_test.h"
 
 int test_count = 0;
 void setUp(void)
@@ -19,223 +21,117 @@ void tearDown(void)
 
 /*
     ##################################################
-    ## Test PID
+    ## Test setup_socket for TCP thread
     ##################################################
 */
 
-// void test_pid_0(void)
-// {
-//     float result;
+void test_setup_socket_0(void)
+{
+    tcp_task_err_t result;
+
+    // Test input params
+    socket_information_t my_sock = {
+        .socket_ID = 0,
+    };
+    int addr_family = 0;
+
+    // Expected mock functions to be called
+    init_sockaddr_storage_ExpectAndReturn(&my_sock, tcp_task_fail);
+
+    result = setup_socket(&my_sock,addr_family);
     
-//     float prev_pos = 0.0;
-//     float new_pos = 1.0;
+    TEST_ASSERT_EQUAL_INT( (int)tcp_task_fail, (int)result );
+}
 
-//     vTaskDelay_Expect(1);
-//     result = pid_loop_step(prev_pos, new_pos, 1.0, 0.0, 0.0);
+void test_setup_socket_1(void)
+{
+    tcp_task_err_t result;
+
+    // Test input params
+    socket_information_t my_sock = {
+        .socket_ID = 0,
+    };
+    int addr_family = 0;
+
+    // Expected mock functions to be called
+    init_sockaddr_storage_ExpectAndReturn(&my_sock, tcp_task_ok);
+    create_bind_socket_ExpectAndReturn(&my_sock, tcp_task_ok);
+
+    result = setup_socket(&my_sock,addr_family);
     
-//     TEST_ASSERT_EQUAL_FLOAT( 1.0, result );
-// }
+    TEST_ASSERT_EQUAL_INT( (int)tcp_task_ok, (int)result );
+}
 
-// void test_pid_1(void)
-// {
-//     float result;
+void test_setup_socket_2(void)
+{
+    tcp_task_err_t result;
+
+    // Test input params
+    socket_information_t my_sock = {
+        .socket_ID = 0,
+    };
+    int addr_family = 0;
+
+    // Expected mock functions to be called
+    init_sockaddr_storage_ExpectAndReturn(&my_sock, tcp_task_ok);
+    create_bind_socket_ExpectAndReturn(&my_sock, tcp_task_fail);
+
+    result = setup_socket(&my_sock,addr_family);
     
-//     float prev_pos = 0.0;
-//     float new_pos = -1.0;
+    TEST_ASSERT_EQUAL_INT( (int)tcp_task_fail, (int)result );
+}
 
-//     result = pid_loop_step(prev_pos, new_pos, 1.0, 0.0, 0.0);
-    
-//     TEST_ASSERT_EQUAL_FLOAT( -1.0, result );
-// }
+/*
+    ##################################################
+    ## Test TCP server thread
+    ##################################################
+*/
 
-// void test_pid_2(void)
-// {
-//     float result;
-    
-//     float prev_pos = -1.0;
-//     float new_pos = 0.0;
+void test_tcp_server_task_0(void)
+{
+    // Test input params
+    char *arg = malloc(sizeof(char));
+    arg[0] = 1;
 
-//     result = pid_loop_step(prev_pos, new_pos, 1.0, 0.0, 0.0);
-    
-//     TEST_ASSERT_EQUAL_FLOAT( -1.0, result );
-// }
+    // Expected mock functions to be called
+    init_sockaddr_storage_IgnoreAndReturn(tcp_task_ok);
+    create_bind_socket_IgnoreAndReturn(tcp_task_fail);
+    shutdown_socket_IgnoreAndReturn(tcp_task_fail);
+    vTaskDelete_Ignore();
 
-// void test_pid_3(void)
-// {
-//     float result;
-    
-//     float prev_pos = -1.0;
-//     float new_pos = -1.0;
+    tcp_server_task(arg);
+}
 
-//     result = pid_loop_step(prev_pos, new_pos, 1.0, 0.0, 0.0);
-    
-//     TEST_ASSERT_EQUAL_FLOAT( -1.0, result );
-// }
+void test_tcp_server_task_1(void)
+{
+    // Test input params
+    char *arg = malloc(sizeof(char));
+    arg[0] = 1;
 
-// void test_pid_4(void)
-// {
-//     float result;
-    
-//     float prev_pos = 0.0;
-//     float new_pos = 0.0;
+    // Expected mock functions to be called
+    init_sockaddr_storage_IgnoreAndReturn(tcp_task_ok);
+    create_bind_socket_IgnoreAndReturn(tcp_task_ok);
+    manage_socket_IgnoreAndReturn(tcp_task_ok);
+    shutdown_socket_IgnoreAndReturn(tcp_task_fail);
+    vTaskDelete_Ignore();
 
-    
+    tcp_server_task(arg);
+}
 
-//     for(int i = 0;i<100;i++){
-//         vTaskDelay_Expect(1);
+void test_tcp_server_task_2(void)
+{
+    // Test input params
+    char *arg = malloc(sizeof(char));
+    arg[0] = 1;
 
-//         // Update step
-//         prev_pos = new_pos;
-//         new_pos++;
-//         // Get next step
-//         result = pid_loop_step(prev_pos, new_pos, 1.0, 0.0, 0.0);
-//         TEST_ASSERT_EQUAL_FLOAT( new_pos, result );
-//     }
-    
-// }
+    // Expected mock functions to be called
+    init_sockaddr_storage_IgnoreAndReturn(tcp_task_ok);
+    create_bind_socket_IgnoreAndReturn(tcp_task_ok);
+    manage_socket_IgnoreAndReturn(tcp_task_fail);
+    shutdown_socket_IgnoreAndReturn(tcp_task_fail);
+    vTaskDelete_Ignore();
 
-// /*
-//     ##################################################
-//     ## Test hsv2rgb
-//     ##################################################
-// */
-
-// void test_hsv2rgb_0(void)
-// {
-
-//     uint32_t r;
-//     uint32_t g;
-//     uint32_t b;
-
-//     int rval = hsv2rgb(0, 100, 100, &r, &g, &b);
-
-//     TEST_ASSERT_EQUAL_UINT32( 255, r );
-//     TEST_ASSERT_EQUAL_UINT32( 0, g );
-//     TEST_ASSERT_EQUAL_UINT32( 0, b );
-//     TEST_ASSERT_EQUAL_INT( 0, rval );
-// }
-
-// void test_hsv2rgb_1(void)
-// {
-
-//     uint32_t r;
-//     uint32_t g;
-//     uint32_t b;
-
-//     int rval = hsv2rgb(240, 100, 100, &r, &g, &b);
-    
-//     TEST_ASSERT_EQUAL_UINT32( 0, r );
-//     TEST_ASSERT_EQUAL_UINT32( 0, g );
-//     TEST_ASSERT_EQUAL_UINT32( 255, b );
-//     TEST_ASSERT_EQUAL_INT( 0, rval );
-// }
-
-// void test_hsv2rgb_2(void)
-// {
-
-//     uint32_t r;
-//     uint32_t g;
-//     uint32_t b;
-
-//     int rval = hsv2rgb(180, 100, 100, &r, &g, &b);
-    
-//     TEST_ASSERT_EQUAL_UINT32( 0, r );
-//     TEST_ASSERT_EQUAL_UINT32( 255, g );
-//     TEST_ASSERT_EQUAL_UINT32( 255, b );
-//     TEST_ASSERT_EQUAL_INT( 0, rval );
-// }
-
-// void test_hsv2rgb_3(void)
-// {
-
-//     uint32_t r;
-//     uint32_t g;
-//     uint32_t b;
-
-//     int rval = hsv2rgb(120, 100, 50, &r, &g, &b);
-    
-//     TEST_ASSERT_EQUAL_UINT32( 0, r );
-//     TEST_ASSERT_EQUAL_UINT32( 127, g );
-//     TEST_ASSERT_EQUAL_UINT32( 0, b );
-//     TEST_ASSERT_EQUAL_INT( 0, rval );
-// }
-
-// void test_hsv2rgb_4(void)
-// {
-
-//     uint32_t r;
-//     uint32_t g;
-//     uint32_t b;
-
-//     int rval =  hsv2rgb(67, 0, 75, &r, &g, &b);
-    
-//     TEST_ASSERT_EQUAL_UINT32( 191, r );
-//     TEST_ASSERT_EQUAL_UINT32( 191, g );
-//     TEST_ASSERT_EQUAL_UINT32( 191, b );
-//     TEST_ASSERT_EQUAL_INT( 0, rval );
-// }
-
-// void test_hsv2rgb_5(void)
-// {
-
-//     uint32_t r;
-//     uint32_t g;
-//     uint32_t b;
-
-//     int rval = hsv2rgb(42, 96, 90, &r, &g, &b);
-    
-//     TEST_ASSERT_EQUAL_UINT32( 229, r );
-//     TEST_ASSERT_EQUAL_UINT32( 163, g );
-//     TEST_ASSERT_EQUAL_UINT32( 9, b );
-//     TEST_ASSERT_EQUAL_INT( 0, rval );
-// }
-
-// void test_hsv2rgb_6(void)
-// {
-
-//     uint32_t r;
-//     uint32_t g;
-//     uint32_t b;
-
-//     int rval = hsv2rgb(300, 23, 64, &r, &g, &b);
-    
-//     TEST_ASSERT_EQUAL_UINT32( 163, r );
-//     TEST_ASSERT_EQUAL_UINT32( 125, g );
-//     TEST_ASSERT_EQUAL_UINT32( 163, b );
-//     TEST_ASSERT_EQUAL_INT( 0, rval );
-// }
-
-// void test_hsv2rgb_7(void)
-// {
-
-//     uint32_t g;
-//     uint32_t b;
-
-//     int rval = hsv2rgb(300, 23, 64, (uint32_t *)0, &g, &b);
-    
-//     TEST_ASSERT_EQUAL_INT( -1, rval );
-// }
-
-// void test_hsv2rgb_8(void)
-// {
-
-//     uint32_t r;
-//     uint32_t b;
-
-//     int rval = hsv2rgb(300, 23, 64, &r, (uint32_t *)0, &b);
-    
-//     TEST_ASSERT_EQUAL_INT( -1, rval );
-// }
-
-// void test_hsv2rgb_9(void)
-// {
-
-//     uint32_t r;
-//     uint32_t g;
-
-//     int rval = hsv2rgb(300, 23, 64, &r, &g, (uint32_t *)0);
-    
-//     TEST_ASSERT_EQUAL_INT( -1, rval );
-// }
+    tcp_server_task(arg);
+}
 
 #endif // TEST

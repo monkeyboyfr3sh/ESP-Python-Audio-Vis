@@ -43,6 +43,9 @@
     "mock_esp_system.h": "c",
     "esp_wifi.h": "c",
     "event_groups.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "mock_tcp_test.h": "c",
+    "stdbool.h": "c",
+    "esp_err.h": "c"
   }
 }

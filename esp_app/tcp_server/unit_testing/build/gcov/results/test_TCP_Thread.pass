@@ -1,0 +1,38 @@
+---
+:source:
+  :path: test
+  :file: test_TCP_Thread.c
+:successes:
+- :test: test_setup_socket_0
+  :line: 28
+  :message: ''
+  :unity_test_time: 0
+- :test: test_setup_socket_1
+  :line: 46
+  :message: ''
+  :unity_test_time: 0
+- :test: test_setup_socket_2
+  :line: 65
+  :message: ''
+  :unity_test_time: 0
+- :test: test_tcp_server_task_0
+  :line: 90
+  :message: ''
+  :unity_test_time: 0
+- :test: test_tcp_server_task_1
+  :line: 105
+  :message: ''
+  :unity_test_time: 0
+- :test: test_tcp_server_task_2
+  :line: 121
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 6
+  :passed: 6
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.04037209999842162

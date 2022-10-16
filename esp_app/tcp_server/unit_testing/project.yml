@@ -76,6 +76,7 @@
   :reports:
     - HtmlDetailed
   :gcovr:
+    :html_title: ESP-Audio-Sync
     :html_medium_threshold: 75
     :html_high_threshold: 90
 

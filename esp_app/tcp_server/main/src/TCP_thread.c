@@ -14,24 +14,15 @@
 #include "nvs_flash.h"
 #include "esp_netif.h"
 
-
 #include "protocol_examples_common.h"
 
-#include "lwip/err.h"
-#include "lwip/sockets.h"
-#include "lwip/sys.h"
-#include <lwip/netdb.h>
 #include "driver/gpio.h"
 
 #include "driver/rmt.h"
 #include "led_strip.h"
 
 #include "stdbool.h"
-
-#ifndef TEST
-#include "LED_thread.h"
-#include "UDP_thread.h"
-#endif
+#include "stdio.h"
 
 static const char *TAG = "tcp";
 
@@ -39,6 +30,8 @@ bool UDP_sync = true;
 bool SET_LED_CNT = false;
 
 #ifndef TEST
+#include "LED_thread.h"
+#include "UDP_thread.h"
 
 static void do_retransmit(const int sock)
 {
@@ -95,82 +88,133 @@ static void do_retransmit(const int sock)
     } while (len > 0);
     ESP_LOGE(TAG,"TCP thread exiting");
 }
+
+tcp_task_err_t init_sockaddr_storage(socket_information_t *socket_info)
+{
+    tcp_task_err_t rval = tcp_task_fail;
+    if (socket_info->addr_family == AF_INET) {
+        socket_info->dest_addr_ip4 = (struct sockaddr_in *)&(socket_info->dest_addr);
+        socket_info->dest_addr_ip4->sin_addr.s_addr = htonl(INADDR_ANY);
+        socket_info->dest_addr_ip4->sin_family = AF_INET;
+        socket_info->dest_addr_ip4->sin_port = htons(TCP_PORT);
+        socket_info->ip_protocol = IPPROTO_IP;
+        rval = tcp_task_ok;
+    }
+
+    return rval;
+}
+
+tcp_task_err_t create_bind_socket(socket_information_t *socket_info)
+{
+    // First create socket
+    socket_info->listen_sock = socket(socket_info->addr_family, SOCK_STREAM, socket_info->ip_protocol);
+    if (socket_info->listen_sock < 0) {
+        ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
+        return tcp_task_fail;
+    }
+    int opt = 1;
+    setsockopt(socket_info->listen_sock, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+    ESP_LOGI(TAG, "Socket created");
+
+    // Now bind the socket
+    int err = bind(socket_info->listen_sock, (struct sockaddr *)&(socket_info->dest_addr), sizeof(socket_info->dest_addr));
+    if (err != 0) {
+        ESP_LOGE(TAG, "Socket unable to bind: errno %d", errno);
+        ESP_LOGE(TAG, "IPPROTO: %d", socket_info->addr_family);
+        return tcp_task_fail;
+    }
+    ESP_LOGI(TAG, "Socket bound, port %d", TCP_PORT);
+
+    err = listen(socket_info->listen_sock, 1);
+    if (err != 0) {
+        ESP_LOGE(TAG, "Error occurred during listen: errno %d", errno);
+        return tcp_task_fail;
+    }
+
+    return tcp_task_ok;
+}
+
+tcp_task_err_t manage_socket(socket_information_t *socket_info)
+{
+    while (1) {
+
+        ESP_LOGI(TAG, "Socket listening");
+
+        struct sockaddr_storage source_addr; // Large enough for both IPv4 or IPv6
+        socklen_t addr_len = sizeof(source_addr);
+        int sock = accept(socket_info->listen_sock, (struct sockaddr *)&source_addr, &addr_len);
+        if (sock < 0) {
+            ESP_LOGE(TAG, "Unable to accept connection: errno %d", errno);
+            return tcp_task_fail;
+        }
+
+        // Set tcp keepalive option
+        setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &(socket_info->keepAlive), sizeof(int));
+        setsockopt(sock, IPPROTO_TCP, TCP_KEEPIDLE, &(socket_info->keepIdle), sizeof(int));
+        setsockopt(sock, IPPROTO_TCP, TCP_KEEPINTVL, &(socket_info->keepInterval), sizeof(int));
+        setsockopt(sock, IPPROTO_TCP, TCP_KEEPCNT, &(socket_info->keepCount), sizeof(int));
+        // Convert ip address to string
+        if (source_addr.ss_family == PF_INET) {
+            inet_ntoa_r(((struct sockaddr_in *)&source_addr)->sin_addr, (socket_info->addr_str), sizeof(socket_info->addr_str) - 1);
+        }
+        ESP_LOGI(TAG, "Socket accepted ip address: %s", socket_info->addr_str);
+
+        // Receive data via TCP on this socket
+        do_retransmit(sock);
+    }
+}
+
+tcp_task_err_t shutdown_socket(socket_information_t *socket_info)
+{
+    close(socket_info->listen_sock);
+    return tcp_task_ok;
+}
+
 #endif
+
+tcp_task_err_t setup_socket(socket_information_t *socket_info, int addr_family)
+{
+    // printf("Setting up socket %d\n",socket_info->socket_ID);
+    socket_info->addr_family = addr_family;
+    socket_info->ip_protocol = 0;
+    socket_info->keepAlive = 1;
+    socket_info->keepIdle = KEEPALIVE_IDLE;
+    socket_info->keepInterval = KEEPALIVE_INTERVAL;
+    socket_info->keepCount = KEEPALIVE_COUNT;
+
+    // Try setting up socket storage
+    tcp_task_err_t init_err = init_sockaddr_storage( socket_info );
+    if(init_err != tcp_task_ok) {
+        return init_err;
+    }
+
+    tcp_task_err_t create_bind_err = create_bind_socket ( socket_info );
+    if(create_bind_err != tcp_task_ok) {
+        return create_bind_err;
+    }
+
+    return tcp_task_ok;
+}
 
 void tcp_server_task(void *pvParameters)
 {
-    char addr_str[128];
-    int addr_family = (int)pvParameters;
-    int ip_protocol = 0;
-    int keepAlive = 1;
-    int keepIdle = KEEPALIVE_IDLE;
-    int keepInterval = KEEPALIVE_INTERVAL;
-    int keepCount = KEEPALIVE_COUNT;
-    // struct sockaddr_storage dest_addr;
+    socket_information_t my_sock = {
+        .socket_ID = 0,
+    };
 
-//     if (addr_family == AF_INET) {
-//         struct sockaddr_in *dest_addr_ip4 = (struct sockaddr_in *)&dest_addr;
-//         dest_addr_ip4->sin_addr.s_addr = htonl(INADDR_ANY);
-//         dest_addr_ip4->sin_family = AF_INET;
-//         dest_addr_ip4->sin_port = htons(TCP_PORT);
-//         ip_protocol = IPPROTO_IP;
-//     }
+    // Setup socket
+    tcp_task_err_t setup_err =  setup_socket( &my_sock, (int)pvParameters );
+    
+    // Only manage the socket if success in setup
+    if(setup_err == tcp_task_ok){
 
-//     int listen_sock = socket(addr_family, SOCK_STREAM, ip_protocol);
-//     if (listen_sock < 0) {
-//         ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
-//         vTaskDelete(NULL);
-//         return;
-//     }
-//     int opt = 1;
-//     setsockopt(listen_sock, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+        // Manage the socket
+        tcp_task_err_t management_err = manage_socket( &my_sock );
+    }
 
-//     ESP_LOGI(TAG, "Socket created");
+    // shutdown socket on exit
+    shutdown_socket( &my_sock );
 
-//     int err = bind(listen_sock, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
-//     if (err != 0) {
-//         ESP_LOGE(TAG, "Socket unable to bind: errno %d", errno);
-//         ESP_LOGE(TAG, "IPPROTO: %d", addr_family);
-//         goto CLEAN_UP;
-//     }
-//     ESP_LOGI(TAG, "Socket bound, port %d", TCP_PORT);
-
-//     err = listen(listen_sock, 1);
-//     if (err != 0) {
-//         ESP_LOGE(TAG, "Error occurred during listen: errno %d", errno);
-//         goto CLEAN_UP;
-//     }
-
-//     while (1) {
-
-//         ESP_LOGI(TAG, "Socket listening");
-
-//         struct sockaddr_storage source_addr; // Large enough for both IPv4 or IPv6
-//         socklen_t addr_len = sizeof(source_addr);
-//         int sock = accept(listen_sock, (struct sockaddr *)&source_addr, &addr_len);
-//         if (sock < 0) {
-//             ESP_LOGE(TAG, "Unable to accept connection: errno %d", errno);
-//             break;
-//         }
-
-//         // Set tcp keepalive option
-//         setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &keepAlive, sizeof(int));
-//         setsockopt(sock, IPPROTO_TCP, TCP_KEEPIDLE, &keepIdle, sizeof(int));
-//         setsockopt(sock, IPPROTO_TCP, TCP_KEEPINTVL, &keepInterval, sizeof(int));
-//         setsockopt(sock, IPPROTO_TCP, TCP_KEEPCNT, &keepCount, sizeof(int));
-//         // Convert ip address to string
-//         if (source_addr.ss_family == PF_INET) {
-//             inet_ntoa_r(((struct sockaddr_in *)&source_addr)->sin_addr, addr_str, sizeof(addr_str) - 1);
-//         }
-//         ESP_LOGI(TAG, "Socket accepted ip address: %s", addr_str);
-
-//         do_retransmit(sock);
-
-//         shutdown(sock, 0);
-//         close(sock);
-//     }
-
-// CLEAN_UP:
-//     close(listen_sock);
-//     vTaskDelete(NULL);
+    // Delete thread
+    vTaskDelete(NULL);
 }

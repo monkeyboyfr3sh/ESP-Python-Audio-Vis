@@ -8,7 +8,9 @@
 static const char* CMockString_i = "i";
 static const char* CMockString_ms = "ms";
 static const char* CMockString_pdMS_TO_TICKS = "pdMS_TO_TICKS";
+static const char* CMockString_taskHandle = "taskHandle";
 static const char* CMockString_vTaskDelay = "vTaskDelay";
+static const char* CMockString_vTaskDelete = "vTaskDelete";
 static const char* CMockString_xTaskGetTickCount = "xTaskGetTickCount";
 
 typedef struct _CMOCK_vTaskDelay_CALL_INSTANCE
@@ -18,6 +20,14 @@ typedef struct _CMOCK_vTaskDelay_CALL_INSTANCE
   int Expected_i;
 
 } CMOCK_vTaskDelay_CALL_INSTANCE;
+
+typedef struct _CMOCK_vTaskDelete_CALL_INSTANCE
+{
+  UNITY_LINE_TYPE LineNumber;
+  int CallOrder;
+  void* Expected_taskHandle;
+
+} CMOCK_vTaskDelete_CALL_INSTANCE;
 
 typedef struct _CMOCK_xTaskGetTickCount_CALL_INSTANCE
 {
@@ -43,6 +53,11 @@ static struct mock_esp_systemInstance
   CMOCK_vTaskDelay_CALLBACK vTaskDelay_CallbackFunctionPointer;
   int vTaskDelay_CallbackCalls;
   CMOCK_MEM_INDEX_TYPE vTaskDelay_CallInstance;
+  char vTaskDelete_IgnoreBool;
+  char vTaskDelete_CallbackBool;
+  CMOCK_vTaskDelete_CALLBACK vTaskDelete_CallbackFunctionPointer;
+  int vTaskDelete_CallbackCalls;
+  CMOCK_MEM_INDEX_TYPE vTaskDelete_CallInstance;
   char xTaskGetTickCount_IgnoreBool;
   int xTaskGetTickCount_FinalReturn;
   char xTaskGetTickCount_CallbackBool;
@@ -74,6 +89,19 @@ void mock_esp_system_Verify(void)
     UNITY_TEST_FAIL(cmock_line, CMockStringCalledLess);
   }
   if (Mock.vTaskDelay_CallbackFunctionPointer != NULL)
+  {
+    call_instance = CMOCK_GUTS_NONE;
+    (void)call_instance;
+  }
+  call_instance = Mock.vTaskDelete_CallInstance;
+  if (Mock.vTaskDelete_IgnoreBool)
+    call_instance = CMOCK_GUTS_NONE;
+  if (CMOCK_GUTS_NONE != call_instance)
+  {
+    UNITY_SET_DETAIL(CMockString_vTaskDelete);
+    UNITY_TEST_FAIL(cmock_line, CMockStringCalledLess);
+  }
+  if (Mock.vTaskDelete_CallbackFunctionPointer != NULL)
   {
     call_instance = CMOCK_GUTS_NONE;
     (void)call_instance;
@@ -196,6 +224,88 @@ void vTaskDelay_Stub(CMOCK_vTaskDelay_CALLBACK Callback)
   Mock.vTaskDelay_IgnoreBool = (char)0;
   Mock.vTaskDelay_CallbackBool = (char)0;
   Mock.vTaskDelay_CallbackFunctionPointer = Callback;
+}
+
+void vTaskDelete(void* taskHandle)
+{
+  UNITY_LINE_TYPE cmock_line = TEST_LINE_NUM;
+  CMOCK_vTaskDelete_CALL_INSTANCE* cmock_call_instance;
+  UNITY_SET_DETAIL(CMockString_vTaskDelete);
+  cmock_call_instance = (CMOCK_vTaskDelete_CALL_INSTANCE*)CMock_Guts_GetAddressFor(Mock.vTaskDelete_CallInstance);
+  Mock.vTaskDelete_CallInstance = CMock_Guts_MemNext(Mock.vTaskDelete_CallInstance);
+  if (Mock.vTaskDelete_IgnoreBool)
+  {
+    UNITY_CLR_DETAILS();
+    return;
+  }
+  if (!Mock.vTaskDelete_CallbackBool &&
+      Mock.vTaskDelete_CallbackFunctionPointer != NULL)
+  {
+    Mock.vTaskDelete_CallbackFunctionPointer(taskHandle, Mock.vTaskDelete_CallbackCalls++);
+    UNITY_CLR_DETAILS();
+    return;
+  }
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringCalledMore);
+  cmock_line = cmock_call_instance->LineNumber;
+  if (cmock_call_instance->CallOrder > ++GlobalVerifyOrder)
+    UNITY_TEST_FAIL(cmock_line, CMockStringCalledEarly);
+  if (cmock_call_instance->CallOrder < GlobalVerifyOrder)
+    UNITY_TEST_FAIL(cmock_line, CMockStringCalledLate);
+  {
+    UNITY_SET_DETAILS(CMockString_vTaskDelete,CMockString_taskHandle);
+    if (cmock_call_instance->Expected_taskHandle == NULL)
+      { UNITY_TEST_ASSERT_NULL(taskHandle, cmock_line, CMockStringExpNULL); }
+    else
+      { UNITY_TEST_ASSERT_EQUAL_HEX8_ARRAY(cmock_call_instance->Expected_taskHandle, taskHandle, 1, cmock_line, CMockStringMismatch); }
+  }
+  if (Mock.vTaskDelete_CallbackFunctionPointer != NULL)
+  {
+    Mock.vTaskDelete_CallbackFunctionPointer(taskHandle, Mock.vTaskDelete_CallbackCalls++);
+  }
+  UNITY_CLR_DETAILS();
+}
+
+void CMockExpectParameters_vTaskDelete(CMOCK_vTaskDelete_CALL_INSTANCE* cmock_call_instance, void* taskHandle);
+void CMockExpectParameters_vTaskDelete(CMOCK_vTaskDelete_CALL_INSTANCE* cmock_call_instance, void* taskHandle)
+{
+  cmock_call_instance->Expected_taskHandle = taskHandle;
+}
+
+void vTaskDelete_CMockIgnore(void)
+{
+  Mock.vTaskDelete_IgnoreBool = (char)1;
+}
+
+void vTaskDelete_CMockStopIgnore(void)
+{
+  Mock.vTaskDelete_IgnoreBool = (char)0;
+}
+
+void vTaskDelete_CMockExpect(UNITY_LINE_TYPE cmock_line, void* taskHandle)
+{
+  CMOCK_MEM_INDEX_TYPE cmock_guts_index = CMock_Guts_MemNew(sizeof(CMOCK_vTaskDelete_CALL_INSTANCE));
+  CMOCK_vTaskDelete_CALL_INSTANCE* cmock_call_instance = (CMOCK_vTaskDelete_CALL_INSTANCE*)CMock_Guts_GetAddressFor(cmock_guts_index);
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringOutOfMemory);
+  memset(cmock_call_instance, 0, sizeof(*cmock_call_instance));
+  Mock.vTaskDelete_CallInstance = CMock_Guts_MemChain(Mock.vTaskDelete_CallInstance, cmock_guts_index);
+  Mock.vTaskDelete_IgnoreBool = (char)0;
+  cmock_call_instance->LineNumber = cmock_line;
+  cmock_call_instance->CallOrder = ++GlobalExpectCount;
+  CMockExpectParameters_vTaskDelete(cmock_call_instance, taskHandle);
+}
+
+void vTaskDelete_AddCallback(CMOCK_vTaskDelete_CALLBACK Callback)
+{
+  Mock.vTaskDelete_IgnoreBool = (char)0;
+  Mock.vTaskDelete_CallbackBool = (char)1;
+  Mock.vTaskDelete_CallbackFunctionPointer = Callback;
+}
+
+void vTaskDelete_Stub(CMOCK_vTaskDelete_CALLBACK Callback)
+{
+  Mock.vTaskDelete_IgnoreBool = (char)0;
+  Mock.vTaskDelete_CallbackBool = (char)0;
+  Mock.vTaskDelete_CallbackFunctionPointer = Callback;
 }
 
 int xTaskGetTickCount(void)

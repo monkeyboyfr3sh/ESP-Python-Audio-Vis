@@ -2,3 +2,5 @@
 - C:/Ruby25/lib/ruby/gems/2.5.0/gems/ceedling-0.31.1/vendor/unity/src/unity.h
 - "../main/inc/TCP_thread.h"
 - build/test/mocks/mock_esp_system.h
+- build/test/mocks/mock_TCP_test.h
+- "../main/src/TCP_thread.c"

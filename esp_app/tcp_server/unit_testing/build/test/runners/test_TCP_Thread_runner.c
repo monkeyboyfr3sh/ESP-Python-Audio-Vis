@@ -4,6 +4,7 @@
 #include "unity.h"
 #include "cmock.h"
 #include "mock_esp_system.h"
+#include "mock_TCP_test.h"
 
 int GlobalExpectCount;
 int GlobalVerifyOrder;
@@ -12,6 +13,12 @@ char* GlobalOrderError;
 /*=======External Functions This Runner Calls=====*/
 extern void setUp(void);
 extern void tearDown(void);
+extern void test_setup_socket_0(void);
+extern void test_setup_socket_1(void);
+extern void test_setup_socket_2(void);
+extern void test_tcp_server_task_0(void);
+extern void test_tcp_server_task_1(void);
+extern void test_tcp_server_task_2(void);
 
 
 /*=======Mock Management=====*/
@@ -21,14 +28,17 @@ static void CMock_Init(void)
   GlobalVerifyOrder = 0;
   GlobalOrderError = NULL;
   mock_esp_system_Init();
+  mock_TCP_test_Init();
 }
 static void CMock_Verify(void)
 {
   mock_esp_system_Verify();
+  mock_TCP_test_Verify();
 }
 static void CMock_Destroy(void)
 {
   mock_esp_system_Destroy();
+  mock_TCP_test_Destroy();
 }
 
 /*=======Test Reset Options=====*/
@@ -47,10 +57,44 @@ void verifyTest(void)
   CMock_Verify();
 }
 
+/*=======Test Runner Used To Run Each Test=====*/
+static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE line_num)
+{
+    Unity.CurrentTestName = name;
+    Unity.CurrentTestLineNumber = line_num;
+#ifdef UNITY_USE_COMMAND_LINE_ARGS
+    if (!UnityTestMatches())
+        return;
+#endif
+    Unity.NumberOfTests++;
+    UNITY_CLR_DETAILS();
+    UNITY_EXEC_TIME_START();
+    CMock_Init();
+    if (TEST_PROTECT())
+    {
+        setUp();
+        func();
+    }
+    if (TEST_PROTECT())
+    {
+        tearDown();
+        CMock_Verify();
+    }
+    CMock_Destroy();
+    UNITY_EXEC_TIME_STOP();
+    UnityConcludeTest();
+}
+
 /*=======MAIN=====*/
 int main(void)
 {
   UnityBegin("test_TCP_Thread.c");
+  run_test(test_setup_socket_0, "test_setup_socket_0", 28);
+  run_test(test_setup_socket_1, "test_setup_socket_1", 46);
+  run_test(test_setup_socket_2, "test_setup_socket_2", 65);
+  run_test(test_tcp_server_task_0, "test_tcp_server_task_0", 90);
+  run_test(test_tcp_server_task_1, "test_tcp_server_task_1", 105);
+  run_test(test_tcp_server_task_2, "test_tcp_server_task_2", 121);
 
   CMock_Guts_MemFreeFinal();
   return UnityEnd();

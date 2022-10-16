@@ -34,6 +34,16 @@ typedef void (* CMOCK_vTaskDelay_CALLBACK)(int i, int cmock_num_calls);
 void vTaskDelay_AddCallback(CMOCK_vTaskDelay_CALLBACK Callback);
 void vTaskDelay_Stub(CMOCK_vTaskDelay_CALLBACK Callback);
 #define vTaskDelay_StubWithCallback vTaskDelay_Stub
+#define vTaskDelete_Ignore() vTaskDelete_CMockIgnore()
+void vTaskDelete_CMockIgnore(void);
+#define vTaskDelete_StopIgnore() vTaskDelete_CMockStopIgnore()
+void vTaskDelete_CMockStopIgnore(void);
+#define vTaskDelete_Expect(taskHandle) vTaskDelete_CMockExpect(__LINE__, taskHandle)
+void vTaskDelete_CMockExpect(UNITY_LINE_TYPE cmock_line, void* taskHandle);
+typedef void (* CMOCK_vTaskDelete_CALLBACK)(void* taskHandle, int cmock_num_calls);
+void vTaskDelete_AddCallback(CMOCK_vTaskDelete_CALLBACK Callback);
+void vTaskDelete_Stub(CMOCK_vTaskDelete_CALLBACK Callback);
+#define vTaskDelete_StubWithCallback vTaskDelete_Stub
 #define xTaskGetTickCount_IgnoreAndReturn(cmock_retval) xTaskGetTickCount_CMockIgnoreAndReturn(__LINE__, cmock_retval)
 void xTaskGetTickCount_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
 #define xTaskGetTickCount_StopIgnore() xTaskGetTickCount_CMockStopIgnore()
