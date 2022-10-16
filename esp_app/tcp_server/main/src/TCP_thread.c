@@ -212,7 +212,7 @@ void tcp_server_task(void *pvParameters)
         tcp_task_err_t management_err = manage_socket( &my_sock );
     }
 
-    // shutdown socket on exit
+    // Shutdown socket on exit
     shutdown_socket( &my_sock );
 
     // Delete thread
