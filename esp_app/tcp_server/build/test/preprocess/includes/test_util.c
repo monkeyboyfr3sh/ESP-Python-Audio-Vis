@@ -1,0 +1,4 @@
+---
+- C:/Ruby25/lib/ruby/gems/2.5.0/gems/ceedling-0.31.1/vendor/unity/src/unity.h
+- components/util/inc/utils.h
+- build/test/mocks/mock_esp_system.h

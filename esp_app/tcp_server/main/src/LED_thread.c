@@ -20,7 +20,6 @@
 
 #include "driver/rmt.h"
 #include "led_strip.h"
-#include "inc/utils.h"
 
 #include "stdbool.h"
 #include "utils.h"
