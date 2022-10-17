@@ -30,8 +30,8 @@
   - main/inc/**
   - components/*/inc
   - components/*/src
-  - unit_testing/esp-idf-mock/**
-  :support: []
+  :support:
+  - unit_testing/fff
   :include: []
   :libraries: []
   :test_toolchain_include: []
@@ -64,8 +64,11 @@
   :release: []
   :release_preprocess: []
   :placement: :end
+:flags:
+  :test: []
+  :path_flag: "-L ${1}"
   :system: []
-:flags: {}
+  :release: []
 :extension:
   :header: ".h"
   :source: ".c"

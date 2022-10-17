@@ -2,8 +2,6 @@
 
 /*=======Automagically Detected Files To Include=====*/
 #include "unity.h"
-#include "cmock.h"
-#include "mock_esp_system.h"
 
 int GlobalExpectCount;
 int GlobalVerifyOrder;
@@ -27,6 +25,8 @@ extern void test_hsv2rgb_6(void);
 extern void test_hsv2rgb_7(void);
 extern void test_hsv2rgb_8(void);
 extern void test_hsv2rgb_9(void);
+extern void test_decay_pos_0(void);
+extern void test_decay_pos_1(void);
 
 
 /*=======Mock Management=====*/
@@ -35,15 +35,12 @@ static void CMock_Init(void)
   GlobalExpectCount = 0;
   GlobalVerifyOrder = 0;
   GlobalOrderError = NULL;
-  mock_esp_system_Init();
 }
 static void CMock_Verify(void)
 {
-  mock_esp_system_Verify();
 }
 static void CMock_Destroy(void)
 {
-  mock_esp_system_Destroy();
 }
 
 /*=======Test Reset Options=====*/
@@ -94,22 +91,23 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_util.c");
-  run_test(test_pid_0, "test_pid_0", 26);
-  run_test(test_pid_1, "test_pid_1", 39);
-  run_test(test_pid_2, "test_pid_2", 51);
-  run_test(test_pid_3, "test_pid_3", 63);
-  run_test(test_pid_4, "test_pid_4", 75);
-  run_test(test_hsv2rgb_0, "test_hsv2rgb_0", 103);
-  run_test(test_hsv2rgb_1, "test_hsv2rgb_1", 118);
-  run_test(test_hsv2rgb_2, "test_hsv2rgb_2", 133);
-  run_test(test_hsv2rgb_3, "test_hsv2rgb_3", 148);
-  run_test(test_hsv2rgb_4, "test_hsv2rgb_4", 163);
-  run_test(test_hsv2rgb_5, "test_hsv2rgb_5", 178);
-  run_test(test_hsv2rgb_6, "test_hsv2rgb_6", 193);
-  run_test(test_hsv2rgb_7, "test_hsv2rgb_7", 208);
-  run_test(test_hsv2rgb_8, "test_hsv2rgb_8", 219);
-  run_test(test_hsv2rgb_9, "test_hsv2rgb_9", 230);
+  run_test(test_pid_0, "test_pid_0", 33);
+  run_test(test_pid_1, "test_pid_1", 47);
+  run_test(test_pid_2, "test_pid_2", 59);
+  run_test(test_pid_3, "test_pid_3", 71);
+  run_test(test_pid_4, "test_pid_4", 83);
+  run_test(test_hsv2rgb_0, "test_hsv2rgb_0", 112);
+  run_test(test_hsv2rgb_1, "test_hsv2rgb_1", 127);
+  run_test(test_hsv2rgb_2, "test_hsv2rgb_2", 142);
+  run_test(test_hsv2rgb_3, "test_hsv2rgb_3", 157);
+  run_test(test_hsv2rgb_4, "test_hsv2rgb_4", 172);
+  run_test(test_hsv2rgb_5, "test_hsv2rgb_5", 187);
+  run_test(test_hsv2rgb_6, "test_hsv2rgb_6", 202);
+  run_test(test_hsv2rgb_7, "test_hsv2rgb_7", 217);
+  run_test(test_hsv2rgb_8, "test_hsv2rgb_8", 228);
+  run_test(test_hsv2rgb_9, "test_hsv2rgb_9", 239);
+  run_test(test_decay_pos_0, "test_decay_pos_0", 280);
+  run_test(test_decay_pos_1, "test_decay_pos_1", 295);
 
-  CMock_Guts_MemFreeFinal();
   return UnityEnd();
 }

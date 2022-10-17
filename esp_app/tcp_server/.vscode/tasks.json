@@ -301,7 +301,7 @@
             "label": "Ceedling: Clean Test All",
             "type": "shell",
             "windows": {
-                "command": ["cd ${workspaceFolder}\\unit_testing\\",";","ceedling clean test:all"],
+                "command": ["ceedling clean test:all"],
             },
             "group": "test",
             "presentation": {
@@ -313,7 +313,7 @@
             "label": "Ceedling: Test util",
             "type": "shell",
             "windows": {
-                "command": ["cd ${workspaceFolder}\\unit_testing\\",";","ceedling clean test:test_util.c"],
+                "command": ["ceedling clean test:test_util.c"],
             },
             "group": "test",
             "presentation": {
@@ -321,23 +321,23 @@
                 "panel": "dedicated"
             }
         },
-        {
-            "label": "Ceedling: Test TCP_Thread",
-            "type": "shell",
-            "windows": {
-                "command": ["cd ${workspaceFolder}\\unit_testing\\",";","ceedling clean test:test_TCP_Thread.c"],
-            },
-            "group": "test",
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated"
-            }
-        },
+        // {
+        //     "label": "Ceedling: Test TCP_Thread",
+        //     "type": "shell",
+        //     "windows": {
+        //         "command": ["cd ${workspaceFolder}\\unit_testing\\",";","ceedling clean test:test_TCP_Thread.c"],
+        //     },
+        //     "group": "test",
+        //     "presentation": {
+        //         "reveal": "always",
+        //         "panel": "dedicated"
+        //     }
+        // },
         {
             "label": "Ceedling: Generate Coverage",
             "type": "shell",
             "windows": {
-                "command": ["cd ${workspaceFolder}\\unit_testing\\",";","ceedling gcov:all utils:gcov"],
+                "command": ["ceedling gcov:all utils:gcov"],
             },
             "group": "test",
             "presentation": {

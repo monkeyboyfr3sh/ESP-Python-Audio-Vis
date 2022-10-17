@@ -46,6 +46,8 @@
     "stdlib.h": "c",
     "mock_tcp_test.h": "c",
     "stdbool.h": "c",
-    "esp_err.h": "c"
+    "esp_err.h": "c",
+    "fff.h": "c",
+    "*.include": "c"
   }
 }

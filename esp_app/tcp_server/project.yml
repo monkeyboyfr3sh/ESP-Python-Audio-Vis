@@ -38,8 +38,9 @@
     - main/inc/**
     - components/*/inc
     - components/*/src
-    - unit_testing/esp-idf-mock/**
+    # - unit_testing/esp-idf-mock/**
   :support:
+    - unit_testing/fff
   :libraries: [ ]
 
 :defines:
@@ -93,6 +94,14 @@
   :flag: 
     - "-l${1}"
           
+:flags:
+  :test:
+    :compile:
+      :*:
+        - -Wimplicit
+        - -Wimplicit-int
+        - -Wimplicit-function-declaration
+        - -Werror-implicit-function-declaration
 
   :path_flag: "-L ${1}"
   :system: []    # for example, you might list 'm' to grab the math library

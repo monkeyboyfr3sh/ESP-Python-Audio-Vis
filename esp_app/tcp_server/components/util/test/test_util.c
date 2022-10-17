@@ -1,16 +1,23 @@
 #ifdef TEST
 
 #include "unity.h"
+#include "fff.h"
+DEFINE_FFF_GLOBALS;
+FAKE_VOID_FUNC(vTaskDelay, int);
+FAKE_VALUE_FUNC(uint32_t,pdMS_TO_TICKS,uint32_t);
+FAKE_VALUE_FUNC(uint32_t,xTaskGetTickCount);
+
+uint32_t tick_count = 0;
 
 // DUT
 #include "utils.h"
 
-// CMock lib 
-#include "mock_esp_system.h"
-
 int test_count = 0;
 void setUp(void)
 {
+    RESET_FAKE(vTaskDelay);
+    RESET_FAKE(pdMS_TO_TICKS);
+    RESET_FAKE(xTaskGetTickCount);
     test_count++;
 }
 void tearDown(void)
@@ -30,9 +37,10 @@ void test_pid_0(void)
     float prev_pos = 0.0;
     float new_pos = 1.0;
 
-    vTaskDelay_Expect(1);
+    // vTaskDelay_Expect(1);
     result = pid_loop_step(prev_pos, new_pos, 1.0, 0.0, 0.0);
-    
+
+    TEST_ASSERT_EQUAL(1, vTaskDelay_fake.call_count);   
     TEST_ASSERT_EQUAL_FLOAT( 1.0, result );
 }
 
@@ -82,13 +90,14 @@ void test_pid_4(void)
     
 
     for(int i = 0;i<100;i++){
-        vTaskDelay_Expect(1);
 
         // Update step
         prev_pos = new_pos;
         new_pos++;
         // Get next step
         result = pid_loop_step(prev_pos, new_pos, 1.0, 0.0, 0.0);
+        
+        TEST_ASSERT_EQUAL(i+1, vTaskDelay_fake.call_count);
         TEST_ASSERT_EQUAL_FLOAT( new_pos, result );
     }
     
@@ -236,6 +245,64 @@ void test_hsv2rgb_9(void)
     int rval = hsv2rgb(300, 23, 64, &r, &g, (uint32_t *)0);
     
     TEST_ASSERT_EQUAL_INT( -1, rval );
+}
+
+/*
+    ##################################################
+    ## Test PID
+    ##################################################
+*/
+
+// #define MEANING_OF_LIFE 42
+uint32_t update_tick(void)
+{
+    return tick_count;
+}
+
+uint32_t tick_to_ms(uint32_t input)
+{
+    return input;
+}
+
+uint32_t decay_unit(uint32_t init_val, int num_iter, int decay_rate, int decay_coef)
+{
+    uint32_t result;
+    
+    tick_count = 0;
+    result = init_val;
+    for(int i = 0;i<num_iter;i++){
+        result = decay_pos(result, decay_rate, decay_coef);
+        printf("Result: %u\n",result);
+        tick_count++;
+    }
+    return result;
+}
+void test_decay_pos_0(void)
+{
+    xTaskGetTickCount_fake.custom_fake = update_tick;
+    pdMS_TO_TICKS_fake.custom_fake = tick_to_ms;
+
+    uint32_t decay_val = 100;
+    decay_val = decay_unit(decay_val, 10, 5, 2); 
+    decay_val = decay_unit(decay_val, 20, 5, 2); 
+    decay_val = decay_unit(decay_val, 2, 5, 2); 
+
+    TEST_ASSERT_EQUAL(88, decay_val);
+    TEST_ASSERT_EQUAL(38, xTaskGetTickCount_fake.call_count);   
+    TEST_ASSERT_EQUAL(32, pdMS_TO_TICKS_fake.call_count);  
+}
+
+void test_decay_pos_1(void)
+{
+    xTaskGetTickCount_fake.custom_fake = update_tick;
+    pdMS_TO_TICKS_fake.custom_fake = tick_to_ms;
+    
+    uint32_t decay_val = 0;
+    decay_val = decay_unit(decay_val, 20, 8, 8); 
+
+    TEST_ASSERT_EQUAL(0, decay_val);
+    TEST_ASSERT_EQUAL(0, xTaskGetTickCount_fake.call_count);   
+    TEST_ASSERT_EQUAL(0, pdMS_TO_TICKS_fake.call_count);  
 }
 
 #endif // TEST
