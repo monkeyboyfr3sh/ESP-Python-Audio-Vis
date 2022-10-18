@@ -4,71 +4,71 @@
   :file: test_util.c
 :successes:
 - :test: test_pid_0
-  :line: 33
+  :line: 35
   :message: ''
   :unity_test_time: 0
 - :test: test_pid_1
-  :line: 47
+  :line: 49
   :message: ''
   :unity_test_time: 0
 - :test: test_pid_2
-  :line: 59
+  :line: 61
   :message: ''
   :unity_test_time: 0
 - :test: test_pid_3
-  :line: 71
+  :line: 73
   :message: ''
   :unity_test_time: 0
 - :test: test_pid_4
-  :line: 83
+  :line: 85
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_0
-  :line: 112
+  :line: 114
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_1
-  :line: 127
+  :line: 129
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_2
-  :line: 142
+  :line: 144
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_3
-  :line: 157
+  :line: 159
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_4
-  :line: 172
+  :line: 174
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_5
-  :line: 187
+  :line: 189
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_6
-  :line: 202
+  :line: 204
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_7
-  :line: 217
+  :line: 219
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_8
-  :line: 228
+  :line: 230
   :message: ''
   :unity_test_time: 0
 - :test: test_hsv2rgb_9
-  :line: 239
+  :line: 241
   :message: ''
   :unity_test_time: 0
 - :test: test_decay_pos_0
-  :line: 280
+  :line: 282
   :message: ''
   :unity_test_time: 0
 - :test: test_decay_pos_1
-  :line: 295
+  :line: 297
   :message: ''
   :unity_test_time: 0
 :failures: []
@@ -131,4 +131,4 @@
 - 'Result: 0'
 - 'Result: 0'
 - 'Result: 0'
-:time: 0.043740499999330495
+:time: 0.06721290000041336

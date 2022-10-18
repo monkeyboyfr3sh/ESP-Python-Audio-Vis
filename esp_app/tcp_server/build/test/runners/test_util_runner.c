@@ -91,23 +91,23 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_util.c");
-  run_test(test_pid_0, "test_pid_0", 33);
-  run_test(test_pid_1, "test_pid_1", 47);
-  run_test(test_pid_2, "test_pid_2", 59);
-  run_test(test_pid_3, "test_pid_3", 71);
-  run_test(test_pid_4, "test_pid_4", 83);
-  run_test(test_hsv2rgb_0, "test_hsv2rgb_0", 112);
-  run_test(test_hsv2rgb_1, "test_hsv2rgb_1", 127);
-  run_test(test_hsv2rgb_2, "test_hsv2rgb_2", 142);
-  run_test(test_hsv2rgb_3, "test_hsv2rgb_3", 157);
-  run_test(test_hsv2rgb_4, "test_hsv2rgb_4", 172);
-  run_test(test_hsv2rgb_5, "test_hsv2rgb_5", 187);
-  run_test(test_hsv2rgb_6, "test_hsv2rgb_6", 202);
-  run_test(test_hsv2rgb_7, "test_hsv2rgb_7", 217);
-  run_test(test_hsv2rgb_8, "test_hsv2rgb_8", 228);
-  run_test(test_hsv2rgb_9, "test_hsv2rgb_9", 239);
-  run_test(test_decay_pos_0, "test_decay_pos_0", 280);
-  run_test(test_decay_pos_1, "test_decay_pos_1", 295);
+  run_test(test_pid_0, "test_pid_0", 35);
+  run_test(test_pid_1, "test_pid_1", 49);
+  run_test(test_pid_2, "test_pid_2", 61);
+  run_test(test_pid_3, "test_pid_3", 73);
+  run_test(test_pid_4, "test_pid_4", 85);
+  run_test(test_hsv2rgb_0, "test_hsv2rgb_0", 114);
+  run_test(test_hsv2rgb_1, "test_hsv2rgb_1", 129);
+  run_test(test_hsv2rgb_2, "test_hsv2rgb_2", 144);
+  run_test(test_hsv2rgb_3, "test_hsv2rgb_3", 159);
+  run_test(test_hsv2rgb_4, "test_hsv2rgb_4", 174);
+  run_test(test_hsv2rgb_5, "test_hsv2rgb_5", 189);
+  run_test(test_hsv2rgb_6, "test_hsv2rgb_6", 204);
+  run_test(test_hsv2rgb_7, "test_hsv2rgb_7", 219);
+  run_test(test_hsv2rgb_8, "test_hsv2rgb_8", 230);
+  run_test(test_hsv2rgb_9, "test_hsv2rgb_9", 241);
+  run_test(test_decay_pos_0, "test_decay_pos_0", 282);
+  run_test(test_decay_pos_1, "test_decay_pos_1", 297);
 
   return UnityEnd();
 }

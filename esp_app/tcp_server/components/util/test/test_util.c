@@ -1,11 +1,13 @@
 #ifdef TEST
 
+LCOV_EXCL_START;
 #include "unity.h"
 #include "fff.h"
 DEFINE_FFF_GLOBALS;
 FAKE_VOID_FUNC(vTaskDelay, int);
 FAKE_VALUE_FUNC(uint32_t,pdMS_TO_TICKS,uint32_t);
 FAKE_VALUE_FUNC(uint32_t,xTaskGetTickCount);
+LCOV_EXCL_STOP;
 
 uint32_t tick_count = 0;
 
