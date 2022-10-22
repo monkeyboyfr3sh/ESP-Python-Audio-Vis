@@ -1,25 +1,43 @@
-name: Ceedling Unit Tests
-run-name: ${{ github.actor }}'s Ceedling Unit Tests
-on: [push]
+# name: Ceedling Unit Tests
+# run-name: ${{ github.actor }}'s Ceedling Unit Tests
+# on: [push]
+
+# jobs:
+#   unit_test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+#       - name: Set up Ruby
+#         uses: ruby/setup-ruby@v1
+#         with:
+#           ruby-version: 2.7
+#       - name: Install Ceedling  
+#         run: |
+#           gem install ceedling
+#       - name: Run Unit Tests
+#         run: |
+#           cd ./esp_app/tcp_server/
+#           ceedling test:all
+#       - name: Generate Coverage
+#         run: |
+#           cd ./esp_app/tcp_server/
+#           ceedling gcov:all
+
+name: Test
+on:
+  workflow_dispatch:
 
 jobs:
-  unit_test:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v2
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Run tests
+        uses: batov/ceedling_action@master
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
         with:
-          ruby-version: 2.7
-      - name: Install Ceedling  
-        run: |
-          gem install ceedling
-      - name: Run Unit Tests
-        run: |
-          cd ./esp_app/tcp_server/
-          ceedling test:all
-      - name: Generate Coverage
-        run: |
-          cd ./esp_app/tcp_server/
-          ceedling gcov:all
+            files: build/artifacts/test/report.xml
