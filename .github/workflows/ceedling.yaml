@@ -18,6 +18,12 @@ jobs:
       - name: Run Unit Tests
         run: |
           cd ./esp_app/tcp_server/
+          ceedling test:all
+      - name: Generate Coverage
+        run: |
+          cd ./esp_app/tcp_server/
+          ceedling gcov:all
+          ceedling utils:gcov
 
 
 # name: GitHub Actions Demo
