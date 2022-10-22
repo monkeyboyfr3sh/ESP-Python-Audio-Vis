@@ -18,9 +18,9 @@ jobs:
     - name: Run Unit Tests
       run: |
         pwd
-        mkdir hello
-        cd hello
-        pwd         
+        # mkdir hello
+        cd esp_app/tcp_server
+        # pwd         
         # ls
         # ceedling test:all
         # ceedling utils:gcov
