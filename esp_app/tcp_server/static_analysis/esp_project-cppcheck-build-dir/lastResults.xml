@@ -3,34 +3,28 @@
     <cppcheck version="2.9"/>
     <errors>
         <error id="unreadVariable" severity="style" msg="Variable &amp;#039;prev_pos&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;prev_pos&amp;#039; is assigned a value that is never used." cwe="563" file0="../main/src/LED_thread.c" sinceDate="M/d/yyyy">
-            <location file="..\main\src\LED_thread.c" line="68"/>
+            <location file="..\main\src\LED_thread.c" line="67"/>
         </error>
         <error id="unreadVariable" severity="style" msg="Variable &amp;#039;Kc&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;Kc&amp;#039; is assigned a value that is never used." cwe="563" file0="../main/src/LED_thread.c" sinceDate="M/d/yyyy">
-            <location file="..\main\src\LED_thread.c" line="71"/>
+            <location file="..\main\src\LED_thread.c" line="70"/>
         </error>
         <error id="unreadVariable" severity="style" msg="Variable &amp;#039;Tp&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;Tp&amp;#039; is assigned a value that is never used." cwe="563" file0="../main/src/LED_thread.c" sinceDate="M/d/yyyy">
-            <location file="..\main\src\LED_thread.c" line="72"/>
+            <location file="..\main\src\LED_thread.c" line="71"/>
         </error>
         <error id="unreadVariable" severity="style" msg="Variable &amp;#039;Ti&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;Ti&amp;#039; is assigned a value that is never used." cwe="563" file0="../main/src/LED_thread.c" sinceDate="M/d/yyyy">
-            <location file="..\main\src\LED_thread.c" line="73"/>
+            <location file="..\main\src\LED_thread.c" line="72"/>
         </error>
         <error id="unreadVariable" severity="style" msg="Variable &amp;#039;Td&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;Td&amp;#039; is assigned a value that is never used." cwe="563" file0="../main/src/LED_thread.c" sinceDate="M/d/yyyy">
-            <location file="..\main\src\LED_thread.c" line="74"/>
+            <location file="..\main\src\LED_thread.c" line="73"/>
         </error>
         <error id="unreadVariable" severity="style" msg="Variable &amp;#039;level&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;level&amp;#039; is assigned a value that is never used." cwe="563" file0="../main/src/TCP_thread.c" sinceDate="M/d/yyyy">
-            <location file="..\main\src\TCP_thread.c" line="38"/>
+            <location file="..\main\src\TCP_thread.c" line="40"/>
         </error>
-        <error id="unusedFunction" severity="style" msg="The function &amp;#039;tcp_server_task&amp;#039; is never used." verbose="The function &amp;#039;tcp_server_task&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
-            <location file="..\main\src\TCP_thread.c" line="90"/>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;management_err&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;management_err&amp;#039; is assigned a value that is never used." cwe="563" file0="../main/src/TCP_thread.c" sinceDate="M/d/yyyy">
+            <location file="..\main\src\TCP_thread.c" line="212"/>
         </error>
         <error id="unusedFunction" severity="style" msg="The function &amp;#039;app_main&amp;#039; is never used." verbose="The function &amp;#039;app_main&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
             <location file="..\main\main.c" line="30"/>
-        </error>
-        <error id="unusedFunction" severity="style" msg="The function &amp;#039;decay_pos&amp;#039; is never used." verbose="The function &amp;#039;decay_pos&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
-            <location file="..\main\src\utils.c" line="12"/>
-        </error>
-        <error id="unusedFunction" severity="style" msg="The function &amp;#039;pid_loop_step&amp;#039; is never used." verbose="The function &amp;#039;pid_loop_step&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
-            <location file="..\main\src\utils.c" line="29"/>
         </error>
         <error id="unusedFunction" severity="style" msg="The function &amp;#039;udp_hello_client_task&amp;#039; is never used." verbose="The function &amp;#039;udp_hello_client_task&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
             <location file="..\main\src\UDP_thread.c" line="56"/>

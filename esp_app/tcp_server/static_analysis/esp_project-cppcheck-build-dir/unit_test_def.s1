@@ -1,1 +1,0 @@
-proxy_log call:[printf,va_end,va_start] noreturn:[va_end]

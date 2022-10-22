@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="3780786853679710503">
+<analyzerinfo hash="18325215359958430627">
   <FileInfo check="CheckUnusedFunctions">
     <functiondecl functionName="app_main" lineNumber="30"/>
     <functioncall functionName="AF_INET"/>
@@ -10,6 +10,8 @@
     <functioncall functionName="led_strip_task"/>
     <functioncall functionName="num_led_read_num_led"/>
     <functioncall functionName="num_led_write_num_led"/>
+    <functioncall functionName="tcp_server_task"/>
+    <functioncall functionName="tcp_task_memory_bad"/>
     <functioncall functionName="xTaskCreate"/>
   </FileInfo>
 </analyzerinfo>

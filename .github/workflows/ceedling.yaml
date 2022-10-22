@@ -26,6 +26,6 @@ jobs:
   static_analysis:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo
+      - name: CPP Check Project
         run: |
-          echo "hello there!"
+          cppcheck --project="./static_analysis/esp_project.cppcheck" --enable=all --suppress=missingIncludeSystem

@@ -1,14 +1,31 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="14725984984925967510">
-        <error id="unreadVariable" severity="style" msg="Variable &apos;level&apos; is assigned a value that is never used." verbose="Variable &apos;level&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/TCP_thread.c">
-            <location file="C:\Users\david\Documents\GitHub\ESP-Python-Audio-Vis\esp_app\tcp_server\main\src\TCP_thread.c" line="38" column="13"/>
+<analyzerinfo hash="9437284182737855250">
+        <error id="unreadVariable" severity="style" msg="Variable &apos;level&apos; is assigned a value that is never used." verbose="Variable &apos;level&apos; is assigned a value that is never used." cwe="563" file0="main/src/TCP_thread.c">
+            <location file="main\src\TCP_thread.c" line="40" column="13"/>
             <symbol>level</symbol>
         </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;management_err&apos; is assigned a value that is never used." verbose="Variable &apos;management_err&apos; is assigned a value that is never used." cwe="563" file0="main/src/TCP_thread.c">
+            <location file="main\src\TCP_thread.c" line="212" column="39"/>
+            <symbol>management_err</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="main/src/TCP_thread.c:92:16" my-argnr="1" my-argname="socket_info" file="main/src/TCP_thread.c" line="95" col="9" value="0"/>
+    <unsafe-usage my-id="main/src/TCP_thread.c:107:16" my-argnr="1" my-argname="socket_info" file="main/src/TCP_thread.c" line="110" col="5" value="0"/>
+    <unsafe-usage my-id="main/src/TCP_thread.c:167:16" my-argnr="1" my-argname="socket_info" file="main/src/TCP_thread.c" line="169" col="11" value="0"/>
+    <unsafe-usage my-id="main/src/TCP_thread.c:175:16" my-argnr="1" my-argname="socket_info" file="main/src/TCP_thread.c" line="178" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="main/src/TCP_thread.c:92:16" my-argnr="1" my-argname="socket_info" file="main/src/TCP_thread.c" line="95" col="9" value="0"/>
+  </FileInfo>
   <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="do_retransmit" lineNumber="34"/>
-    <functiondecl functionName="tcp_server_task" lineNumber="90"/>
+    <functiondecl functionName="do_retransmit" lineNumber="36"/>
+    <functiondecl functionName="init_sockaddr_storage" lineNumber="92"/>
+    <functiondecl functionName="create_bind_socket" lineNumber="107"/>
+    <functiondecl functionName="manage_socket" lineNumber="137"/>
+    <functiondecl functionName="shutdown_socket" lineNumber="167"/>
+    <functiondecl functionName="setup_socket" lineNumber="175"/>
+    <functiondecl functionName="tcp_server_task" lineNumber="199"/>
     <functioncall functionName="AF_INET"/>
-    <functioncall functionName="CLEAN_UP"/>
     <functioncall functionName="CONFIG_EXAMPLE_STRIP_LED_NUMBER"/>
     <functioncall functionName="ESP_LOGE"/>
     <functioncall functionName="ESP_LOGI"/>
@@ -37,6 +54,7 @@
     <functioncall functionName="break"/>
     <functioncall functionName="case"/>
     <functioncall functionName="close"/>
+    <functioncall functionName="create_bind_socket"/>
     <functioncall functionName="default"/>
     <functioncall functionName="dest_addr"/>
     <functioncall functionName="do_retransmit"/>
@@ -48,6 +66,7 @@
     <functioncall functionName="htons"/>
     <functioncall functionName="if"/>
     <functioncall functionName="inet_ntoa_r"/>
+    <functioncall functionName="init_sockaddr_storage"/>
     <functioncall functionName="int"/>
     <functioncall functionName="ip_protocol"/>
     <functioncall functionName="keepAlive"/>
@@ -60,23 +79,28 @@
     <functioncall functionName="len"/>
     <functioncall functionName="listen"/>
     <functioncall functionName="listen_sock"/>
+    <functioncall functionName="manage_socket"/>
+    <functioncall functionName="my_sock"/>
     <functioncall functionName="num_led_read_num_led"/>
     <functioncall functionName="num_led_write_num_led"/>
     <functioncall functionName="opt"/>
     <functioncall functionName="printf"/>
     <functioncall functionName="pvParameters"/>
     <functioncall functionName="recv"/>
-    <functioncall functionName="return"/>
     <functioncall functionName="rx_buffer"/>
     <functioncall functionName="send"/>
     <functioncall functionName="setsockopt"/>
-    <functioncall functionName="shutdown"/>
+    <functioncall functionName="setup_socket"/>
+    <functioncall functionName="shutdown_socket"/>
     <functioncall functionName="sin_addr"/>
     <functioncall functionName="sizeof"/>
     <functioncall functionName="sock"/>
     <functioncall functionName="socket"/>
+    <functioncall functionName="socket_info"/>
     <functioncall functionName="source_addr"/>
     <functioncall functionName="switch"/>
+    <functioncall functionName="tcp_task_fail"/>
+    <functioncall functionName="tcp_task_ok"/>
     <functioncall functionName="true"/>
     <functioncall functionName="vTaskDelete"/>
     <functioncall functionName="while"/>

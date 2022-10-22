@@ -1,2 +1,7 @@
 do_retransmit global:[TAG,UDP_sync] call:[ESP_LOGE,ESP_LOGI,ESP_LOGW,case,esp_log_buffer_hex,printf,recv,send,sizeof,while] noreturn:[ESP_LOGE,ESP_LOGW,printf,send]
-tcp_server_task global:[TAG] call:[ESP_LOGE,ESP_LOGI,accept,bind,close,do_retransmit,htonl,htons,inet_ntoa_r,listen,setsockopt,shutdown,sizeof,socket,vTaskDelete] noreturn:[close,inet_ntoa_r,vTaskDelete]
+init_sockaddr_storage call:[htonl,htons]
+create_bind_socket global:[TAG] call:[ESP_LOGE,ESP_LOGI,bind,listen,setsockopt,sizeof,socket]
+manage_socket global:[TAG] call:[ESP_LOGE,ESP_LOGI,accept,do_retransmit,inet_ntoa_r,setsockopt,sizeof] noreturn:[do_retransmit,inet_ntoa_r]
+shutdown_socket call:[close]
+setup_socket call:[create_bind_socket,init_sockaddr_storage]
+tcp_server_task call:[manage_socket,setup_socket,shutdown_socket,vTaskDelete] noreturn:[manage_socket,vTaskDelete]

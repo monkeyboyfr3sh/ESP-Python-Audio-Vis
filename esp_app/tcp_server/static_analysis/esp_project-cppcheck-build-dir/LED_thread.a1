@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="2186452183492996607">
-        <error id="unreadVariable" severity="style" msg="Variable &apos;prev_pos&apos; is assigned a value that is never used." verbose="Variable &apos;prev_pos&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/LED_thread.c">
-            <location file="C:\Users\david\Documents\GitHub\ESP-Python-Audio-Vis\esp_app\tcp_server\main\src\LED_thread.c" line="68" column="18"/>
+<analyzerinfo hash="8763567526345415809">
+        <error id="unreadVariable" severity="style" msg="Variable &apos;prev_pos&apos; is assigned a value that is never used." verbose="Variable &apos;prev_pos&apos; is assigned a value that is never used." cwe="563" file0="main/src/LED_thread.c">
+            <location file="main\src\LED_thread.c" line="67" column="18"/>
             <symbol>prev_pos</symbol>
         </error>
-        <error id="unreadVariable" severity="style" msg="Variable &apos;Kc&apos; is assigned a value that is never used." verbose="Variable &apos;Kc&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/LED_thread.c">
-            <location file="C:\Users\david\Documents\GitHub\ESP-Python-Audio-Vis\esp_app\tcp_server\main\src\LED_thread.c" line="71" column="18"/>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;Kc&apos; is assigned a value that is never used." verbose="Variable &apos;Kc&apos; is assigned a value that is never used." cwe="563" file0="main/src/LED_thread.c">
+            <location file="main\src\LED_thread.c" line="70" column="18"/>
             <symbol>Kc</symbol>
         </error>
-        <error id="unreadVariable" severity="style" msg="Variable &apos;Tp&apos; is assigned a value that is never used." verbose="Variable &apos;Tp&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/LED_thread.c">
-            <location file="C:\Users\david\Documents\GitHub\ESP-Python-Audio-Vis\esp_app\tcp_server\main\src\LED_thread.c" line="72" column="20"/>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;Tp&apos; is assigned a value that is never used." verbose="Variable &apos;Tp&apos; is assigned a value that is never used." cwe="563" file0="main/src/LED_thread.c">
+            <location file="main\src\LED_thread.c" line="71" column="20"/>
             <symbol>Tp</symbol>
         </error>
-        <error id="unreadVariable" severity="style" msg="Variable &apos;Ti&apos; is assigned a value that is never used." verbose="Variable &apos;Ti&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/LED_thread.c">
-            <location file="C:\Users\david\Documents\GitHub\ESP-Python-Audio-Vis\esp_app\tcp_server\main\src\LED_thread.c" line="73" column="20"/>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;Ti&apos; is assigned a value that is never used." verbose="Variable &apos;Ti&apos; is assigned a value that is never used." cwe="563" file0="main/src/LED_thread.c">
+            <location file="main\src\LED_thread.c" line="72" column="20"/>
             <symbol>Ti</symbol>
         </error>
-        <error id="unreadVariable" severity="style" msg="Variable &apos;Td&apos; is assigned a value that is never used." verbose="Variable &apos;Td&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/LED_thread.c">
-            <location file="C:\Users\david\Documents\GitHub\ESP-Python-Audio-Vis\esp_app\tcp_server\main\src\LED_thread.c" line="74" column="20"/>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;Td&apos; is assigned a value that is never used." verbose="Variable &apos;Td&apos; is assigned a value that is never used." cwe="563" file0="main/src/LED_thread.c">
+            <location file="main\src\LED_thread.c" line="73" column="20"/>
             <symbol>Td</symbol>
         </error>
   <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="update_num_led" lineNumber="38"/>
-    <functiondecl functionName="led_strip_task" lineNumber="62"/>
+    <functiondecl functionName="update_num_led" lineNumber="37"/>
+    <functiondecl functionName="led_strip_task" lineNumber="61"/>
     <functioncall functionName="CONFIG_EXAMPLE_STRIP_LED_NUMBER"/>
     <functioncall functionName="ESP_ERROR_CHECK"/>
     <functioncall functionName="ESP_LOGE"/>

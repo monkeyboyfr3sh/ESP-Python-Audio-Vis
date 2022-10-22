@@ -1,5 +1,4 @@
-main.a1::../main/main.c
-LED_thread.a1::C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/LED_thread.c
-TCP_thread.a1::C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/TCP_thread.c
-UDP_thread.a1::C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/UDP_thread.c
-utils.a1::C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/main/src/utils.c
+main.a1::main/main.c
+LED_thread.a1::main/src/LED_thread.c
+TCP_thread.a1::main/src/TCP_thread.c
+UDP_thread.a1::main/src/UDP_thread.c

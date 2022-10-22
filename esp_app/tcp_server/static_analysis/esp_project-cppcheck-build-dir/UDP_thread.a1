@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="4383484870737254940">
+<analyzerinfo hash="7059561709587154847">
   <FileInfo check="CheckUnusedFunctions">
     <functiondecl functionName="udp_write_hello" lineNumber="42"/>
     <functiondecl functionName="udp_hello_client_task" lineNumber="56"/>
