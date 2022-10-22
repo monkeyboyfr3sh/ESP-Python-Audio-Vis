@@ -21,8 +21,8 @@ jobs:
       - name: Generate Coverage
         run: |
           cd ./esp_app/tcp_server/
-          ceedling gcov:all
-          # ceedling utils:gcov --trace
+          # ceedling gcov:all
+          ceedling utils:gcov
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1
         if: always()
