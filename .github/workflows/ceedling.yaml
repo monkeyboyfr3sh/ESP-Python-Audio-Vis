@@ -19,7 +19,7 @@ jobs:
       run: |
         pwd
         # mkdir hello
-        cd esp_app/tcp_server
+        cd ../esp_app/tcp_server
         # pwd         
         # ls
         # ceedling test:all
