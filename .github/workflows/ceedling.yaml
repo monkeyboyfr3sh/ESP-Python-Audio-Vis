@@ -14,6 +14,9 @@ jobs:
       - name: Install Ceedling  
         run: |
           gem install ceedling
+      - name: Install GCOV
+          run: |
+          pip3 install 'gcovr == 4.1'
       - name: Run Unit Tests
         run: |
           cd ./esp_app/tcp_server/
