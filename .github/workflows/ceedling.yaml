@@ -8,14 +8,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
       - name: Run Unit Tests
         run: |
           cd ./esp_app/tcp_server/
-    
-    # - name: Set up Ruby
-    #   uses: ruby/setup-ruby@v1
-    #   with:
-    #     ruby-version: 2.7
   
     # - name: Install Ceedling  
     #   run: |
