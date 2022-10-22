@@ -26,6 +26,9 @@ jobs:
   static_analysis:
     runs-on: ubuntu-latest
     steps:
+      - name: Install CPPCheck
+        run: |
+          sudo apt -y install cppcheck
       - name: CPP Check Project
         run: |
           cppcheck --project="./static_analysis/esp_project.cppcheck" --enable=all --suppress=missingIncludeSystem
