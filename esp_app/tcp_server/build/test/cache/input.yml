@@ -323,10 +323,12 @@
   - gcov
   - stdout_pretty_tests_report
   - module_generator
+  - junit_tests_report
   :display_raw_test_results: false
   :gcov_path: C:/Ruby25/lib/ruby/gems/2.5.0/gems/ceedling-0.31.1/lib/../plugins/gcov
   :stdout_pretty_tests_report_path: C:/Ruby25/lib/ruby/gems/2.5.0/gems/ceedling-0.31.1/lib/../plugins/stdout_pretty_tests_report
   :module_generator_path: C:/Ruby25/lib/ruby/gems/2.5.0/gems/ceedling-0.31.1/lib/../plugins/module_generator
+  :junit_tests_report_path: C:/Ruby25/lib/ruby/gems/2.5.0/gems/ceedling-0.31.1/lib/../plugins/junit_tests_report
 :gcov:
   :reports:
   - HtmlDetailed

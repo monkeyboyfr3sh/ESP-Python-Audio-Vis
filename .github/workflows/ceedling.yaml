@@ -14,23 +14,15 @@ jobs:
       - name: Install Ceedling  
         run: |
           gem install ceedling
-      - name: Install GCOV
-        run: |
-          pip3 install 'gcovr == 4.1'
       - name: Run Unit Tests
         run: |
           cd ./esp_app/tcp_server/
           ceedling test:all
-      - name: Generate Coverage
-        run: |
-          cd ./esp_app/tcp_server/
-          # ceedling gcov:all
-          ceedling utils:gcov
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1
         if: always()
         with:
-            files: build/artifacts/gcov/
+            files: build/artifacts/test/
 
 # name: Ceedling Unit Tests
 # run-name: ${{ github.actor }}'s Ceedling Unit Tests

@@ -118,5 +118,6 @@
     - gcov
     - stdout_pretty_tests_report
     - module_generator
+    - junit_tests_report
   
 ...
