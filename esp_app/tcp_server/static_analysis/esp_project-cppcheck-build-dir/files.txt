@@ -1,4 +1,4 @@
-main.a1::main/main.c
-LED_thread.a1::main/src/LED_thread.c
-TCP_thread.a1::main/src/TCP_thread.c
-UDP_thread.a1::main/src/UDP_thread.c
+main.a1::../main/main.c
+LED_thread.a1::../main/src/LED_thread.c
+TCP_thread.a1::../main/src/TCP_thread.c
+UDP_thread.a1::../main/src/UDP_thread.c
