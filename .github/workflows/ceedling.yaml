@@ -17,13 +17,7 @@ jobs:
     #   run: gem install ceedling
     - name: Run Unit Tests
       run: |
-        # pwd
-        ls
-        # cd ..
-        # pwd         
-        # ls
-        # ceedling test:all
-        # ceedling utils:gcov
+        cd test
 
 # name: GitHub Actions Demo
 # run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
