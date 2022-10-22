@@ -1,6 +1,5 @@
 name: Test
-on:
-  workflow_dispatch:
+on: [push]
 
 jobs:
   build:
@@ -15,7 +14,7 @@ jobs:
         if: always()
         with:
             files: build/artifacts/test/report.xml
-            
+
 # name: Ceedling Unit Tests
 # run-name: ${{ github.actor }}'s Ceedling Unit Tests
 # on: [push]
