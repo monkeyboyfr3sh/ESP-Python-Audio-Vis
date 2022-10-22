@@ -1,0 +1,1364 @@
+esp_app/tcp_server/build/CMakeFiles/3.20.3/CompilerIdC/CMakeCCompilerId.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 127 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+esp_app/tcp_server/build/CMakeFiles/3.20.3/CompilerIdC/CMakeCCompilerId.c:652:0: information: Skipping configuration 'SDCC;__SDCC_VERSION_MAJOR' since the value of '__SDCC_VERSION_MAJOR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  COMPILER_VERSION_MAJOR,
+^
+esp_app/tcp_server/build/CMakeFiles/3.20.3/CompilerIdC/CMakeCCompilerId.c:652:0: information: Skipping configuration 'SDCC;__SDCC_VERSION_MAJOR;__SDCC_VERSION_MAJOR' since the value of '__SDCC_VERSION_MAJOR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  COMPILER_VERSION_MAJOR,
+^
+esp_app/tcp_server/build/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 125 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+esp_app/tcp_server/build/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:637:0: information: Skipping configuration '_MSC_BUILD;_MSC_VER' since the value of '_MSC_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  COMPILER_VERSION_MAJOR,
+^
+esp_app/tcp_server/build/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:639:0: information: Skipping configuration '_MSC_BUILD;_MSC_VER' since the value of '_MSC_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  '.', COMPILER_VERSION_MINOR,
+^
+esp_app/tcp_server/build/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:641:0: information: Skipping configuration '_MSC_FULL_VER;_MSC_VER' since the value of '_MSC_FULL_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   '.', COMPILER_VERSION_PATCH,
+^
+esp_app/tcp_server/build/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:637:0: information: Skipping configuration '_MSC_FULL_VER;_MSC_VER' since the value of '_MSC_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  COMPILER_VERSION_MAJOR,
+^
+esp_app/tcp_server/build/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:639:0: information: Skipping configuration '_MSC_FULL_VER;_MSC_VER' since the value of '_MSC_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  '.', COMPILER_VERSION_MINOR,
+^
+esp_app/tcp_server/build/bootloader/CMakeFiles/3.20.3/CompilerIdC/CMakeCCompilerId.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 127 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+esp_app/tcp_server/build/bootloader/CMakeFiles/3.20.3/CompilerIdC/CMakeCCompilerId.c:652:0: information: Skipping configuration 'SDCC;__SDCC_VERSION_MAJOR' since the value of '__SDCC_VERSION_MAJOR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  COMPILER_VERSION_MAJOR,
+^
+esp_app/tcp_server/build/bootloader/CMakeFiles/3.20.3/CompilerIdC/CMakeCCompilerId.c:652:0: information: Skipping configuration 'SDCC;__SDCC_VERSION_MAJOR;__SDCC_VERSION_MAJOR' since the value of '__SDCC_VERSION_MAJOR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  COMPILER_VERSION_MAJOR,
+^
+esp_app/tcp_server/build/bootloader/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 125 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+esp_app/tcp_server/build/bootloader/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:637:0: information: Skipping configuration '_MSC_BUILD;_MSC_VER' since the value of '_MSC_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  COMPILER_VERSION_MAJOR,
+^
+esp_app/tcp_server/build/bootloader/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:639:0: information: Skipping configuration '_MSC_BUILD;_MSC_VER' since the value of '_MSC_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  '.', COMPILER_VERSION_MINOR,
+^
+esp_app/tcp_server/build/bootloader/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:641:0: information: Skipping configuration '_MSC_FULL_VER;_MSC_VER' since the value of '_MSC_FULL_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   '.', COMPILER_VERSION_PATCH,
+^
+esp_app/tcp_server/build/bootloader/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:637:0: information: Skipping configuration '_MSC_FULL_VER;_MSC_VER' since the value of '_MSC_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  COMPILER_VERSION_MAJOR,
+^
+esp_app/tcp_server/build/bootloader/CMakeFiles/3.20.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:639:0: information: Skipping configuration '_MSC_FULL_VER;_MSC_VER' since the value of '_MSC_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  '.', COMPILER_VERSION_MINOR,
+^
+esp_app/tcp_server/build/test/cache/test_led.c:15:1791: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+typedef struct pdMS_TO_TICKS_Fake { uint32_t arg0_val; uint32_t arg0_history[(50u)]; unsigned int call_count; unsigned int arg_history_len; unsigned int arg_histories_dropped; uint32_t return_val; int return_val_seq_len; int return_val_seq_idx; uint32_t * return_val_seq; uint32_t return_val_history[(50u)]; int custom_fake_seq_len; int custom_fake_seq_idx; uint32_t(*custom_fake)(uint32_t arg0); uint32_t(**custom_fake_seq)(uint32_t arg0); } pdMS_TO_TICKS_Fake; extern pdMS_TO_TICKS_Fake pdMS_TO_TICKS_fake; void pdMS_TO_TICKS_reset(void); uint32_t pdMS_TO_TICKS(uint32_t arg0); pdMS_TO_TICKS_Fake pdMS_TO_TICKS_fake; uint32_t pdMS_TO_TICKS(uint32_t arg0){ memcpy((void*)&pdMS_TO_TICKS_fake.arg0_val, (void*)&arg0, sizeof(arg0));; if(pdMS_TO_TICKS_fake.call_count < (50u)){ memcpy((void*)&pdMS_TO_TICKS_fake.arg0_history[pdMS_TO_TICKS_fake.call_count], (void*)&arg0, sizeof(arg0));; } else{ pdMS_TO_TICKS_fake.arg_histories_dropped++; } pdMS_TO_TICKS_fake.call_count++; if(fff.call_history_idx < (50u)) fff.call_history[fff.call_history_idx++] = (fff_function_t)pdMS_TO_TICKS;; if (pdMS_TO_TICKS_fake.custom_fake_seq_len){ if (pdMS_TO_TICKS_fake.custom_fake_seq_idx < pdMS_TO_TICKS_fake.custom_fake_seq_len){ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_idx++](arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; } else{ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_len-1](arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_len-1](arg0); } } if (pdMS_TO_TICKS_fake.custom_fake){ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake(arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return pdMS_TO_TICKS_fake.custom_fake(arg0); } if (pdMS_TO_TICKS_fake.return_val_seq_len){ if(pdMS_TO_TICKS_fake.return_val_seq_idx < pdMS_TO_TICKS_fake.return_val_seq_len) { if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx], sizeof(pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx])); return pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx++]; } if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1], sizeof(pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1])); return pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1]; } if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val, sizeof(pdMS_TO_TICKS_fake.return_val)); return pdMS_TO_TICKS_fake.return_val; } void pdMS_TO_TICKS_reset(void){ memset(&pdMS_TO_TICKS_fake, 0, sizeof(pdMS_TO_TICKS_fake)); pdMS_TO_TICKS_fake.arg_history_len = (50u); };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+esp_app/tcp_server/build/test/cache/test_led.c:17:1619: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+typedef struct xTaskGetTickCount_Fake { unsigned int call_count; unsigned int arg_history_len; unsigned int arg_histories_dropped; uint32_t return_val; int return_val_seq_len; int return_val_seq_idx; uint32_t * return_val_seq; uint32_t return_val_history[(50u)]; int custom_fake_seq_len; int custom_fake_seq_idx; uint32_t(*custom_fake)(void); uint32_t(**custom_fake_seq)(void); } xTaskGetTickCount_Fake; extern xTaskGetTickCount_Fake xTaskGetTickCount_fake; void xTaskGetTickCount_reset(void); uint32_t xTaskGetTickCount(void); xTaskGetTickCount_Fake xTaskGetTickCount_fake; uint32_t xTaskGetTickCount(void){ if(xTaskGetTickCount_fake.call_count < (50u)){ } else{ xTaskGetTickCount_fake.arg_histories_dropped++; } xTaskGetTickCount_fake.call_count++; if(fff.call_history_idx < (50u)) fff.call_history[fff.call_history_idx++] = (fff_function_t)xTaskGetTickCount;; if (xTaskGetTickCount_fake.custom_fake_seq_len){ if (xTaskGetTickCount_fake.custom_fake_seq_idx < xTaskGetTickCount_fake.custom_fake_seq_len){ uint32_t ret = xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_idx++](); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; } else{ uint32_t ret = xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_len-1](); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_len-1](); } } if (xTaskGetTickCount_fake.custom_fake){ uint32_t ret = xTaskGetTickCount_fake.custom_fake(); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return xTaskGetTickCount_fake.custom_fake(); } if (xTaskGetTickCount_fake.return_val_seq_len){ if(xTaskGetTickCount_fake.return_val_seq_idx < xTaskGetTickCount_fake.return_val_seq_len) { if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx], sizeof(xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx])); return xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx++]; } if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1], sizeof(xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1])); return xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1]; } if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val, sizeof(xTaskGetTickCount_fake.return_val)); return xTaskGetTickCount_fake.return_val; } void xTaskGetTickCount_reset(void){ memset(&xTaskGetTickCount_fake, 0, sizeof(xTaskGetTickCount_fake)); xTaskGetTickCount_fake.arg_history_len = (50u); };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+esp_app/tcp_server/build/test/cache/test_util.c:14:1791: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+typedef struct pdMS_TO_TICKS_Fake { uint32_t arg0_val; uint32_t arg0_history[(50u)]; unsigned int call_count; unsigned int arg_history_len; unsigned int arg_histories_dropped; uint32_t return_val; int return_val_seq_len; int return_val_seq_idx; uint32_t * return_val_seq; uint32_t return_val_history[(50u)]; int custom_fake_seq_len; int custom_fake_seq_idx; uint32_t(*custom_fake)(uint32_t arg0); uint32_t(**custom_fake_seq)(uint32_t arg0); } pdMS_TO_TICKS_Fake; extern pdMS_TO_TICKS_Fake pdMS_TO_TICKS_fake; void pdMS_TO_TICKS_reset(void); uint32_t pdMS_TO_TICKS(uint32_t arg0); pdMS_TO_TICKS_Fake pdMS_TO_TICKS_fake; uint32_t pdMS_TO_TICKS(uint32_t arg0){ memcpy((void*)&pdMS_TO_TICKS_fake.arg0_val, (void*)&arg0, sizeof(arg0));; if(pdMS_TO_TICKS_fake.call_count < (50u)){ memcpy((void*)&pdMS_TO_TICKS_fake.arg0_history[pdMS_TO_TICKS_fake.call_count], (void*)&arg0, sizeof(arg0));; } else{ pdMS_TO_TICKS_fake.arg_histories_dropped++; } pdMS_TO_TICKS_fake.call_count++; if(fff.call_history_idx < (50u)) fff.call_history[fff.call_history_idx++] = (fff_function_t)pdMS_TO_TICKS;; if (pdMS_TO_TICKS_fake.custom_fake_seq_len){ if (pdMS_TO_TICKS_fake.custom_fake_seq_idx < pdMS_TO_TICKS_fake.custom_fake_seq_len){ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_idx++](arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; } else{ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_len-1](arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_len-1](arg0); } } if (pdMS_TO_TICKS_fake.custom_fake){ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake(arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return pdMS_TO_TICKS_fake.custom_fake(arg0); } if (pdMS_TO_TICKS_fake.return_val_seq_len){ if(pdMS_TO_TICKS_fake.return_val_seq_idx < pdMS_TO_TICKS_fake.return_val_seq_len) { if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx], sizeof(pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx])); return pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx++]; } if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1], sizeof(pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1])); return pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1]; } if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val, sizeof(pdMS_TO_TICKS_fake.return_val)); return pdMS_TO_TICKS_fake.return_val; } void pdMS_TO_TICKS_reset(void){ memset(&pdMS_TO_TICKS_fake, 0, sizeof(pdMS_TO_TICKS_fake)); pdMS_TO_TICKS_fake.arg_history_len = (50u); };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+esp_app/tcp_server/build/test/cache/test_util.c:16:1619: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+typedef struct xTaskGetTickCount_Fake { unsigned int call_count; unsigned int arg_history_len; unsigned int arg_histories_dropped; uint32_t return_val; int return_val_seq_len; int return_val_seq_idx; uint32_t * return_val_seq; uint32_t return_val_history[(50u)]; int custom_fake_seq_len; int custom_fake_seq_idx; uint32_t(*custom_fake)(void); uint32_t(**custom_fake_seq)(void); } xTaskGetTickCount_Fake; extern xTaskGetTickCount_Fake xTaskGetTickCount_fake; void xTaskGetTickCount_reset(void); uint32_t xTaskGetTickCount(void); xTaskGetTickCount_Fake xTaskGetTickCount_fake; uint32_t xTaskGetTickCount(void){ if(xTaskGetTickCount_fake.call_count < (50u)){ } else{ xTaskGetTickCount_fake.arg_histories_dropped++; } xTaskGetTickCount_fake.call_count++; if(fff.call_history_idx < (50u)) fff.call_history[fff.call_history_idx++] = (fff_function_t)xTaskGetTickCount;; if (xTaskGetTickCount_fake.custom_fake_seq_len){ if (xTaskGetTickCount_fake.custom_fake_seq_idx < xTaskGetTickCount_fake.custom_fake_seq_len){ uint32_t ret = xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_idx++](); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; } else{ uint32_t ret = xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_len-1](); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_len-1](); } } if (xTaskGetTickCount_fake.custom_fake){ uint32_t ret = xTaskGetTickCount_fake.custom_fake(); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return xTaskGetTickCount_fake.custom_fake(); } if (xTaskGetTickCount_fake.return_val_seq_len){ if(xTaskGetTickCount_fake.return_val_seq_idx < xTaskGetTickCount_fake.return_val_seq_len) { if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx], sizeof(xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx])); return xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx++]; } if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1], sizeof(xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1])); return xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1]; } if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val, sizeof(xTaskGetTickCount_fake.return_val)); return xTaskGetTickCount_fake.return_val; } void xTaskGetTickCount_reset(void){ memset(&xTaskGetTickCount_fake, 0, sizeof(xTaskGetTickCount_fake)); xTaskGetTickCount_fake.arg_history_len = (50u); };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+esp_app/tcp_server/build/test/cache/test_util.c:190:11: style: The scope of the variable 'result' can be reduced. [variableScope]
+    float result;
+          ^
+esp_app/tcp_server/build/test/cache/test_util.c:194:11: style: The scope of the variable 'prev_pos' can be reduced. [variableScope]
+    float prev_pos = 0.0;
+          ^
+esp_app/tcp_server/build/test/cache/test_util.c:194:20: style: Variable 'prev_pos' is assigned a value that is never used. [unreadVariable]
+    float prev_pos = 0.0;
+                   ^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:357:37: style: Variable 'Mock.xTaskGetTickCount_IgnoreBool' is reassigned a value before the old one has been used. [redundantAssignment]
+  Mock.xTaskGetTickCount_IgnoreBool = (char)1;
+                                    ^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:354:37: note: Mock.xTaskGetTickCount_IgnoreBool is assigned
+  Mock.xTaskGetTickCount_IgnoreBool = (char)0;
+                                    ^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:357:37: note: Mock.xTaskGetTickCount_IgnoreBool is overwritten
+  Mock.xTaskGetTickCount_IgnoreBool = (char)1;
+                                    ^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:450:33: style: Variable 'Mock.pdMS_TO_TICKS_IgnoreBool' is reassigned a value before the old one has been used. [redundantAssignment]
+  Mock.pdMS_TO_TICKS_IgnoreBool = (char)1;
+                                ^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:447:33: note: Mock.pdMS_TO_TICKS_IgnoreBool is assigned
+  Mock.pdMS_TO_TICKS_IgnoreBool = (char)0;
+                                ^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:450:33: note: Mock.pdMS_TO_TICKS_IgnoreBool is overwritten
+  Mock.pdMS_TO_TICKS_IgnoreBool = (char)1;
+                                ^
+esp_app/tcp_server/build/test/mocks/mock_gpio.c:10:17: style: struct member 'mock_gpioInstance::placeHolder' is never used. [unusedStructMember]
+  unsigned char placeHolder;
+                ^
+esp_app/tcp_server/build/test/mocks/mock_led_strip.c:10:17: style: struct member 'mock_led_stripInstance::placeHolder' is never used. [unusedStructMember]
+  unsigned char placeHolder;
+                ^
+esp_app/tcp_server/build/test/mocks/mock_typedefs.c:10:17: style: struct member 'mock_typedefsInstance::placeHolder' is never used. [unusedStructMember]
+  unsigned char placeHolder;
+                ^
+esp_app/tcp_server/build/test/preprocess/files/test_led.c:15:1791: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+typedef struct pdMS_TO_TICKS_Fake { uint32_t arg0_val; uint32_t arg0_history[(50u)]; unsigned int call_count; unsigned int arg_history_len; unsigned int arg_histories_dropped; uint32_t return_val; int return_val_seq_len; int return_val_seq_idx; uint32_t * return_val_seq; uint32_t return_val_history[(50u)]; int custom_fake_seq_len; int custom_fake_seq_idx; uint32_t(*custom_fake)(uint32_t arg0); uint32_t(**custom_fake_seq)(uint32_t arg0); } pdMS_TO_TICKS_Fake; extern pdMS_TO_TICKS_Fake pdMS_TO_TICKS_fake; void pdMS_TO_TICKS_reset(void); uint32_t pdMS_TO_TICKS(uint32_t arg0); pdMS_TO_TICKS_Fake pdMS_TO_TICKS_fake; uint32_t pdMS_TO_TICKS(uint32_t arg0){ memcpy((void*)&pdMS_TO_TICKS_fake.arg0_val, (void*)&arg0, sizeof(arg0));; if(pdMS_TO_TICKS_fake.call_count < (50u)){ memcpy((void*)&pdMS_TO_TICKS_fake.arg0_history[pdMS_TO_TICKS_fake.call_count], (void*)&arg0, sizeof(arg0));; } else{ pdMS_TO_TICKS_fake.arg_histories_dropped++; } pdMS_TO_TICKS_fake.call_count++; if(fff.call_history_idx < (50u)) fff.call_history[fff.call_history_idx++] = (fff_function_t)pdMS_TO_TICKS;; if (pdMS_TO_TICKS_fake.custom_fake_seq_len){ if (pdMS_TO_TICKS_fake.custom_fake_seq_idx < pdMS_TO_TICKS_fake.custom_fake_seq_len){ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_idx++](arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; } else{ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_len-1](arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_len-1](arg0); } } if (pdMS_TO_TICKS_fake.custom_fake){ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake(arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return pdMS_TO_TICKS_fake.custom_fake(arg0); } if (pdMS_TO_TICKS_fake.return_val_seq_len){ if(pdMS_TO_TICKS_fake.return_val_seq_idx < pdMS_TO_TICKS_fake.return_val_seq_len) { if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx], sizeof(pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx])); return pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx++]; } if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1], sizeof(pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1])); return pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1]; } if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val, sizeof(pdMS_TO_TICKS_fake.return_val)); return pdMS_TO_TICKS_fake.return_val; } void pdMS_TO_TICKS_reset(void){ memset(&pdMS_TO_TICKS_fake, 0, sizeof(pdMS_TO_TICKS_fake)); pdMS_TO_TICKS_fake.arg_history_len = (50u); };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+esp_app/tcp_server/build/test/preprocess/files/test_led.c:17:1619: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+typedef struct xTaskGetTickCount_Fake { unsigned int call_count; unsigned int arg_history_len; unsigned int arg_histories_dropped; uint32_t return_val; int return_val_seq_len; int return_val_seq_idx; uint32_t * return_val_seq; uint32_t return_val_history[(50u)]; int custom_fake_seq_len; int custom_fake_seq_idx; uint32_t(*custom_fake)(void); uint32_t(**custom_fake_seq)(void); } xTaskGetTickCount_Fake; extern xTaskGetTickCount_Fake xTaskGetTickCount_fake; void xTaskGetTickCount_reset(void); uint32_t xTaskGetTickCount(void); xTaskGetTickCount_Fake xTaskGetTickCount_fake; uint32_t xTaskGetTickCount(void){ if(xTaskGetTickCount_fake.call_count < (50u)){ } else{ xTaskGetTickCount_fake.arg_histories_dropped++; } xTaskGetTickCount_fake.call_count++; if(fff.call_history_idx < (50u)) fff.call_history[fff.call_history_idx++] = (fff_function_t)xTaskGetTickCount;; if (xTaskGetTickCount_fake.custom_fake_seq_len){ if (xTaskGetTickCount_fake.custom_fake_seq_idx < xTaskGetTickCount_fake.custom_fake_seq_len){ uint32_t ret = xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_idx++](); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; } else{ uint32_t ret = xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_len-1](); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_len-1](); } } if (xTaskGetTickCount_fake.custom_fake){ uint32_t ret = xTaskGetTickCount_fake.custom_fake(); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return xTaskGetTickCount_fake.custom_fake(); } if (xTaskGetTickCount_fake.return_val_seq_len){ if(xTaskGetTickCount_fake.return_val_seq_idx < xTaskGetTickCount_fake.return_val_seq_len) { if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx], sizeof(xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx])); return xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx++]; } if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1], sizeof(xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1])); return xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1]; } if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val, sizeof(xTaskGetTickCount_fake.return_val)); return xTaskGetTickCount_fake.return_val; } void xTaskGetTickCount_reset(void){ memset(&xTaskGetTickCount_fake, 0, sizeof(xTaskGetTickCount_fake)); xTaskGetTickCount_fake.arg_history_len = (50u); };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+esp_app/tcp_server/build/test/preprocess/files/test_util.c:14:1791: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+typedef struct pdMS_TO_TICKS_Fake { uint32_t arg0_val; uint32_t arg0_history[(50u)]; unsigned int call_count; unsigned int arg_history_len; unsigned int arg_histories_dropped; uint32_t return_val; int return_val_seq_len; int return_val_seq_idx; uint32_t * return_val_seq; uint32_t return_val_history[(50u)]; int custom_fake_seq_len; int custom_fake_seq_idx; uint32_t(*custom_fake)(uint32_t arg0); uint32_t(**custom_fake_seq)(uint32_t arg0); } pdMS_TO_TICKS_Fake; extern pdMS_TO_TICKS_Fake pdMS_TO_TICKS_fake; void pdMS_TO_TICKS_reset(void); uint32_t pdMS_TO_TICKS(uint32_t arg0); pdMS_TO_TICKS_Fake pdMS_TO_TICKS_fake; uint32_t pdMS_TO_TICKS(uint32_t arg0){ memcpy((void*)&pdMS_TO_TICKS_fake.arg0_val, (void*)&arg0, sizeof(arg0));; if(pdMS_TO_TICKS_fake.call_count < (50u)){ memcpy((void*)&pdMS_TO_TICKS_fake.arg0_history[pdMS_TO_TICKS_fake.call_count], (void*)&arg0, sizeof(arg0));; } else{ pdMS_TO_TICKS_fake.arg_histories_dropped++; } pdMS_TO_TICKS_fake.call_count++; if(fff.call_history_idx < (50u)) fff.call_history[fff.call_history_idx++] = (fff_function_t)pdMS_TO_TICKS;; if (pdMS_TO_TICKS_fake.custom_fake_seq_len){ if (pdMS_TO_TICKS_fake.custom_fake_seq_idx < pdMS_TO_TICKS_fake.custom_fake_seq_len){ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_idx++](arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; } else{ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_len-1](arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return pdMS_TO_TICKS_fake.custom_fake_seq[pdMS_TO_TICKS_fake.custom_fake_seq_len-1](arg0); } } if (pdMS_TO_TICKS_fake.custom_fake){ uint32_t ret = pdMS_TO_TICKS_fake.custom_fake(arg0); if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return pdMS_TO_TICKS_fake.custom_fake(arg0); } if (pdMS_TO_TICKS_fake.return_val_seq_len){ if(pdMS_TO_TICKS_fake.return_val_seq_idx < pdMS_TO_TICKS_fake.return_val_seq_len) { if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx], sizeof(pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx])); return pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_idx++]; } if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1], sizeof(pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1])); return pdMS_TO_TICKS_fake.return_val_seq[pdMS_TO_TICKS_fake.return_val_seq_len-1]; } if ((pdMS_TO_TICKS_fake.call_count - 1) < (50u)) memcpy((void *)&pdMS_TO_TICKS_fake.return_val_history[pdMS_TO_TICKS_fake.call_count - 1], (const void *) &pdMS_TO_TICKS_fake.return_val, sizeof(pdMS_TO_TICKS_fake.return_val)); return pdMS_TO_TICKS_fake.return_val; } void pdMS_TO_TICKS_reset(void){ memset(&pdMS_TO_TICKS_fake, 0, sizeof(pdMS_TO_TICKS_fake)); pdMS_TO_TICKS_fake.arg_history_len = (50u); };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+esp_app/tcp_server/build/test/preprocess/files/test_util.c:16:1619: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+typedef struct xTaskGetTickCount_Fake { unsigned int call_count; unsigned int arg_history_len; unsigned int arg_histories_dropped; uint32_t return_val; int return_val_seq_len; int return_val_seq_idx; uint32_t * return_val_seq; uint32_t return_val_history[(50u)]; int custom_fake_seq_len; int custom_fake_seq_idx; uint32_t(*custom_fake)(void); uint32_t(**custom_fake_seq)(void); } xTaskGetTickCount_Fake; extern xTaskGetTickCount_Fake xTaskGetTickCount_fake; void xTaskGetTickCount_reset(void); uint32_t xTaskGetTickCount(void); xTaskGetTickCount_Fake xTaskGetTickCount_fake; uint32_t xTaskGetTickCount(void){ if(xTaskGetTickCount_fake.call_count < (50u)){ } else{ xTaskGetTickCount_fake.arg_histories_dropped++; } xTaskGetTickCount_fake.call_count++; if(fff.call_history_idx < (50u)) fff.call_history[fff.call_history_idx++] = (fff_function_t)xTaskGetTickCount;; if (xTaskGetTickCount_fake.custom_fake_seq_len){ if (xTaskGetTickCount_fake.custom_fake_seq_idx < xTaskGetTickCount_fake.custom_fake_seq_len){ uint32_t ret = xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_idx++](); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; } else{ uint32_t ret = xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_len-1](); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return xTaskGetTickCount_fake.custom_fake_seq[xTaskGetTickCount_fake.custom_fake_seq_len-1](); } } if (xTaskGetTickCount_fake.custom_fake){ uint32_t ret = xTaskGetTickCount_fake.custom_fake(); if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &ret, sizeof(ret));; return ret; return xTaskGetTickCount_fake.custom_fake(); } if (xTaskGetTickCount_fake.return_val_seq_len){ if(xTaskGetTickCount_fake.return_val_seq_idx < xTaskGetTickCount_fake.return_val_seq_len) { if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx], sizeof(xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx])); return xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_idx++]; } if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1], sizeof(xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1])); return xTaskGetTickCount_fake.return_val_seq[xTaskGetTickCount_fake.return_val_seq_len-1]; } if ((xTaskGetTickCount_fake.call_count - 1) < (50u)) memcpy((void *)&xTaskGetTickCount_fake.return_val_history[xTaskGetTickCount_fake.call_count - 1], (const void *) &xTaskGetTickCount_fake.return_val, sizeof(xTaskGetTickCount_fake.return_val)); return xTaskGetTickCount_fake.return_val; } void xTaskGetTickCount_reset(void){ memset(&xTaskGetTickCount_fake, 0, sizeof(xTaskGetTickCount_fake)); xTaskGetTickCount_fake.arg_history_len = (50u); };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+esp_app/tcp_server/build/test/preprocess/files/test_util.c:190:11: style: The scope of the variable 'result' can be reduced. [variableScope]
+    float result;
+          ^
+esp_app/tcp_server/build/test/preprocess/files/test_util.c:194:11: style: The scope of the variable 'prev_pos' can be reduced. [variableScope]
+    float prev_pos = 0.0;
+          ^
+esp_app/tcp_server/build/test/preprocess/files/test_util.c:194:20: style: Variable 'prev_pos' is assigned a value that is never used. [unreadVariable]
+    float prev_pos = 0.0;
+                   ^
+esp_app/tcp_server/build/test/preprocess/includes/test_led.c:5:31: error: syntax error [syntaxError]
+- components/led/inc/neopixel-if.h
+                              ^
+esp_app/tcp_server/components/util/src/utils.c:15:21: style: The scope of the variable 'timestamp' can be reduced. [variableScope]
+    static uint32_t timestamp = 0;
+                    ^
+esp_app/tcp_server/components/util/test/test_util.c:87:11: style: The scope of the variable 'result' can be reduced. [variableScope]
+    float result;
+          ^
+esp_app/tcp_server/components/util/test/test_util.c:89:11: style: The scope of the variable 'prev_pos' can be reduced. [variableScope]
+    float prev_pos = 0.0;
+          ^
+esp_app/tcp_server/components/util/test/test_util.c:89:20: style: Variable 'prev_pos' is assigned a value that is never used. [unreadVariable]
+    float prev_pos = 0.0;
+                   ^
+esp_app/tcp_server/main/src/LED_thread.c:67:18: style: Variable 'prev_pos' is assigned a value that is never used. [unreadVariable]
+    int prev_pos = 0;
+                 ^
+esp_app/tcp_server/main/src/LED_thread.c:70:18: style: Variable 'Kc' is assigned a value that is never used. [unreadVariable]
+    const int Kc = 1.5;
+                 ^
+esp_app/tcp_server/main/src/LED_thread.c:71:20: style: Variable 'Tp' is assigned a value that is never used. [unreadVariable]
+    const float Tp = 1.25;
+                   ^
+esp_app/tcp_server/main/src/LED_thread.c:72:20: style: Variable 'Ti' is assigned a value that is never used. [unreadVariable]
+    const float Ti = 1.25;
+                   ^
+esp_app/tcp_server/main/src/LED_thread.c:73:20: style: Variable 'Td' is assigned a value that is never used. [unreadVariable]
+    const float Td = 0.25;
+                   ^
+esp_app/tcp_server/main/src/TCP_thread.c:212:39: style: Variable 'management_err' is assigned a value that is never used. [unreadVariable]
+        tcp_task_err_t management_err = manage_socket( &my_sock );
+                                      ^
+esp_app/tcp_server/unit_testing/fff/examples/embedded_ui/UI_test_ansic.c:18:1: style:inconclusive: Function 'SYSTEM_register_irq' argument 2 names different: declaration 'irq' definition 'arg1'. [funcArgNamesDifferent]
+FAKE_VOID_FUNC2(SYSTEM_register_irq, irq_func_t, unsigned int);
+^
+esp_app/tcp_server/unit_testing/fff/examples/embedded_ui/SYSTEM.h:19:51: note: Function 'SYSTEM_register_irq' argument 2 names different: declaration 'irq' definition 'arg1'.
+void SYSTEM_register_irq(irq_func_t, unsigned int irq);
+                                                  ^
+esp_app/tcp_server/unit_testing/fff/examples/embedded_ui/UI_test_ansic.c:18:1: note: Function 'SYSTEM_register_irq' argument 2 names different: declaration 'irq' definition 'arg1'.
+FAKE_VOID_FUNC2(SYSTEM_register_irq, irq_func_t, unsigned int);
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 45 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:551:3: warning: Member variable 'GTestFlagSaver::pretty_' is not initialized in the constructor. [uninitMemberVar]
+  GTestFlagSaver() {
+  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:1007:10: performance:inconclusive: Technically the member function 'testing::internal::UnitTestImpl::CurrentOsStackTraceExceptTop' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  String CurrentOsStackTraceExceptTop(int skip_count);
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2063:22: note: Technically the member function 'testing::internal::UnitTestImpl::CurrentOsStackTraceExceptTop' can be static (but you may consider moving to unnamed namespace).
+String UnitTestImpl::CurrentOsStackTraceExceptTop(int skip_count) {
+                     ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:1007:10: note: Technically the member function 'testing::internal::UnitTestImpl::CurrentOsStackTraceExceptTop' can be static (but you may consider moving to unnamed namespace).
+  String CurrentOsStackTraceExceptTop(int skip_count);
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:1108:7: style:inconclusive: Technically the member function 'testing::internal::UnitTestImpl::FilterTests' can be const. [functionConst]
+  int FilterTests(ReactionToSharding shard_tests);
+      ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5681:19: note: Technically the member function 'testing::internal::UnitTestImpl::FilterTests' can be const.
+int UnitTestImpl::FilterTests(ReactionToSharding shard_tests) {
+                  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:1108:7: note: Technically the member function 'testing::internal::UnitTestImpl::FilterTests' can be const.
+  int FilterTests(ReactionToSharding shard_tests);
+      ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:1111:8: style:inconclusive: Technically the member function 'testing::internal::UnitTestImpl::ListTestsMatchingFilter' can be const. [functionConst]
+  void ListTestsMatchingFilter();
+       ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5735:20: note: Technically the member function 'testing::internal::UnitTestImpl::ListTestsMatchingFilter' can be const.
+void UnitTestImpl::ListTestsMatchingFilter() {
+                   ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:1111:8: note: Technically the member function 'testing::internal::UnitTestImpl::ListTestsMatchingFilter' can be const.
+  void ListTestsMatchingFilter();
+       ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:833:18: style: The function 'CurrentStackTrace' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual String CurrentStackTrace(int max_depth, int skip_count);
+                 ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:818:18: note: Virtual function in base class
+  virtual String CurrentStackTrace(int max_depth, int skip_count) = 0;
+                 ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:833:18: note: Function in derived class
+  virtual String CurrentStackTrace(int max_depth, int skip_count);
+                 ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:834:16: style: The function 'UponLeavingGTest' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void UponLeavingGTest();
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:823:16: note: Virtual function in base class
+  virtual void UponLeavingGTest() = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:834:16: note: Function in derived class
+  virtual void UponLeavingGTest();
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5099:34: error: Null pointer dereference: static_cast<volatile int*>(NULL) [nullPointer]
+      *static_cast<volatile int*>(NULL) = 1;
+                                 ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4278:1: style:inconclusive: Function 'OnTestProgramStart' argument 1 names different: declaration 'unit_test' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REPEATER_METHOD_(OnTestProgramStart, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4213:51: note: Function 'OnTestProgramStart' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+  virtual void OnTestProgramStart(const UnitTest& unit_test);
+                                                  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4278:1: note: Function 'OnTestProgramStart' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+GTEST_REPEATER_METHOD_(OnTestProgramStart, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4279:1: style:inconclusive: Function 'OnEnvironmentsSetUpStart' argument 1 names different: declaration 'unit_test' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REPEATER_METHOD_(OnEnvironmentsSetUpStart, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4215:57: note: Function 'OnEnvironmentsSetUpStart' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+  virtual void OnEnvironmentsSetUpStart(const UnitTest& unit_test);
+                                                        ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4279:1: note: Function 'OnEnvironmentsSetUpStart' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+GTEST_REPEATER_METHOD_(OnEnvironmentsSetUpStart, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4280:1: style:inconclusive: Function 'OnTestCaseStart' argument 1 names different: declaration 'test_case' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REPEATER_METHOD_(OnTestCaseStart, TestCase)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4217:48: note: Function 'OnTestCaseStart' argument 1 names different: declaration 'test_case' definition 'parameter'.
+  virtual void OnTestCaseStart(const TestCase& test_case);
+                                               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4280:1: note: Function 'OnTestCaseStart' argument 1 names different: declaration 'test_case' definition 'parameter'.
+GTEST_REPEATER_METHOD_(OnTestCaseStart, TestCase)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4281:1: style:inconclusive: Function 'OnTestStart' argument 1 names different: declaration 'test_info' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REPEATER_METHOD_(OnTestStart, TestInfo)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4218:44: note: Function 'OnTestStart' argument 1 names different: declaration 'test_info' definition 'parameter'.
+  virtual void OnTestStart(const TestInfo& test_info);
+                                           ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4281:1: note: Function 'OnTestStart' argument 1 names different: declaration 'test_info' definition 'parameter'.
+GTEST_REPEATER_METHOD_(OnTestStart, TestInfo)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4282:1: style:inconclusive: Function 'OnTestPartResult' argument 1 names different: declaration 'result' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REPEATER_METHOD_(OnTestPartResult, TestPartResult)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4219:55: note: Function 'OnTestPartResult' argument 1 names different: declaration 'result' definition 'parameter'.
+  virtual void OnTestPartResult(const TestPartResult& result);
+                                                      ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4282:1: note: Function 'OnTestPartResult' argument 1 names different: declaration 'result' definition 'parameter'.
+GTEST_REPEATER_METHOD_(OnTestPartResult, TestPartResult)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4283:1: style:inconclusive: Function 'OnEnvironmentsTearDownStart' argument 1 names different: declaration 'unit_test' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REPEATER_METHOD_(OnEnvironmentsTearDownStart, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4222:60: note: Function 'OnEnvironmentsTearDownStart' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+  virtual void OnEnvironmentsTearDownStart(const UnitTest& unit_test);
+                                                           ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4283:1: note: Function 'OnEnvironmentsTearDownStart' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+GTEST_REPEATER_METHOD_(OnEnvironmentsTearDownStart, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4284:1: style:inconclusive: Function 'OnEnvironmentsSetUpEnd' argument 1 names different: declaration 'unit_test' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REVERSE_REPEATER_METHOD_(OnEnvironmentsSetUpEnd, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4216:55: note: Function 'OnEnvironmentsSetUpEnd' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+  virtual void OnEnvironmentsSetUpEnd(const UnitTest& unit_test);
+                                                      ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4284:1: note: Function 'OnEnvironmentsSetUpEnd' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+GTEST_REVERSE_REPEATER_METHOD_(OnEnvironmentsSetUpEnd, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4285:1: style:inconclusive: Function 'OnEnvironmentsTearDownEnd' argument 1 names different: declaration 'unit_test' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REVERSE_REPEATER_METHOD_(OnEnvironmentsTearDownEnd, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4223:58: note: Function 'OnEnvironmentsTearDownEnd' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+  virtual void OnEnvironmentsTearDownEnd(const UnitTest& unit_test);
+                                                         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4285:1: note: Function 'OnEnvironmentsTearDownEnd' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+GTEST_REVERSE_REPEATER_METHOD_(OnEnvironmentsTearDownEnd, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4286:1: style:inconclusive: Function 'OnTestEnd' argument 1 names different: declaration 'test_info' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REVERSE_REPEATER_METHOD_(OnTestEnd, TestInfo)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4220:42: note: Function 'OnTestEnd' argument 1 names different: declaration 'test_info' definition 'parameter'.
+  virtual void OnTestEnd(const TestInfo& test_info);
+                                         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4286:1: note: Function 'OnTestEnd' argument 1 names different: declaration 'test_info' definition 'parameter'.
+GTEST_REVERSE_REPEATER_METHOD_(OnTestEnd, TestInfo)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4287:1: style:inconclusive: Function 'OnTestCaseEnd' argument 1 names different: declaration 'test_case' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REVERSE_REPEATER_METHOD_(OnTestCaseEnd, TestCase)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4221:46: note: Function 'OnTestCaseEnd' argument 1 names different: declaration 'test_case' definition 'parameter'.
+  virtual void OnTestCaseEnd(const TestCase& test_case);
+                                             ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4287:1: note: Function 'OnTestCaseEnd' argument 1 names different: declaration 'test_case' definition 'parameter'.
+GTEST_REVERSE_REPEATER_METHOD_(OnTestCaseEnd, TestCase)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4288:1: style:inconclusive: Function 'OnTestProgramEnd' argument 1 names different: declaration 'unit_test' definition 'parameter'. [funcArgNamesDifferent]
+GTEST_REVERSE_REPEATER_METHOD_(OnTestProgramEnd, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4225:49: note: Function 'OnTestProgramEnd' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+  virtual void OnTestProgramEnd(const UnitTest& unit_test);
+                                                ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4288:1: note: Function 'OnTestProgramEnd' argument 1 names different: declaration 'unit_test' definition 'parameter'.
+GTEST_REVERSE_REPEATER_METHOD_(OnTestProgramEnd, UnitTest)
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5607:30: style:inconclusive: Function 'ShouldShard' argument 1 names different: declaration 'total_shards_str' definition 'total_shards_env'. [funcArgNamesDifferent]
+bool ShouldShard(const char* total_shards_env,
+                             ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:650:41: note: Function 'ShouldShard' argument 1 names different: declaration 'total_shards_str' definition 'total_shards_env'.
+GTEST_API_ bool ShouldShard(const char* total_shards_str,
+                                        ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5607:30: note: Function 'ShouldShard' argument 1 names different: declaration 'total_shards_str' definition 'total_shards_env'.
+bool ShouldShard(const char* total_shards_env,
+                             ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5608:30: style:inconclusive: Function 'ShouldShard' argument 2 names different: declaration 'shard_index_str' definition 'shard_index_env'. [funcArgNamesDifferent]
+                 const char* shard_index_env,
+                             ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:651:41: note: Function 'ShouldShard' argument 2 names different: declaration 'shard_index_str' definition 'shard_index_env'.
+                            const char* shard_index_str,
+                                        ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5608:30: note: Function 'ShouldShard' argument 2 names different: declaration 'shard_index_str' definition 'shard_index_env'.
+                 const char* shard_index_env,
+                             ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5652:37: style:inconclusive: Function 'Int32FromEnvOrDie' argument 1 names different: declaration 'env_var' definition 'var'. [funcArgNamesDifferent]
+Int32 Int32FromEnvOrDie(const char* var, Int32 default_val) {
+                                    ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:657:48: note: Function 'Int32FromEnvOrDie' argument 1 names different: declaration 'env_var' definition 'var'.
+GTEST_API_ Int32 Int32FromEnvOrDie(const char* env_var, Int32 default_val);
+                                               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5652:37: note: Function 'Int32FromEnvOrDie' argument 1 names different: declaration 'env_var' definition 'var'.
+Int32 Int32FromEnvOrDie(const char* var, Int32 default_val) {
+                                    ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6985:20: style: Condition 'thread_count!=1' is always true [knownConditionTrueFalse]
+  if (thread_count != 1) {
+                   ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6984:45: note: Assignment 'thread_count=GetThreadCount()', assigned value is 0
+  const size_t thread_count = GetThreadCount();
+                                            ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6985:20: note: Condition 'thread_count!=1' is always true
+  if (thread_count != 1) {
+                   ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:7175:30: style: Variable 'child_pid' is reassigned a value before the old one has been used. [redundantAssignment]
+  if (use_fork && (child_pid = fork()) == 0) {
+                             ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:7167:15: note: child_pid is assigned
+    child_pid = clone(&ExecDeathTestChildMain, stack_top, SIGCHLD, &args);
+              ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:7175:30: note: child_pid is overwritten
+  if (use_fork && (child_pid = fork()) == 0) {
+                             ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6953:48: style:inconclusive: Function 'ForkingDeathTest' argument 1 names different: declaration 'statement' definition 'a_statement'. [funcArgNamesDifferent]
+ForkingDeathTest::ForkingDeathTest(const char* a_statement, const RE* a_regex)
+                                               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6939:32: note: Function 'ForkingDeathTest' argument 1 names different: declaration 'statement' definition 'a_statement'.
+  ForkingDeathTest(const char* statement, const RE* regex);
+                               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6953:48: note: Function 'ForkingDeathTest' argument 1 names different: declaration 'statement' definition 'a_statement'.
+ForkingDeathTest::ForkingDeathTest(const char* a_statement, const RE* a_regex)
+                                               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6953:71: style:inconclusive: Function 'ForkingDeathTest' argument 2 names different: declaration 'regex' definition 'a_regex'. [funcArgNamesDifferent]
+ForkingDeathTest::ForkingDeathTest(const char* a_statement, const RE* a_regex)
+                                                                      ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6939:53: note: Function 'ForkingDeathTest' argument 2 names different: declaration 'regex' definition 'a_regex'.
+  ForkingDeathTest(const char* statement, const RE* regex);
+                                                    ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6953:71: note: Function 'ForkingDeathTest' argument 2 names different: declaration 'regex' definition 'a_regex'.
+ForkingDeathTest::ForkingDeathTest(const char* a_statement, const RE* a_regex)
+                                                                      ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:7144:33: error: Uninitialized variable: dummy [uninitvar]
+  return StackLowerThanAddress(&dummy);
+                                ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6356:0: information: Skipping configuration 'GTEST_HAS_DEATH_TEST;WCOREDUMP' since the value of 'WCOREDUMP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if (WCOREDUMP(exit_code)) {
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5841:13: style: Condition 'IsTrue(false)' is always false [knownConditionTrueFalse]
+  if (IsTrue(false))
+            ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-main.cc:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 57 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:740:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& /* t */) { return *this; }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:740:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& /* t */) { return *this; }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:740:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& /* t */) { return *this; }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:740:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& /* t */) { return *this; }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:740:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& /* t */) { return *this; }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:740:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& /* t */) { return *this; }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:740:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& /* t */) { return *this; }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:740:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& /* t */) { return *this; }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:740:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& /* t */) { return *this; }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:757:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:757:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:757:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:757:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:757:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:757:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:757:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:757:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:757:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:760:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_1_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:760:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_1_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:760:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_1_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:760:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_1_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:760:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_1_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:760:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_1_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:760:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_1_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:760:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_1_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:760:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_1_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:792:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:792:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:792:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:792:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:792:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:792:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:792:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:792:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:792:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:795:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_2_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:795:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_2_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:795:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_2_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:795:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_2_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:795:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_2_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:795:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_2_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:795:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_2_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:795:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_2_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:795:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_2_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:833:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:833:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:833:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:833:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:833:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:833:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:833:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:833:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:833:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:836:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_3_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:836:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_3_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:836:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_3_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:836:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_3_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:836:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_3_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:836:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_3_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:836:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_3_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:836:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_3_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:836:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_3_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:872:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:872:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:872:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:872:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:872:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:872:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:872:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:872:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:872:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:875:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_4_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:875:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_4_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:875:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_4_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:875:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_4_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:875:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_4_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:875:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_4_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:875:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_4_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:875:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_4_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:875:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_4_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:914:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:914:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:914:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:914:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:914:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:914:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:914:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:914:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:914:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:917:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_5_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:917:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_5_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:917:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_5_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:917:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_5_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:917:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_5_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:917:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_5_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:917:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_5_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:917:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_5_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:917:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_5_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:959:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:959:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:959:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:959:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:959:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:959:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:959:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:959:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:959:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:962:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_6_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:962:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_6_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:962:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_6_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:962:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_6_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:962:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_6_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:962:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_6_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:962:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_6_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:962:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_6_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:962:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_6_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1006:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1006:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1006:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1006:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1006:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1006:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1006:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1006:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1006:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1009:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_7_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1009:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_7_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1009:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_7_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1009:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_7_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1009:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_7_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1009:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_7_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1009:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_7_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1009:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_7_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1009:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_7_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1056:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1056:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1056:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1056:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1056:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1056:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1056:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1056:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1056:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1059:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_8_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1059:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_8_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1059:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_8_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1059:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_8_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1059:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_8_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1059:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_8_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1059:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_8_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1059:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_8_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1059:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_8_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1108:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1108:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1108:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1108:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1108:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1108:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1108:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1108:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1108:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const tuple& t) { return CopyFrom(t); }
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1111:10: warning:inconclusive: Member variable 'tuple::f0_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_9_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1111:10: warning:inconclusive: Member variable 'tuple::f1_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_9_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1111:10: warning:inconclusive: Member variable 'tuple::f2_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_9_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1111:10: warning:inconclusive: Member variable 'tuple::f3_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_9_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1111:10: warning:inconclusive: Member variable 'tuple::f4_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_9_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1111:10: warning:inconclusive: Member variable 'tuple::f5_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_9_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1111:10: warning:inconclusive: Member variable 'tuple::f6_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_9_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1111:10: warning:inconclusive: Member variable 'tuple::f7_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_9_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1111:10: warning:inconclusive: Member variable 'tuple::f8_' is not assigned a value in 'tuple::operator='. [operatorEqVarError]
+  tuple& operator=(const GTEST_9_TUPLE_(U)& t) {
+         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:9043:1: style: The class 'linked_ptr_internal' does not have a constructor although it has private member variables. [noConstructor]
+class linked_ptr_internal {
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10259:5: warning:inconclusive: Member variable 'Iterator::value_' is not assigned in the copy constructor. Should it be copied? [uninitMemberVarPrivate]
+    Iterator(const Iterator& other)
+    ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17949:42: style: Unused private function: 'Environment::Setup' [unusedPrivateFunction]
+  virtual Setup_should_be_spelled_SetUp* Setup() { return NULL; }
+                                         ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:2464:8: performance:inconclusive: Technically the member function 'testing::internal::Mutex::AssertHeld' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  void AssertHeld() const {}
+       ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:9075:8: style:inconclusive: Technically the member function 'testing::internal::linked_ptr_internal::depart' can be const. [functionConst]
+  bool depart() {
+       ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18703:20: performance:inconclusive: Technically the member function 'testing::WithParamInterface::GetParam' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  const ParamType& GetParam() const { return *parameter_; }
+                   ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:790:3: style: Class 'tuple' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  tuple(const ::std::pair<U0, U1>& p) : f0_(p.first), f1_(p.second) {}
+  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1878:3: style: Class 'RE' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  RE(const ::std::string& regex) { Init(regex.c_str()); }  // NOLINT
+  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1886:3: style: Class 'RE' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  RE(const char* regex) { Init(regex); }  // NOLINT
+  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:3045:3: style: Class 'String' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  String(const char* a_c_str) {  // NOLINT
+  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:3076:3: style: Class 'String' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  String(const ::std::string& str) {
+  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:7420:3: style: Struct 'ConstCharPtr' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  ConstCharPtr(const char* str) : value(str) {}
+  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:1160:3: style: Class 'tuple < void , typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 , typename T7 , typename T8 , typename T9 >' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  tuple(const GTEST_10_TUPLE_(U)& t) : f0_(t.f0_), f1_(t.f1_), f2_(t.f2_),
+  ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:9100:25: style: Class 'linked_ptr < const ParamGeneratorInterface < bool > >' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  template <typename U> linked_ptr(linked_ptr<U> const& ptr) { copy(&ptr); }
+                        ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:7209:17: style: The function 'CreateTest' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual Test* CreateTest() { return new TestClass; }
+                ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:7195:17: note: Virtual function in base class
+  virtual Test* CreateTest() = 0;
+                ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:7209:17: note: Function in derived class
+  virtual Test* CreateTest() { return new TestClass; }
+                ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10292:17: style: The function 'CreateTest' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual Test* CreateTest() {
+                ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:7195:17: note: Virtual function in base class
+  virtual Test* CreateTest() = 0;
+                ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10292:17: note: Function in derived class
+  virtual Test* CreateTest() {
+                ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10331:28: style: The function 'CreateTestFactory' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual TestFactoryBase* CreateTestFactory(ParamType parameter) {
+                           ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10312:28: note: Virtual function in base class
+  virtual TestFactoryBase* CreateTestFactory(ParamType parameter) = 0;
+                           ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10331:28: note: Function in derived class
+  virtual TestFactoryBase* CreateTestFactory(ParamType parameter) {
+                           ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10391:25: style: The function 'GetTestCaseName' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual const string& GetTestCaseName() const { return test_case_name_; }
+                        ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10354:25: note: Virtual function in base class
+  virtual const string& GetTestCaseName() const = 0;
+                        ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10391:25: note: Function in derived class
+  virtual const string& GetTestCaseName() const { return test_case_name_; }
+                        ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10393:18: style: The function 'GetTestCaseTypeId' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual TypeId GetTestCaseTypeId() const { return GetTypeId<TestCase>(); }
+                 ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10356:18: note: Virtual function in base class
+  virtual TypeId GetTestCaseTypeId() const = 0;
+                 ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10393:18: note: Function in derived class
+  virtual TypeId GetTestCaseTypeId() const { return GetTypeId<TestCase>(); }
+                 ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10421:16: style: The function 'RegisterTests' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void RegisterTests() {
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10361:16: note: Virtual function in base class
+  virtual void RegisterTests() = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:10421:16: note: Function in derived class
+  virtual void RegisterTests() {
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18009:16: style: The function 'OnTestProgramStart' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnTestProgramStart(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17959:16: note: Virtual function in base class
+  virtual void OnTestProgramStart(const UnitTest& unit_test) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18009:16: note: Function in derived class
+  virtual void OnTestProgramStart(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18010:16: style: The function 'OnTestIterationStart' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnTestIterationStart(const UnitTest& /*unit_test*/,
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17964:16: note: Virtual function in base class
+  virtual void OnTestIterationStart(const UnitTest& unit_test,
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18010:16: note: Function in derived class
+  virtual void OnTestIterationStart(const UnitTest& /*unit_test*/,
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18012:16: style: The function 'OnEnvironmentsSetUpStart' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnEnvironmentsSetUpStart(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17968:16: note: Virtual function in base class
+  virtual void OnEnvironmentsSetUpStart(const UnitTest& unit_test) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18012:16: note: Function in derived class
+  virtual void OnEnvironmentsSetUpStart(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18013:16: style: The function 'OnEnvironmentsSetUpEnd' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnEnvironmentsSetUpEnd(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17971:16: note: Virtual function in base class
+  virtual void OnEnvironmentsSetUpEnd(const UnitTest& unit_test) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18013:16: note: Function in derived class
+  virtual void OnEnvironmentsSetUpEnd(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18014:16: style: The function 'OnTestCaseStart' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnTestCaseStart(const TestCase& /*test_case*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17974:16: note: Virtual function in base class
+  virtual void OnTestCaseStart(const TestCase& test_case) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18014:16: note: Function in derived class
+  virtual void OnTestCaseStart(const TestCase& /*test_case*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18015:16: style: The function 'OnTestStart' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnTestStart(const TestInfo& /*test_info*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17977:16: note: Virtual function in base class
+  virtual void OnTestStart(const TestInfo& test_info) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18015:16: note: Function in derived class
+  virtual void OnTestStart(const TestInfo& /*test_info*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18016:16: style: The function 'OnTestPartResult' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnTestPartResult(const TestPartResult& /*test_part_result*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17980:16: note: Virtual function in base class
+  virtual void OnTestPartResult(const TestPartResult& test_part_result) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18016:16: note: Function in derived class
+  virtual void OnTestPartResult(const TestPartResult& /*test_part_result*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18017:16: style: The function 'OnTestEnd' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnTestEnd(const TestInfo& /*test_info*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17983:16: note: Virtual function in base class
+  virtual void OnTestEnd(const TestInfo& test_info) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18017:16: note: Function in derived class
+  virtual void OnTestEnd(const TestInfo& /*test_info*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18018:16: style: The function 'OnTestCaseEnd' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnTestCaseEnd(const TestCase& /*test_case*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17986:16: note: Virtual function in base class
+  virtual void OnTestCaseEnd(const TestCase& test_case) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18018:16: note: Function in derived class
+  virtual void OnTestCaseEnd(const TestCase& /*test_case*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18019:16: style: The function 'OnEnvironmentsTearDownStart' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnEnvironmentsTearDownStart(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17989:16: note: Virtual function in base class
+  virtual void OnEnvironmentsTearDownStart(const UnitTest& unit_test) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18019:16: note: Function in derived class
+  virtual void OnEnvironmentsTearDownStart(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18020:16: style: The function 'OnEnvironmentsTearDownEnd' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnEnvironmentsTearDownEnd(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17992:16: note: Virtual function in base class
+  virtual void OnEnvironmentsTearDownEnd(const UnitTest& unit_test) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18020:16: note: Function in derived class
+  virtual void OnEnvironmentsTearDownEnd(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18021:16: style: The function 'OnTestIterationEnd' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnTestIterationEnd(const UnitTest& /*unit_test*/,
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17995:16: note: Virtual function in base class
+  virtual void OnTestIterationEnd(const UnitTest& unit_test,
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18021:16: note: Function in derived class
+  virtual void OnTestIterationEnd(const UnitTest& /*unit_test*/,
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18023:16: style: The function 'OnTestProgramEnd' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void OnTestProgramEnd(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:17999:16: note: Virtual function in base class
+  virtual void OnTestProgramEnd(const UnitTest& unit_test) = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:18023:16: note: Function in derived class
+  virtual void OnTestProgramEnd(const UnitTest& /*unit_test*/) {}
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:7570:7: warning: Found function call inside sizeof(). [sizeofFunctionCall]
+      sizeof(Helper(ImplicitlyConvertible::MakeFrom())) == 1;
+      ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:2157:8: style:inconclusive: Technically the member function 'testing::internal::Notification::WaitForNotification' can be const. [functionConst]
+  void WaitForNotification() {
+       ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:2229:16: style: The function 'Run' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual void Run() {
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:2177:16: note: Virtual function in base class
+  virtual void Run() = 0;
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:2229:16: note: Function in derived class
+  virtual void Run() {
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:8095:16: style: The function 'Create' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+  virtual bool Create(const char* statement, const RE* regex,
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:8088:16: note: Virtual function in base class
+  virtual bool Create(const char* statement, const RE* regex,
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:8095:16: note: Function in derived class
+  virtual bool Create(const char* statement, const RE* regex,
+               ^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest.h:7561:7: warning: Found function call inside sizeof(). [sizeofFunctionCall]
+      sizeof(Helper(ImplicitlyConvertible::MakeFrom())) == 1;
+      ^
+esp_app/tcp_server/unit_testing/fff/fff.h:6576:0: error: failed to expand 'FAKE_VOID_FUNC_VARARG', Invalid ## usage when expanding 'FUNC_VOID_VARARG_N'. [preprocessorErrorDirective]
+#define FUNC_VOID_VARARG_N(N,...)     EXPAND(FAKE_VOID_FUNC ## N ## _VARARG(__VA_ARGS__))
+^
+esp_app/tcp_server/unit_testing/fff/test/fff_test_c.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+esp_app/tcp_server/unit_testing/fff/test/fff_test_cpp.cpp:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+esp_app/tcp_server/unit_testing/fff/fff.h:6607:0: error: failed to expand 'DECLARE_FAKE_VOID_FUNC_VARARG', Invalid ## usage when expanding 'DECLARE_FUNC_VOID_VARARG_N'. [preprocessorErrorDirective]
+#define DECLARE_FUNC_VOID_VARARG_N(N,...)     EXPAND(DECLARE_FAKE_VOID_FUNC ## N ## _VARARG(__VA_ARGS__))
+^
+esp_app/tcp_server/unit_testing/fff/test/fff_test_global_c.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+esp_app/tcp_server/unit_testing/fff/test/fff_test_global_cpp.cpp:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+esp_app/tcp_server/unit_testing/fff/test/global_fakes.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6983:0: style: The function 'AssumeRole' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:1093:0: style: The function 'ClearAdHocTestResult' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2457:0: style: The function 'CmpHelperGE' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2460:0: style: The function 'CmpHelperGT' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2451:0: style: The function 'CmpHelperLE' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2454:0: style: The function 'CmpHelperLT' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2448:0: style: The function 'CmpHelperNE' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2481:0: style: The function 'CmpHelperSTRCASEEQ' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2511:0: style: The function 'CmpHelperSTRCASENE' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2465:0: style: The function 'CmpHelperSTREQ' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2497:0: style: The function 'CmpHelperSTRNE' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4839:0: style: The function 'CurrentStackTrace' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2406:0: style: The function 'DoubleLE' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2340:0: style: The function 'DoubleNearPredFormat' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:4347:0: style: The function 'EscapeXmlText' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6367:0: style: The function 'ExitedUnsuccessfully' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2399:0: style: The function 'FloatLE' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2325:0: style: The function 'GetBoolAssertionFailureMessage' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5822:0: style: The function 'GetCurrentOsStackTraceExceptTop' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2689:0: style: The function 'IsHRESULTFailure' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2682:0: style: The function 'IsHRESULTSuccess' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2596:0: style: The function 'IsNotSubstring' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:2584:0: style: The function 'IsSubstring' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:6960:0: style: The function 'Wait' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/main/main.c:30:0: style: The function 'app_main' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/examples/weak_linking/src/main.c:7:0: style: The function 'give_error' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/components/led/src/neopixel-if.c:20:0: style: The function 'init_led_strip' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:137:0: style: The function 'mock_esp_system_Init' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:79:0: style: The function 'mock_esp_system_Verify' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_gpio.c:21:0: style: The function 'mock_gpio_Init' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_gpio.c:17:0: style: The function 'mock_gpio_Verify' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_led_strip.c:21:0: style: The function 'mock_led_strip_Init' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_led_strip.c:17:0: style: The function 'mock_led_strip_Verify' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:474:0: style: The function 'pdMS_TO_TICKS_AddCallback' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:460:0: style: The function 'pdMS_TO_TICKS_CMockExpectAndReturn' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:440:0: style: The function 'pdMS_TO_TICKS_CMockIgnoreAndReturn' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:453:0: style: The function 'pdMS_TO_TICKS_CMockStopIgnore' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:481:0: style: The function 'pdMS_TO_TICKS_Stub' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/runners/test_led_runner.c:37:0: style: The function 'resetTest' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/gtest/gtest-all.cc:5760:0: style: The function 'set_os_stack_trace_getter' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/test_TCP_Thread.c:28:0: style: The function 'test_setup_socket_0' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/test_TCP_Thread.c:46:0: style: The function 'test_setup_socket_1' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/test_TCP_Thread.c:65:0: style: The function 'test_setup_socket_2' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/test_TCP_Thread.c:90:0: style: The function 'test_tcp_server_task_0' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/test_TCP_Thread.c:105:0: style: The function 'test_tcp_server_task_1' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/test_TCP_Thread.c:121:0: style: The function 'test_tcp_server_task_2' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/main/src/UDP_thread.c:56:0: style: The function 'udp_hello_client_task' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/main/src/UDP_thread.c:71:0: style: The function 'udp_streaming_client_task' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:215:0: style: The function 'vTaskDelay_AddCallback' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:202:0: style: The function 'vTaskDelay_CMockExpect' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:192:0: style: The function 'vTaskDelay_CMockIgnore' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:197:0: style: The function 'vTaskDelay_CMockStopIgnore' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:222:0: style: The function 'vTaskDelay_Stub' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:297:0: style: The function 'vTaskDelete_AddCallback' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:284:0: style: The function 'vTaskDelete_CMockExpect' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:274:0: style: The function 'vTaskDelete_CMockIgnore' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:279:0: style: The function 'vTaskDelete_CMockStopIgnore' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:304:0: style: The function 'vTaskDelete_Stub' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/runners/test_led_runner.c:46:0: style: The function 'verifyTest' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/unit_testing/fff/examples/embedded_ui/UI_test_ansic.c:135:0: style: The function 'when_outputting_to_full_display_then_previous_inserted' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:380:0: style: The function 'xTaskGetTickCount_AddCallback' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:367:0: style: The function 'xTaskGetTickCount_CMockExpectAndReturn' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:347:0: style: The function 'xTaskGetTickCount_CMockIgnoreAndReturn' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:360:0: style: The function 'xTaskGetTickCount_CMockStopIgnore' is never used. [unusedFunction]
+
+^
+esp_app/tcp_server/build/test/mocks/mock_esp_system.c:387:0: style: The function 'xTaskGetTickCount_Stub' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
