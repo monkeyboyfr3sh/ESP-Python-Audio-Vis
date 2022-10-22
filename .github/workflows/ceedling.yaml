@@ -29,22 +29,21 @@ jobs:
   unit_test:
     runs-on: ubuntu-latest
     steps:
-    
       - name: Checkout code
         uses: actions/checkout@v2
     
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7
+    # - name: Set up Ruby
+    #   uses: ruby/setup-ruby@v1
+    #   with:
+    #     ruby-version: 2.7
   
-    - name: Install Ceedling  
-      run: |
-        gem install ceedling
+    # - name: Install Ceedling  
+    #   run: |
+    #     gem install ceedling
 
-    - name: Run Unit Tests
-      run: |
-        cd ./esp_app/tcp_server/
+    # - name: Run Unit Tests
+    #   run: |
+    #     cd ./esp_app/tcp_server/
 
 
 # name: GitHub Actions Demo
