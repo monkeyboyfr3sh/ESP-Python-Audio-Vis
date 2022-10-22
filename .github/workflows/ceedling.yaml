@@ -18,9 +18,10 @@ jobs:
     - name: Run Unit Tests
       run: |
         pwd
+        ls
         cd ..
         pwd         
-        # ls
+        ls
         # ceedling test:all
         # ceedling utils:gcov
 
