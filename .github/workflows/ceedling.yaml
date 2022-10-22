@@ -11,13 +11,14 @@ jobs:
     #   uses: ruby/setup-ruby@v1
     #   with:
     #     ruby-version: 2.7
-    # - name: Install Ceedling
+    # - name: Install Ceedling  
     #   run: gem install ceedling
     - name: Run Unit Tests
       run: |
         pwd
         cd ..
         pwd
+        ls
 
 # name: GitHub Actions Demo
 # run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
