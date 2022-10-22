@@ -31,9 +31,9 @@ jobs:
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v2
-      # - name: Run Unit Tests
-      #   run: |
-      #     cd ./esp_app/tcp_server/
+      - name: Run Unit Tests
+        run: |
+          cd ./esp_app/tcp_server/
     
     # - name: Set up Ruby
     #   uses: ruby/setup-ruby@v1
