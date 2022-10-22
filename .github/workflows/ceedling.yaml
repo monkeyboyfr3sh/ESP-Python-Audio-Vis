@@ -23,3 +23,9 @@ jobs:
         run: |
           cd ./esp_app/tcp_server/
           ceedling gcov:all
+  static_analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: |
+          echo "hello there!"
