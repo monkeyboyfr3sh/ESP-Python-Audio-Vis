@@ -23,8 +23,6 @@ jobs:
         run: |
           cd ./esp_app/tcp_server/
           ceedling gcov:all
-          ceedling utils:gcov
-
 
 # name: GitHub Actions Demo
 # run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
