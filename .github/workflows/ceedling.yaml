@@ -8,20 +8,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7
-    - name: Install Ceedling
-      run: gem install ceedling
+    # - uses: actions/checkout@v2
+    # - name: Set up Ruby
+    #   uses: ruby/setup-ruby@v1
+    #   with:
+    #     ruby-version: 2.7
+    # - name: Install Ceedling
+    #   run: gem install ceedling
     - name: Run Unit Tests
       run: |
         pwd
+      run: |
         ls
-        cd /esp_app/tcp_server
-        ceedling test:all
-        ceedling utils:gcov
+      run: |
+        cd esp_app
+        # pwd
+        # ceedling test:all
+        # ceedling utils:gcov
 
 # name: GitHub Actions Demo
 # run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
