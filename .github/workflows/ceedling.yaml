@@ -1,39 +1,25 @@
-name: Code Analysis
-run-name: ${{ github.actor }}'s Code Analysis Results
+name: Ceedling Unit Tests
+run-name: ${{ github.actor }}'s Ceedling Unit Tests
 on: [push]
 
-# jobs:
-  # unit_test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v2
-  #     - name: Set up Ruby
-  #       uses: ruby/setup-ruby@v1
-  #       with:
-  #         ruby-version: 2.7
-  #     - name: Install Ceedling  
-  #       run: |
-  #         gem install ceedling
-  #     - name: Run Unit Tests
-  #       run: |
-  #         cd ./esp_app/tcp_server/
-  #         ceedling test:all
-  #     - name: Generate Coverage
-  #       run: |
-  #         cd ./esp_app/tcp_server/
-  #         ceedling gcov:all
-  # static_analysis:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # - name: Checkout code
-  #     #   uses: actions/checkout@v2
-  #     - name: Install CPPCheck
-  #       run: |
-  #         sudo apt -y install cppcheck
-  #         cppe
-  #     - name: CPP Check Project
-  #       run: |
-  #         # cd ./esp_app/tcp_server/static_analysis
-  #         # cppcheck --project="./esp_project.cppcheck" --enable=all --suppress=missingIncludeSystem
-  #         # cppcheck -h
+jobs:
+  unit_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+      - name: Install Ceedling  
+        run: |
+          gem install ceedling
+      - name: Run Unit Tests
+        run: |
+          cd ./esp_app/tcp_server/
+          ceedling test:all
+      - name: Generate Coverage
+        run: |
+          cd ./esp_app/tcp_server/
+          ceedling gcov:all
