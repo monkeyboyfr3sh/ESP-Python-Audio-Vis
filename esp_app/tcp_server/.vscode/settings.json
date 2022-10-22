@@ -48,6 +48,8 @@
     "stdbool.h": "c",
     "esp_err.h": "c",
     "fff.h": "c",
-    "*.include": "c"
+    "*.include": "c",
+    "neopixel-if.h": "c",
+    "mock_typedefs.h": "c"
   }
 }

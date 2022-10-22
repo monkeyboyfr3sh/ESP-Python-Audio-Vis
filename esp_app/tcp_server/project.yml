@@ -6,7 +6,8 @@
 # This sample, therefore, only demonstrates running a collection of unit tests.
 
 :project:
-  :use_exceptions: FALSE
+  :use_mocks: TRUE
+  :use_exceptions: FALSE        
   :use_test_preprocessor: TRUE
   :use_auxiliary_dependencies: TRUE
   :build_root: build
@@ -36,9 +37,9 @@
     - main/main.c
     - main/src/**
     - main/inc/**
-    - components/*/inc
     - components/*/src
-    # - unit_testing/esp-idf-mock/**
+    - components/*/inc
+    - components/*/test
   :support:
     - unit_testing/fff
   :libraries: [ ]
@@ -68,6 +69,8 @@
     uint32:   UINT32
     int8:     INT8
     bool:     UINT8
+    'led_strip_t':  INT32
+    'gpio_num_t':  INT32
 
 # Add -gcov to the plugins list to make sure of the gcov plugin
 # You will need to have gcov and gcovr both installed to make it work.
@@ -115,4 +118,5 @@
     - gcov
     - stdout_pretty_tests_report
     - module_generator
+  
 ...

@@ -690,6 +690,13 @@ C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/es
 C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led_strip/CMakeFiles/rebuild_cache.dir
 C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led_strip/CMakeFiles/list_install_components.dir
 C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led_strip/CMakeFiles/install/strip.dir
+C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led/CMakeFiles/__idf_led.dir
+C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led/CMakeFiles/install/local.dir
+C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led/CMakeFiles/install.dir
+C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led/CMakeFiles/edit_cache.dir
+C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led/CMakeFiles/rebuild_cache.dir
+C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led/CMakeFiles/list_install_components.dir
+C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/led/CMakeFiles/install/strip.dir
 C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/util/CMakeFiles/install/strip.dir
 C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/util/CMakeFiles/__idf_util.dir
 C:/Users/david/Documents/GitHub/ESP-Python-Audio-Vis/esp_app/tcp_server/build/esp-idf/util/CMakeFiles/install/local.dir
