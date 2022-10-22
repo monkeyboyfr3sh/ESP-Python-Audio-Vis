@@ -18,10 +18,9 @@ jobs:
     - name: Run Unit Tests
       run: |
         pwd
-      run: |
         ls
-      run: |
         cd esp_app
+
         # pwd
         # ceedling test:all
         # ceedling utils:gcov
