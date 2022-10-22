@@ -15,7 +15,7 @@ jobs:
         run: |
           gem install ceedling
       - name: Install GCOV
-          run: |
+        run: |
           pip3 install 'gcovr == 4.1'
       - name: Run Unit Tests
         run: |
