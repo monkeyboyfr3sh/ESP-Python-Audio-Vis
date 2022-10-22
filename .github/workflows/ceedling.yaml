@@ -23,6 +23,7 @@ jobs:
         run: |
           cd ./esp_app/tcp_server/
           ceedling gcov:all
+jobs:
   static_analysis:
     runs-on: ubuntu-latest
     steps:
