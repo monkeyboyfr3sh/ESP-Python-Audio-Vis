@@ -2,21 +2,41 @@ name: Ceedling Unit Test
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 
+# jobs:
+#   - test:
+#     - name: Ceedling Unit Tests
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
+    
+#     # - name: Set up Ruby
+#     #   uses: ruby/setup-ruby@v1
+#     #   with:
+#     #     ruby-version: 2.7
+#     # - name: Install Ceedling  
+#     #   run: gem install ceedling
+    
+#       run: |
+#         pwd
+#         ls
+#         cd ..
+#         pwd
+#         ls
+
+
 jobs:
-  - test:
-    - name: Ceedling Unit Tests
+  test:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    
+    # - uses: actions/checkout@v2
     # - name: Set up Ruby
     #   uses: ruby/setup-ruby@v1
     #   with:
     #     ruby-version: 2.7
     # - name: Install Ceedling  
     #   run: gem install ceedling
-    
+    - name: Run Unit Tests
       run: |
         pwd
         ls
