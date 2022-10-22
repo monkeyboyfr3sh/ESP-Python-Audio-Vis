@@ -12,13 +12,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
+      - name: Install Ceedling  
+        run: |
+          gem install ceedling
       - name: Run Unit Tests
         run: |
           cd ./esp_app/tcp_server/
-  
-    # - name: Install Ceedling  
-    #   run: |
-    #     gem install ceedling
 
 
 # name: GitHub Actions Demo
