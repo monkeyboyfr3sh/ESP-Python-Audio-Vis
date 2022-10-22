@@ -7,9 +7,10 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - name: Run tests
+      - name: Open Project
         run: |
           cd ./esp_app/tcp_server/
+      - name: Run tests
         uses: batov/ceedling_action@master
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1
