@@ -1,29 +1,6 @@
 name: Ceedling Unit Test
-run-name: ${{ github.actor }}'s' unit test for commit ${{ github.github_run_id }}
+run-name: ${{ github.actor }}'s Unit Test for commit ${{ github.sha }}
 on: [push]
-
-# jobs:
-#   - test:
-#     - name: Ceedling Unit Tests
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Checkout code
-#       uses: actions/checkout@v2
-    
-#     # - name: Set up Ruby
-#     #   uses: ruby/setup-ruby@v1
-#     #   with:
-#     #     ruby-version: 2.7
-#     # - name: Install Ceedling  
-#     #   run: gem install ceedling
-    
-#       run: |
-#         pwd
-#         ls
-#         cd ..
-#         pwd
-#         ls
-
 
 jobs:
   unit_test:
