@@ -1,13 +1,13 @@
 name: Ceedling Unit Test
-run-name: ${{ github.actor }}'s Unit Test for commit ${{ github.sha::6 }}
+run-name: ${{ github.actor }}'s Unit Test
 on: [push]
 
 jobs:
   unit_test:
     runs-on: ubuntu-latest
     steps:
-      # - name: Checkout code
-      #   uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Run Unit Tests
         run: |
           cd ./esp_app/tcp_server/
