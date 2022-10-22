@@ -31,4 +31,5 @@ jobs:
           sudo apt -y install cppcheck
       - name: CPP Check Project
         run: |
+          cd ./esp_app/tcp_server/
           cppcheck --project="./static_analysis/esp_project.cppcheck" --enable=all --suppress=missingIncludeSystem
