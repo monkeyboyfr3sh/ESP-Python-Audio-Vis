@@ -22,7 +22,7 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v1
         if: always()
         with:
-            files: build/artifacts/test/
+            files: esp_app/tcp_server/build/artifacts/test/
 
 # name: Ceedling Unit Tests
 # run-name: ${{ github.actor }}'s Ceedling Unit Tests
