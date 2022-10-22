@@ -2,7 +2,7 @@ name: Code Analysis
 run-name: ${{ github.actor }}'s Code Analysis Results
 on: [push]
 
-jobs:
+# jobs:
   # unit_test:
   #   runs-on: ubuntu-latest
   #   steps:
@@ -23,16 +23,17 @@ jobs:
   #       run: |
   #         cd ./esp_app/tcp_server/
   #         ceedling gcov:all
-  static_analysis:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install CPPCheck
-        run: |
-          sudo apt -y install cppcheck
-      - name: CPP Check Project
-        run: |
-          cd ./esp_app/tcp_server/static_analysis
-          cppcheck --project="./esp_project.cppcheck" --enable=all --suppress=missingIncludeSystem
-          # cppcheck -h
+  # static_analysis:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     # - name: Checkout code
+  #     #   uses: actions/checkout@v2
+  #     - name: Install CPPCheck
+  #       run: |
+  #         sudo apt -y install cppcheck
+  #         cppe
+  #     - name: CPP Check Project
+  #       run: |
+  #         # cd ./esp_app/tcp_server/static_analysis
+  #         # cppcheck --project="./esp_project.cppcheck" --enable=all --suppress=missingIncludeSystem
+  #         # cppcheck -h
