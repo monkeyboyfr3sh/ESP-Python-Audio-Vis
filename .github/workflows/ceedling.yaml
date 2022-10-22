@@ -19,7 +19,7 @@ jobs:
       run: |
         pwd
         ls
-        cd esp_app
+        cd ./esp_app
 
         # pwd
         # ceedling test:all
