@@ -58,6 +58,28 @@ led_strip_t *update_num_led(uint32_t num_led)
     return strip;
 }
 
+esp_err_t deinit_led_strip(led_strip_t * strip_ptr)
+{
+    esp_err_t err = ESP_FAIL;
+    
+    if (!strip_ptr) {
+        ESP_LOGE(TAG, "install WS2812 driver failed");
+        return ESP_FAIL;
+    }
+
+    // uninstall ws2812 driver
+    err = rmt_driver_uninstall(RMT_TX_CHANNEL);
+    if(err!=ESP_OK){
+        ESP_LOGE(TAG,"Failed to uninstall driver: %s",esp_err_to_name(err));
+        return err;
+    }
+
+    // Free strip pointer resources
+    strip_ptr->del(strip_ptr);
+
+    return ESP_OK;
+}
+
 void led_strip_task(void *pvParameters)
 {
     uint32_t red = 0;

@@ -52,5 +52,6 @@ static const char *TAG = "audio-vis";
 
 void app_main(void)
 {
-    xTaskCreate(profile_utils, "profile_led_thread", 4096, (void*)NULL, 5, NULL);
+    profile_led_thread(NULL);
+    profile_utils(NULL);
 }

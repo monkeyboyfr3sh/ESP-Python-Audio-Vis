@@ -52,6 +52,7 @@
     "neopixel-if.h": "c",
     "mock_typedefs.h": "c",
     "perfmon.h": "c",
-    "profile_util.h": "c"
+    "profile_util.h": "c",
+    "semphr.h": "c"
   }
 }

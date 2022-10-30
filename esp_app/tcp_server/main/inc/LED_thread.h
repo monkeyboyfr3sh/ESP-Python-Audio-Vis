@@ -32,6 +32,7 @@ typedef enum {
 } led_code_t;
 
 led_strip_t *update_num_led(uint32_t num_led);
+esp_err_t deinit_led_strip(led_strip_t * strip_ptr);
 void led_strip_task(void *pvParameters);
 
 #endif

@@ -14,9 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//No help, variable specified on the command line.
-CCACHE_ENABLE:UNINITIALIZED=0
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Users/david/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-addr2line.exe
 
@@ -690,12 +687,12 @@ C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[C:/Program Files/Git/cmd/git.exe][v2.37.0.windows.1()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/david/.espressif/python_env/idf4.4_py3.8_env/Scripts/python.exe][cfound components: Interpreter ][v3.8.7()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/david/anaconda3/python.exe][cfound components: Interpreter ][v3.9.7()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Path to a program.
-_Python3_EXECUTABLE:INTERNAL=C:/Users/david/.espressif/python_env/idf4.4_py3.8_env/Scripts/python.exe
+_Python3_EXECUTABLE:INTERNAL=C:/Users/david/anaconda3/python.exe
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;7;32;;;C:\Users\david\.espressif\tools\idf-python\3.8.7\Lib;C:\Users\david\.espressif\tools\idf-python\3.8.7\Lib;C:\Users\david\.espressif\python_env\idf4.4_py3.8_env\Lib\site-packages;C:\Users\david\.espressif\python_env\idf4.4_py3.8_env\Lib\site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=4dae0b0e9f01a5524aa8f080e68dad47
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;7;32;;;C:\Users\david\anaconda3\Lib;C:\Users\david\anaconda3\Lib;C:\Users\david\anaconda3\Lib\site-packages;C:\Users\david\anaconda3\Lib\site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=8a4fa6d40bc99cdd61146d8a6bab5206
 

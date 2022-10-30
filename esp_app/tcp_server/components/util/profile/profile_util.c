@@ -62,6 +62,4 @@ void profile_utils(void *params)
 
     ESP_LOGI(TAG, "End profiling of utils functions");
     ESP_LOGI(TAG, "###########################################\n");
-
-    vTaskDelete(NULL);
 }
