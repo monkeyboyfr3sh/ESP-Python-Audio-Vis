@@ -8,6 +8,7 @@
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
 #include "freertos/semphr.h"
+#include "led_strip.h"
 
 #define RMT_TX_CHANNEL RMT_CHANNEL_0
 
@@ -30,7 +31,7 @@ typedef enum {
     num_led_write_num_led,
 } led_code_t;
 
+led_strip_t *update_num_led(uint32_t num_led);
 void led_strip_task(void *pvParameters);
-void some_function(void);
 
 #endif

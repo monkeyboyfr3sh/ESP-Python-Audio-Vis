@@ -1,4 +1,4 @@
-#include"inc/LED_thread.h"
+#include"LED_thread.h"
 
 #include <string.h>
 #include <sys/param.h>

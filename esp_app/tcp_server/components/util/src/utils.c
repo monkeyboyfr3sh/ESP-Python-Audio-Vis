@@ -37,7 +37,7 @@ float pid_loop_step(float prev_pos, float new_pos, float proportional_coef, floa
     float i = (integral_coef * ( (float)prev_pos) );
     float d = (derivative_coef * ((float)(new_pos-prev_pos)) );
 
-    vTaskDelay(1);
+    // vTaskDelay(1);
 
     // Return next step value
     return p+i+d;

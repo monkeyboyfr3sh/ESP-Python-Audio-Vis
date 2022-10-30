@@ -50,6 +50,8 @@
     "fff.h": "c",
     "*.include": "c",
     "neopixel-if.h": "c",
-    "mock_typedefs.h": "c"
+    "mock_typedefs.h": "c",
+    "perfmon.h": "c",
+    "profile_util.h": "c"
   }
 }
