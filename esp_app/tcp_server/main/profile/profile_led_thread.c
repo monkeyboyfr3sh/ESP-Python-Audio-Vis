@@ -4,7 +4,7 @@
 
 static const char* TAG = "led_thread-profiler";
 
-#define TOTAL_CALL_AMOUNT 10
+#define TOTAL_CALL_AMOUNT 100
 #define PERFMON_TRACELEVEL -1 // -1 - will ignore trace level
 
 // Table with dedicated performance counters
@@ -37,6 +37,8 @@ void profile_led_thread(void *params)
     ESP_LOGI(TAG, "Start test of init_deinit_strip");
     pm_config.counters_size = sizeof(pm_check_table) / sizeof(uint32_t) / 2;
     pm_config.select_mask = pm_check_table;
+    // pm_config.counters_size = sizeof(xtensa_perfmon_select_mask_all) / sizeof(uint32_t) / 2;
+    // pm_config.select_mask = xtensa_perfmon_select_mask_all;
     pm_config.repeat_count = TOTAL_CALL_AMOUNT;
     pm_config.max_deviation = 1;
     pm_config.call_function = init_deinit_strip;
